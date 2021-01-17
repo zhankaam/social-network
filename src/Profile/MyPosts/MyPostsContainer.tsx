@@ -39,6 +39,5 @@ const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => {
 // }*/
 
 
-
-export default connect<MapStateToPropsType, MapDispatchToPropsType, null, RootStateRedux>
-(mapStateToProps, {addPost, updateNewPostText})(MyPosts) as ConnectedComponent<any, {}>
+export default connect<MapStateToPropsType, MapDispatchToPropsType, {}, RootStateRedux>
+(mapStateToProps, {addPost, updateNewPostText})(MyPosts) /*as ConnectedComponent<any, {}>*/

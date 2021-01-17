@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="" />
+    <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Spin-1.1s-200px.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Spin-1.4s-137px.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cwBh8gjJX_k.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/MyPostsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/users-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/users.module.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,15 +35,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kT7e43M0JCRl7CVQjhVS4wDG4i" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -39,7 +58,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -112,12 +131,34 @@
       <workItem from="1610359829201" duration="629000" />
       <workItem from="1610360881937" duration="15788000" />
       <workItem from="1610388310272" duration="294000" />
-      <workItem from="1610388631143" duration="5271000" />
+      <workItem from="1610388631143" duration="11927000" />
+      <workItem from="1610447590367" duration="9970000" />
+      <workItem from="1610566610362" duration="7041000" />
+      <workItem from="1610621994650" duration="12325000" />
+      <workItem from="1610706324635" duration="3685000" />
+      <workItem from="1610721013157" duration="9275000" />
+      <workItem from="1610738036956" duration="89000" />
+      <workItem from="1610738143309" duration="174000" />
+      <workItem from="1610881501756" duration="1069000" />
+      <workItem from="1610897918469" duration="3113000" />
     </task>
+    <task id="LOCAL-00001" summary="social-network">
+      <created>1610398271572</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610398271572</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="social-network" />
+    <option name="LAST_COMMIT_MESSAGE" value="social-network" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="256" key="#ESLint" timestamp="1605731196053">
@@ -132,38 +173,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="448" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1605715396224" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610029615372">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610452134277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610029615372" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610452134277" />
+    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1610398267284">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610398267284" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610398187465" />
-    <state width="1345" height="245" key="GridCell.Tab.0.bottom" timestamp="1610393329653">
+    <state x="561" y="261" key="Github.ShareDialog" timestamp="1610398350079">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610393329653" />
-    <state width="1345" height="245" key="GridCell.Tab.0.center" timestamp="1610393329651">
+    <state x="561" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1610398350079" />
+    <state width="1345" height="245" key="GridCell.Tab.0.bottom" timestamp="1610884318902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610393329651" />
-    <state width="1345" height="245" key="GridCell.Tab.0.left" timestamp="1610393329650">
+    <state width="1345" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610884318902" />
+    <state width="1345" height="245" key="GridCell.Tab.0.center" timestamp="1610884318902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610393329650" />
-    <state width="1345" height="245" key="GridCell.Tab.0.right" timestamp="1610393329653">
+    <state width="1345" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610884318902" />
+    <state width="1345" height="245" key="GridCell.Tab.0.left" timestamp="1610884318902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610393329653" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1605715311615">
+    <state width="1345" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610884318902" />
+    <state width="1345" height="245" key="GridCell.Tab.0.right" timestamp="1610884318902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605715311615" />
-    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609846083725">
+    <state width="1345" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610884318902" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1610738285622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1609846083725" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1610738285622" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1610398378973">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610398378973" />
+    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610722698688">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1610722698688" />
     <state x="0" y="0" width="1361" height="716" key="dock-window-1" timestamp="1606741703091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -172,9 +225,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610133192928" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610382803846">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610737123237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610382803846" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610737123237" />
   </component>
 </project>
