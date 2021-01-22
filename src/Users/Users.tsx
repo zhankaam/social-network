@@ -1,11 +1,25 @@
 import React from "react";
 import styles from "./users.module.css";
-import userPhoto from "../assets/images/cwBh8gjJX_k.jpg";
-import {UserType} from "../types";
+import userPhoto from "../assets/images/390poHMbqew.jpg";
 import {MapDispatchToPropsType, MapStateToPropsType} from "./UsersContainer";
+import {NavLink} from "react-router-dom"
+import {instance} from "../api/api";
+import {UserType} from "../types";
 
 type PropsType = {
     onPageChanged: (p: number) => void
+    followingInProgress: number[]
+    totalUsersCount: number
+    pageSize: number
+    currentPage: number
+    users: Array<UserType>
+    follow: (userId: number) => void
+    unfollow: (userId: number) => void
+    setUsers: (users: Array<UserType>) => void
+    setCurrentPage:  (pageNumber: number) => void
+    setTotalUsersCount: (totalCount: number) => void
+    toggleIsFetching: (isFetching: boolean) => void
+    toggleFollowingProgress: (isFetching: boolean, userId: number) => void
 }
 
 export let Users = (props: MapDispatchToPropsType & MapStateToPropsType & PropsType ) => {
@@ -28,9 +42,42 @@ export let Users = (props: MapDispatchToPropsType & MapStateToPropsType & PropsT
             {
                 props.users.map(u => <div key={u.id}>
         <span>
-            <div><img src={u.photos.small != null ? u.photos.small : userPhoto} className={styles.userPhoto}/></div>
-             <div>{u.followed ? <button onClick={() => { props.unfollow(u.id)}}>Unfollow</button>
-                 : <button onClick={() => { props.follow(u.id) }}>Follow</button>}
+            <div>
+                <NavLink to={'./profile/' + u.id}>
+                     <img src={u.photos.small != null ? u.photos.small : userPhoto} className={styles                                 .userPhoto}/>
+                </NavLink>
+            </div>
+             <div>{u.followed
+                 ?  <button disabled={props.followingInProgress
+                            .some(id => id === u.id)}
+                            onClick={() => {
+                            props.toggleFollowingProgress(true, u.id)
+                     return instance.delete(`follow/${u.id}`,  {
+                         withCredentials: true,
+                         headers: {
+                             "API-KEY": "e08e1901-cb67-4f8e-968d-12deec271219"
+                         }
+                       })
+                         .then(response => {
+                             if(response.data.resultCode == 0){
+                                 props.unfollow(u.id)    }
+                             props.toggleFollowingProgress(false,u.id)
+                         })
+
+
+                 }}>Unfollow</button>
+                 : <button disabled={props.followingInProgress.some(id => id === u.id)}
+                           onClick={() => {
+                     props.toggleFollowingProgress(true, u.id)
+                     instance.post(`follow/${u.id}`, {}, {
+                         withCredentials: true
+                     })
+                         .then(response => {
+                            if(response.data.resultCode == 0){
+                                props.follow(u.id)}
+                             props.toggleFollowingProgress(false, u.id)
+                         })
+                 }}>Follow</button>}
             </div>
         </span>
                     <span>

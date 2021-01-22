@@ -1,14 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 import {addPost, PostsPropsType, updateNewPostText} from "../../Redux/profile-reducer";
-import MyPosts, {MyPostsPropsType} from "./MyPosts";
+import MyPosts from "./MyPosts";
 import {
     connect,
-    ConnectedComponent, ConnectedProps, DispatchProp,
-    InferableComponentEnhancer,
-    InferableComponentEnhancerWithProps
 } from "react-redux";
 import {RootStateRedux} from "../../Redux/redux-store";
-import {Dispatch} from "redux";
 
 
 export type MapStateToPropsType = {

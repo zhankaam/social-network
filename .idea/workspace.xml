@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Spin-1.1s-200px.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Spin-1.4s-137px.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/cwBh8gjJX_k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/HeaderContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/auth-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/common/Preloader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/390poHMbqew.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/MyPostsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/Post/Post.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/profile-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/redux-store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/users-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Users.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/users.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -58,17 +66,17 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Redux" />
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Users" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile\Dialogs" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src" />
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile\Dialogs\Message" />
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile\Dialogs\DialogItem" />
     </key>
   </component>
   <component name="RunManager">
@@ -140,7 +148,13 @@
       <workItem from="1610738036956" duration="89000" />
       <workItem from="1610738143309" duration="174000" />
       <workItem from="1610881501756" duration="1069000" />
-      <workItem from="1610897918469" duration="3113000" />
+      <workItem from="1610897918469" duration="18446000" />
+      <workItem from="1610965357647" duration="17896000" />
+      <workItem from="1611077669700" duration="130000" />
+      <workItem from="1611140537665" duration="55000" />
+      <workItem from="1611140648665" duration="599000" />
+      <workItem from="1611229143801" duration="9841000" />
+      <workItem from="1611306927842" duration="3955000" />
     </task>
     <task id="LOCAL-00001" summary="social-network">
       <created>1610398271572</created>
@@ -149,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610398271572</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="social-network">
+      <created>1610904182748</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610904182748</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,10 +198,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610452134277" />
-    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1610398267284">
+    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1610904179775">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610398267284" />
+    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610904179775" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -205,29 +226,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610884318902" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1610738285622">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1611140606756">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1610738285622" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1610398378973">
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611140606756" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1610904190996">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610398378973" />
-    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610722698688">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610904190996" />
+    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611234326800">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1610722698688" />
+    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1611234326800" />
     <state x="0" y="0" width="1361" height="716" key="dock-window-1" timestamp="1606741703091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="1361" height="716" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1606741703091" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1610133192928">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1610967189251">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610133192928" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610737123237">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610967189251" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1611234249039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610737123237" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1611234249039" />
   </component>
 </project>

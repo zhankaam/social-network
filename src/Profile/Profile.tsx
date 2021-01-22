@@ -3,16 +3,15 @@ import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 import MyPosts from "./MyPosts/MyPosts";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 export type ProfilePropsType = {
-
+      profile: any
 }
 
 const Profile = (props: ProfilePropsType) => {
 
     return (
         <div>
-            <ProfileInfo/>
-            {/*<MyPostsContainer />*/}
-            <MyPostsContainer />
+            <ProfileInfo profile={props.profile}/>
+           <MyPostsContainer />
         </div>
 
     );
