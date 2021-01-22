@@ -11,8 +11,7 @@ export type HeaderPropsType = {
 const Header = (props: HeaderPropsType) => {
     return (
         <header className={s.header}>
-            <img
-                src='https://sun9-44.userapi.com/impf/c856136/v856136281/a9770/7RBeaUJ9A98
+            <img src='https://sun9-44.userapi.com/impf/c856136/v856136281/a9770/7RBeaUJ9A98
                 .jpg?size=767x767&quality=96&proxy=1&sign=265e2a0e0a64547c891841d58ef10c51&type=album'/>
             <div className={s.loginBlock}>
                 {props.isAuth
