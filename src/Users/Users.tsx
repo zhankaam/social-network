@@ -3,7 +3,7 @@ import styles from "./users.module.css";
 import userPhoto from "../assets/images/390poHMbqew.jpg";
 import {MapDispatchToPropsType, MapStateToPropsType} from "./UsersContainer";
 import {NavLink} from "react-router-dom"
-import {instance} from "../api/api";
+import {instance, usersAPI} from "../api/api";
 import {UserType} from "../types";
 
 type PropsType = {
@@ -44,40 +44,14 @@ export let Users = (props: MapDispatchToPropsType & MapStateToPropsType & PropsT
         <span>
             <div>
                 <NavLink to={'./profile/' + u.id}>
-                     <img src={u.photos.small != null ? u.photos.small : userPhoto} className={styles                                 .userPhoto}/>
+                     <img src={u.photos.small != null ? u.photos.small : userPhoto} className={styles.userPhoto}/>
                 </NavLink>
             </div>
              <div>{u.followed
-                 ?  <button disabled={props.followingInProgress
-                            .some(id => id === u.id)}
-                            onClick={() => {
-                            props.toggleFollowingProgress(true, u.id)
-                     return instance.delete(`follow/${u.id}`,  {
-                         withCredentials: true,
-                         headers: {
-                             "API-KEY": "e08e1901-cb67-4f8e-968d-12deec271219"
-                         }
-                       })
-                         .then(response => {
-                             if(response.data.resultCode == 0){
-                                 props.unfollow(u.id)    }
-                             props.toggleFollowingProgress(false,u.id)
-                         })
-
-
-                 }}>Unfollow</button>
+                 ?  <button disabled={props.followingInProgress.some(id => id === u.id)}
+                            onClick={() => { props.unfollow( u.id) }}>Unfollow</button>
                  : <button disabled={props.followingInProgress.some(id => id === u.id)}
-                           onClick={() => {
-                     props.toggleFollowingProgress(true, u.id)
-                     instance.post(`follow/${u.id}`, {}, {
-                         withCredentials: true
-                     })
-                         .then(response => {
-                            if(response.data.resultCode == 0){
-                                props.follow(u.id)}
-                             props.toggleFollowingProgress(false, u.id)
-                         })
-                 }}>Follow</button>}
+                           onClick={() => { props.follow(u.id) }}>Follow</button>}
             </div>
         </span>
                     <span>

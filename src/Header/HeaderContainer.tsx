@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "./Header";
 import {connect} from "react-redux";
 import {setAuthUserData} from "../Redux/auth-reducer";
-import {instance} from "../api/api";
+import {authAPI} from "../api/api";
 import {RootStateRedux} from "../Redux/redux-store";
 
 type PropsType = {
@@ -13,9 +13,7 @@ type PropsType = {
 
 class HeaderContainer extends React.Component<PropsType> {
     componentDidMount() {
-        instance.get(`auth/me`, {
-            withCredentials: true
-        })
+        authAPI.me()
             .then(response => {
                 if (response.data.resultCode === 0) {
                     let {id, email, login} = response.data.data

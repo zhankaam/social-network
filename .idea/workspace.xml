@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/users-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +148,8 @@
       <workItem from="1611229143801" duration="9841000" />
       <workItem from="1611306927842" duration="8253000" />
       <workItem from="1611329771541" duration="1371000" />
-      <workItem from="1611565605027" duration="2109000" />
+      <workItem from="1611565605027" duration="2237000" />
+      <workItem from="1611744213255" duration="8152000" />
     </task>
     <task id="LOCAL-00001" summary="social-network">
       <created>1610398271572</created>
@@ -172,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611315861297</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="social-network">
+      <created>1611568634930</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611568634930</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,10 +214,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610452134277" />
-    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1611315859012">
+    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1611568632588">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1611315859012" />
+    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1611568632588" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -232,10 +246,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611568612579" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1611315868500">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1611568638859">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1611315868500" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1611568638859" />
     <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611234326800">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -248,9 +262,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610967189251" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1611234249039">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1611756779246">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1611234249039" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1611756779246" />
   </component>
 </project>

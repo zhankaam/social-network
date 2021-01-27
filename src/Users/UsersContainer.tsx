@@ -4,33 +4,35 @@ import {
     follow,
     setCurrentPage,
     setUsers, setTotalUsersCount, toggleIsFetching,
-    unfollow, toggleFollowingProgress,
+    unfollowSuccess, toggleFollowingProgress, getUsers,
 } from "../Redux/users-reducer";
 import {RootStateRedux} from "../Redux/redux-store";
 import {UserType} from "../types";
 import {Users} from "./Users";
 import {Preloader} from "../assets/common/Preloader";
-import { usersAPI} from "../api/api";
 
 
 class UsersContainer extends React.Component< MapDispatchToPropsType & MapStateToPropsType> {
     componentDidMount() {
-        this.props.toggleIsFetching(true)
+
+        this.props.getUsers(this.props.currentPage, this.props.pageSize)
+        /*this.props.toggleIsFetching(true)
             usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
                 this.props.toggleIsFetching(false)
                 this.props.setUsers(data.items)
                 this.props.setTotalUsersCount(data.totalCount)
-            })
+            })*/
 
     }
 
     onPageChanged = (pageNumber: number) => {
-        this.props.setCurrentPage(pageNumber)
+        this.props.getUsers(pageNumber, this.props.pageSize)
+      /*  this.props.setCurrentPage(pageNumber)
         this.props.toggleIsFetching(true)
         usersAPI.getUsers(pageNumber, this.props.pageSize).then(data => {
                 this.props.toggleIsFetching(true)
                 this.props.setUsers(data.items)
-            })
+            })*/
     }
 
     render() {
@@ -51,7 +53,6 @@ class UsersContainer extends React.Component< MapDispatchToPropsType & MapStateT
                       setUsers={this.props.setUsers}
                       isFetching={this.props.isFetching}
                       toggleIsFetching={this.props.toggleIsFetching}
-                   followingInProgress={this.props.followingInProgress}
                      toggleFollowingProgress={this.props.toggleFollowingProgress}/>
         </>
     }
@@ -112,5 +113,5 @@ let mapStateToProps = (state: RootStateRedux ):  MapStateToPropsType => {
 
 
     export default connect<MapStateToPropsType, MapDispatchToPropsType, {}, RootStateRedux>
-    (mapStateToProps, {follow, unfollow, setUsers, setCurrentPage,
-            setTotalUsersCount,toggleIsFetching, toggleFollowingProgress})(UsersContainer)
+    (mapStateToProps, {follow, unfollow: unfollowSuccess, setCurrentPage, toggleFollowingProgress,
+       /* setUsers, setTotalUsersCount,toggleIsFetching,*/ getUsers})(UsersContainer)
