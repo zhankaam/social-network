@@ -9,12 +9,10 @@ import DialogsContainer from "./Profile/Dialogs/DialogsContainer";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
 import HeaderContainer from "./Header/HeaderContainer";
+import {Login} from "./Login/Login";
 
-type PropsType = {
-    // state: StateType
-    // dispatch: (action: ActionPropsType) => void
-}
-const App = (props: PropsType) => {
+
+const App = (props: any) => {
 
     return (
         <BrowserRouter>
@@ -29,6 +27,7 @@ const App = (props: PropsType) => {
                            render={() => <ProfileContainer/>}/>
                     <Route path='/users'
                            render={() => <UsersContainer/>}/>
+                    <Route path='/login' render={() => <Login/>}/>
                     <Route path='/dialogs' render={() => <News/>}/>
                     <Route path='/profile' render={() => <Music/>}/>
                     <Route path='/dialogs' render={() => <Settings/>}/>

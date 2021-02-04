@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./users.module.css";
+import styles from "./Users.module.css";
 import userPhoto from "../assets/images/390poHMbqew.jpg";
 import {MapDispatchToPropsType, MapStateToPropsType} from "./UsersContainer";
 import {NavLink} from "react-router-dom"
@@ -12,6 +12,7 @@ type PropsType = {
     totalUsersCount: number
     pageSize: number
     currentPage: number
+    isFetching: boolean
     users: Array<UserType>
     follow: (userId: number) => void
     unfollow: (userId: number) => void
@@ -20,9 +21,10 @@ type PropsType = {
     setTotalUsersCount: (totalCount: number) => void
     toggleIsFetching: (isFetching: boolean) => void
     toggleFollowingProgress: (isFetching: boolean, userId: number) => void
+    getUsers: (currentPage: number, pageSize: number) => void
 }
 
-export let Users = (props: MapDispatchToPropsType & MapStateToPropsType & PropsType ) => {
+export let Users = (props: PropsType ) => {
 
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
 
