@@ -5,7 +5,7 @@ import {RootStateRedux} from "../Redux/redux-store";
 import {getAuthUserData} from "../Redux/auth-reducer";
 
 type PropsType = {
-    setAuthUserData: (id: number, email: string, login: string, isAuth: boolean) => void
+    //setAuthUserData: (id: number, email: string, login: string, isAuth: boolean) => void
     isAuth: boolean
     login: string | null
     getAuthUserData: () => void
@@ -18,7 +18,7 @@ class HeaderContainer extends React.Component<PropsType> {
 
     render() {
         return (
-            <Header setAuthUserData={this.props.setAuthUserData}
+            <Header /*setAuthUserData={this.props.setAuthUserData}*/
             isAuth={this.props.isAuth}
             login={this.props.login}/>
         )

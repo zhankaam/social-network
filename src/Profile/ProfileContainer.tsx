@@ -1,9 +1,11 @@
 import React from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {Redirect, RouteComponentProps, withRouter} from 'react-router-dom';
+import { RouteComponentProps, withRouter} from 'react-router-dom';
 import {RootStateRedux} from "../Redux/redux-store";
 import {getUserProfile} from "../Redux/profile-reducer";
+import {withAuthRedirect} from "../hoc/withAuthRedirect";
+import {compose} from "redux";
 
 
 type MapStateToPropsType = ReturnType<typeof mapStateToProps>
@@ -18,7 +20,7 @@ type PathParamsType = {
 type AllPropsType = RouteComponentProps<PathParamsType> & PropsType
 
 
-class ProfileContainer extends React.Component<AllPropsType> {
+    class ProfileContainer extends React.Component<AllPropsType> {
     componentDidMount() {
     let userId: number | undefined = this.props.match.params.userId ? Number(this.props.match.params.userId): undefined
     if(!userId){
@@ -28,7 +30,6 @@ class ProfileContainer extends React.Component<AllPropsType> {
 }
     render() {
 
-        if (!this.props.isAuth) return <Redirect to="/login"/>
 
     return (
         <Profile {...this.props} profile={this.props.profile}/>
@@ -36,11 +37,22 @@ class ProfileContainer extends React.Component<AllPropsType> {
   }
 }
 
-let mapStateToProps = (state: RootStateRedux)/*: MapStateToPropsType*/ => ({
+    let mapStateToProps = (state: RootStateRedux)/*: MapStateToPropsType*/ => ({
     profile: state.profilePage.profile,
-    isAuth: state.auth.isAuth
-})
-  let WithUrlDataContainerComponent  = withRouter(ProfileContainer)
+    // isAuth: state.auth.isAuth
+    })
 
 
-export default connect(mapStateToProps, {getUserProfile}) (WithUrlDataContainerComponent)
+export default compose(
+        connect(mapStateToProps, {getUserProfile}),
+        withRouter,
+        withAuthRedirect
+    ) (ProfileContainer)
+
+    let AuthRedirectComponent = withAuthRedirect(ProfileContainer)
+
+
+    let WithUrlDataContainerComponent  = withRouter(AuthRedirectComponent)
+
+
+ connect<MapStateToPropsType, MapDispatchToPropsType, {}, RootStateRedux>(mapStateToProps, {getUserProfile}) (WithUrlDataContainerComponent)

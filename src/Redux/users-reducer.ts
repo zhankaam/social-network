@@ -109,8 +109,8 @@ export const toggleIsFetching = (isFetching: boolean): toggleIsFetchingACType  =
 export const toggleFollowingProgress = (isFetching: boolean, userId: number): toggleFollowingProgressACType  => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching, userId})
 
 
- export const getUsers = (currentPage, pageSize) => {  //ThunkCreator
-          return (dispatch) => {
+ export const getUsers = (currentPage: number, pageSize:number) => {  //ThunkCreator
+          return (dispatch: any) => {
           dispatch(toggleIsFetching(true))
 
           usersAPI.getUsers(currentPage, pageSize).then(data => {
@@ -121,8 +121,8 @@ export const toggleFollowingProgress = (isFetching: boolean, userId: number): to
       }
 }
 
-export const follow = (userId) => {  //ThunkCreator
-          return (dispatch) => {
+export const follow = (userId: number) => {  //ThunkCreator
+          return (dispatch: any) => {
              dispatch(toggleFollowingProgress(true, userId))
               usersAPI.follow(userId)
                   .then(response => {
@@ -134,8 +134,8 @@ export const follow = (userId) => {  //ThunkCreator
       }
 }
 
-export const unfollow = (userId) => {  //ThunkCreator
-    return (dispatch) => {
+export const unfollow = (userId: number) => {  //ThunkCreator
+    return (dispatch: any) => {
         dispatch(toggleFollowingProgress(true, userId))
         usersAPI.unfollow(userId)
             .then(response => {
