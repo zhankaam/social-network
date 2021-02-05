@@ -2,8 +2,6 @@ import React, {ChangeEvent} from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 import {PostsPropsType} from "../../Redux/profile-reducer";
-import {useSelector} from "react-redux";
-import {RootStateRedux} from "../../Redux/redux-store";
 
 export type MyPostsPropsType = {
     posts: Array<PostsPropsType>

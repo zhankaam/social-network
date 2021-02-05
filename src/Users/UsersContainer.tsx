@@ -15,6 +15,7 @@ import {compose} from "redux";
 
 
 class UsersContainer extends React.Component<MapDispatchToPropsType & MapStateToPropsType> {
+
     componentDidMount() {
         this.props.getUsers(this.props.currentPage, this.props.pageSize)
     }
@@ -110,7 +111,7 @@ let withRedirect = withAuthRedirect(UsersContainer)
 (mapStateToProps, {follow, unfollow: unfollowSuccess, setCurrentPage, toggleFollowingProgress, getUsers, setUsers, setTotalUsersCount, toggleIsFetching})(withRedirect)*/
 
 
-export default compose(
+export default compose<React.ComponentType>(
     withAuthRedirect,
     connect<MapStateToPropsType, MapDispatchToPropsType, {}, RootStateRedux>
     (mapStateToProps, {follow, unfollow: unfollowSuccess, setCurrentPage, toggleFollowingProgress, getUsers, setUsers, setTotalUsersCount, toggleIsFetching})

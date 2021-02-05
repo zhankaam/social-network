@@ -43,16 +43,19 @@ type AllPropsType = RouteComponentProps<PathParamsType> & PropsType
     })
 
 
-export default compose(
+let AuthRedirectComponent = withAuthRedirect(ProfileContainer)
+
+
+let WithUrlDataContainerComponent  = withRouter(AuthRedirectComponent)
+
+
+export default compose<React.ComponentType>(
         connect(mapStateToProps, {getUserProfile}),
         withRouter,
-        withAuthRedirect
+       // withAuthRedirect
     ) (ProfileContainer)
 
-    let AuthRedirectComponent = withAuthRedirect(ProfileContainer)
 
 
-    let WithUrlDataContainerComponent  = withRouter(AuthRedirectComponent)
-
-
- connect<MapStateToPropsType, MapDispatchToPropsType, {}, RootStateRedux>(mapStateToProps, {getUserProfile}) (WithUrlDataContainerComponent)
+/*
+ connect<MapStateToPropsType, MapDispatchToPropsType, {}, RootStateRedux>(mapStateToProps, {getUserProfile}) (WithUrlDataContainerComponent)*/

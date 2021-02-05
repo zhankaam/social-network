@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./Users.module.css";
 import userPhoto from "../assets/images/390poHMbqew.jpg";
-import {MapDispatchToPropsType, MapStateToPropsType} from "./UsersContainer";
 import {NavLink} from "react-router-dom"
-import {instance, usersAPI} from "../api/api";
 import {UserType} from "../types";
 
 type PropsType = {
