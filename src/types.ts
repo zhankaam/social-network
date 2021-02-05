@@ -9,3 +9,6 @@ export type UserType = {
         large: string | undefined
     }
 }
+export type ProfileType = {
+    userId: string
+}
