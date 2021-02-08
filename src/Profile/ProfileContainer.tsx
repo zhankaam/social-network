@@ -3,14 +3,19 @@ import Profile from "./Profile";
 import {connect} from "react-redux";
 import { RouteComponentProps, withRouter} from 'react-router-dom';
 import {RootStateRedux} from "../Redux/redux-store";
-import {getStatus, getUserProfile, updateStatus} from "../Redux/profile-reducer";
+import {getStatus, getUserProfile, ProfileStateType, updateStatus} from "../Redux/profile-reducer";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {ProfileType} from "../types";
 
 
-type MapStateToPropsType = ReturnType<typeof mapStateToProps>
+type MapStateToPropsType ={
+    profile: ProfileType | null
+    status: string
+}
 type MapDispatchToPropsType = {
    /* setUserProfile: (data: any) => void*/
+    updateStatus: (status: string) => void
     getUserProfile: (userId: number ) => void
     getStatus: (userId: number) => void
 }
