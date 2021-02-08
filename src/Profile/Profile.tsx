@@ -5,7 +5,7 @@ import {ProfileType} from "../types";
 
 export type ProfilePropsType = {
       profile: ProfileType | null
-      updateStatus: (status: string) => void
+      updateStatus: () => void
       status: string
 }
 

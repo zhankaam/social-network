@@ -15,7 +15,7 @@ type MapStateToPropsType ={
 }
 type MapDispatchToPropsType = {
    /* setUserProfile: (data: any) => void*/
-    updateStatus: (status: string) => void
+    updateStatus: () => void
     getUserProfile: (userId: number ) => void
     getStatus: (userId: number) => void
 }
