@@ -9,13 +9,13 @@ export type MyPostsPropsType = {
     newPostText: string
     addPost: (newPostText: any) => void
     // onPostChange: (text: string) => void
-    updateNewPostText: (text: string) => void
+    // updateNewPostText: (text: string) => void
 }
 
     function AddNewPostForm(props: any) {
         return <form onSubmit={props.handleSubmit} >
             <div>
-                <Field name="newPostText" />
+                <Field name="newPostText" component="textarea" />
               {/*  <textarea onChange={props.onChange} value={props.value}/>*/}
             </div>
             <div>
@@ -25,7 +25,7 @@ export type MyPostsPropsType = {
         </form>;
     }
 
-AddNewPostForm = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostForm)
+const AddNewPostFormRedux = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostForm)
 
 const MyPosts = (props:MyPostsPropsType) => {
 
@@ -43,7 +43,7 @@ const MyPosts = (props:MyPostsPropsType) => {
             <div className={s.postsBlock}>
                 <h3> My posts </h3>
               {/*  <AddNewPostForm onChange={onPostChange} value={props.newPostText} onClick={onAddPost}/>*/}
-                <AddNewPostForm onSubmit={onAddPost}/>
+                <AddNewPostFormRedux onSubmit={onAddPost}/>
                 <div className={s.posts}>
                     {postsElements}
                 </div>

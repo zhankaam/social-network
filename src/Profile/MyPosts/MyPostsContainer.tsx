@@ -7,7 +7,7 @@ import {RootStateRedux} from "../../Redux/redux-store";
 
 export type MapStateToPropsType = {
     posts: Array<PostsPropsType>
-   // newPostText: string
+    newPostText: string
 }
 export type MapDispatchToPropsType = {
  //   updateNewPostText: (text: string) => void
@@ -16,8 +16,8 @@ export type MapDispatchToPropsType = {
 
 const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => {
     return {
-        posts: state.profilePage.posts
-        /*newPostText: state.profilePage.newPostText*/
+        posts: state.profilePage.posts,
+        newPostText: state.profilePage.newPostText
     }
 }
 // const mapDispatchToProps = (dispatch: Dispatch): MapDispatchToPropsType => {

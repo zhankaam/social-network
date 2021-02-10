@@ -1,5 +1,4 @@
 import {profileAPI, usersAPI} from "../api/api";
-import {Dispatch} from "redux";
 
 const ADD_POST = 'ADD-POST';
 //const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
@@ -17,7 +16,7 @@ export type PostsPropsType = {
 }
 export type ProfileStateType = {
     posts: Array<PostsPropsType>
- //   newPostText: string,
+    newPostText: string,
     profile: null,
     status: string | null
 }
@@ -28,7 +27,7 @@ let initialState: ProfileStateType = {
         {id: 3, message: "Blabla", likesCount: 11},
         {id: 4, message: "Dada", likesCount: 11}
     ],
-   // newPostText: "",
+    newPostText: "",
     profile: null,
     status: ""
 }
