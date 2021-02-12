@@ -14,6 +14,7 @@ type MapStateToPropsType ={
     status: string
     isAuth: boolean
     userId: number
+    authorizedUserId: number
 }
 type MapDispatchToPropsType = {
    /* setUserProfile: (data: any) => void*/
@@ -32,7 +33,7 @@ type AllPropsType = RouteComponentProps<PathParamsType> & PropsType
     componentDidMount() {
     let userId: number | undefined = this.props.match.params.userId ? Number(this.props.match.params.userId): undefined
         if(!userId){
-            userId = 12328
+            userId = this.props.authorizedUserId
         }
             this.props.getUserProfile(userId)
             this.props.getStatus(userId)
