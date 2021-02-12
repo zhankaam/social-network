@@ -2,6 +2,7 @@ import {Field} from "redux-form";
 import {required} from "../utilities/validators/Validators";
 import {Input} from "../assets/common/FormsControls/FormsControls";
 import React from "react";
+import s from "../assets/common/FormsControls/FormsControls.module.css"
 
 export const LoginForm = (props: any) => {
     return (
@@ -30,6 +31,9 @@ export const LoginForm = (props: any) => {
                     component={Input}
                 /> Remember me
             </div>
+            {props.error && <div className={s.formSummaryError}>
+                {props.error}
+            </div>}
             <div>
                 <button>Login</button>
             </div>

@@ -12,6 +12,8 @@ import {ProfileType} from "../types";
 type MapStateToPropsType ={
     profile: ProfileType | null
     status: string
+    isAuth: boolean
+    userId: number
 }
 type MapDispatchToPropsType = {
    /* setUserProfile: (data: any) => void*/
@@ -29,14 +31,13 @@ type AllPropsType = RouteComponentProps<PathParamsType> & PropsType
     class ProfileContainer extends React.Component<AllPropsType> {
     componentDidMount() {
     let userId: number | undefined = this.props.match.params.userId ? Number(this.props.match.params.userId): undefined
-    if(!userId){
-        userId = 2
-    }
+        if(!userId){
+            userId = 12328
+        }
             this.props.getUserProfile(userId)
             this.props.getStatus(userId)
-}
+    }
     render() {
-
 
     return (
         <Profile {...this.props}
@@ -48,10 +49,11 @@ type AllPropsType = RouteComponentProps<PathParamsType> & PropsType
   }
 }
 
-    let mapStateToProps = (state: RootStateRedux)/*: MapStateToPropsType*/ => ({
-        profile: state.profilePage.profile,
-        status: state.profilePage.status
-    // isAuth: state.auth.isAuth
+    let mapStateToProps = ({profilePage,auth}: RootStateRedux)/*: MapStateToPropsType*/ => ({
+        profile: profilePage.profile,
+        status: profilePage.status,
+        authorizedUserId: auth.userId,
+        isAuth: auth.isAuth
     })
 
 
