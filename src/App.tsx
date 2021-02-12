@@ -9,7 +9,7 @@ import DialogsContainer from "./Profile/Dialogs/DialogsContainer";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
 import HeaderContainer from "./Header/HeaderContainer";
-import {Login} from "./Login/Login";
+import Login from "./Login/Login";
 
 
 const App = (props: any) => {
