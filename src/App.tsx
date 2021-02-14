@@ -10,33 +10,42 @@ import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
 import HeaderContainer from "./Header/HeaderContainer";
 import Login from "./Login/Login";
+import {connect} from "react-redux";
+import {getAuthUserData} from "./Redux/auth-reducer";
 
 
-const App = (props: any) => {
+export class App extends React.Component<any> {
+    componentDidMount() {
+        this.props.getAuthUserData();
+    }
 
-    return (
-        <BrowserRouter>
-            <div className='app-wrapper'>
-                <HeaderContainer/>
-                <Navbar/>
-                <div className='app-wrapper-content'>
+    render() {
 
-                    <Route path='/dialogs'
-                           render={() => <DialogsContainer/>}/>
-                    <Route path='/profile/:userId?'
-                           render={() => <ProfileContainer/>}/>
-                    <Route path='/users'
-                           render={() => <UsersContainer/>}/>
-                    <Route path='/login' render={() => <Login/>}/>
-                    <Route path='/dialogs' render={() => <News/>}/>
-                    <Route path='/profile' render={() => <Music/>}/>
-                    <Route path='/dialogs' render={() => <Settings/>}/>
+        return (
+            <BrowserRouter>
+                <div className='app-wrapper'>
+                    <HeaderContainer/>
+                    <Navbar/>
+                    <div className='app-wrapper-content'>
 
+                        <Route path='/dialogs'
+                               render={() => <DialogsContainer/>}/>
+                        <Route path='/profile/:userId?'
+                               render={() => <ProfileContainer/>}/>
+                        <Route path='/users'
+                               render={() => <UsersContainer/>}/>
+                        <Route path='/login' render={() => <Login/>}/>
+                        <Route path='/dialogs' render={() => <News/>}/>
+                        <Route path='/profile' render={() => <Music/>}/>
+                        <Route path='/dialogs' render={() => <Settings/>}/>
+
+                    </div>
                 </div>
-            </div>
-        </BrowserRouter>
-    );
+            </BrowserRouter>
+        );
+    }
 }
 
 
-export default App;
+
+export default connect(null, {getAuthUserData})(App)
