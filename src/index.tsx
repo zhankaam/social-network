@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 import store from "./Redux/redux-store";
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
+import {getAuthUserData} from "./Redux/auth-reducer";
 /*
 
 ReactDOM.render() {
@@ -20,7 +21,7 @@ ReactDOM.render() {
 */
 ReactDOM.render( <BrowserRouter>
     <Provider store={store}>
-        <App/>
+        <App getAuthUserData={getAuthUserData}/>
     </Provider>
 </BrowserRouter>, document.getElementById('root'));
 

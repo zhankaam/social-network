@@ -8,7 +8,6 @@ type PropsType = {
     //setAuthUserData: (id: number, email: string, login: string, isAuth: boolean) => void
     isAuth: boolean
     login: string | null
-   // getAuthUserData: () => void
     logout: () => void
 }
 

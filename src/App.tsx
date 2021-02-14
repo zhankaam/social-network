@@ -12,9 +12,14 @@ import HeaderContainer from "./Header/HeaderContainer";
 import Login from "./Login/Login";
 import {connect} from "react-redux";
 import {getAuthUserData} from "./Redux/auth-reducer";
+import {compose} from "redux";
+import {withRouter} from "react-router-dom";
 
+type AppPropsType = {
+    getAuthUserData: () => void
+}
 
-export class App extends React.Component<any> {
+export class App extends React.Component<AppPropsType> {
     componentDidMount() {
         this.props.getAuthUserData();
     }
@@ -48,4 +53,6 @@ export class App extends React.Component<any> {
 
 
 
-export default connect(null, {getAuthUserData})(App)
+export default compose(
+    withRouter,
+    connect(null, {getAuthUserData})(App))

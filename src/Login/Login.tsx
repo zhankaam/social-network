@@ -23,8 +23,8 @@ const Login = (props: any) => {
     </div>
 }
 
-const mapStateToProps = (state: RootStateRedux) => {
+const mapStateToProps = (state: RootStateRedux) => ({
    isAuth: state.auth.isAuth
-}
+})
 
 export default connect(mapStateToProps, {login})(Login);
