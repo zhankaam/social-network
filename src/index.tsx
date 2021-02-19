@@ -6,22 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import store from "./Redux/redux-store";
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
-import {getAuthUserData} from "./Redux/auth-reducer";
-/*
 
-ReactDOM.render() {
-    return (
-        <BrowserRouter>
-            <Provider store={store}>
-                <App/>
-            </Provider>
-        </BrowserRouter>, document.getElementById('root')
-    )
-}
-*/
 ReactDOM.render( <BrowserRouter>
     <Provider store={store}>
-        <App getAuthUserData={getAuthUserData}/>
+        <App/>
     </Provider>
 </BrowserRouter>, document.getElementById('root'));
 
