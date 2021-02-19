@@ -10,7 +10,7 @@ import {initializeApp} from "./Redux/app-reducer";
 
 ReactDOM.render( <BrowserRouter>
     <Provider store={store}>
-        <App initializeApp={initializeApp} initialized={true}/>
+        <App initializeApp={initializeApp} initialized={false}/>
     </Provider>
 </BrowserRouter>, document.getElementById('root'));
 

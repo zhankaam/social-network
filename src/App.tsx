@@ -29,7 +29,6 @@ export class App extends React.Component<MapStateToPropsType & MapDispatchToProp
     }
 
     render() {
-        debugger
         if(!this.props.initialized) {
             return <Preloader/>
         }
