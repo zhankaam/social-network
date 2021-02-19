@@ -52,7 +52,7 @@ export const login = (email:string, password:string,rememberMe:boolean) => (disp
             let message = response.data.messages.length > 0
                                     ? response.data.messages[0]
                                     : "some error"
-             dispatch(stopSubmit("login", {_error: "incorrect email or password"}))
+             dispatch(stopSubmit("login", {_error: message}))
          }
     })
 }

@@ -12,6 +12,14 @@ import {Users} from "./Users";
 import {Preloader} from "../assets/common/Preloader";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {
+    getCurrentPage,
+    getFollowingInProgress,
+    getIsFetching,
+    getPageSize,
+    getTotalUsersCount,
+    getUsersState
+} from "../Redux/users-selectors";
 
 
 class UsersContainer extends React.Component<MapDispatchToPropsType & MapStateToPropsType> {
@@ -56,7 +64,7 @@ export type MapStateToPropsType = {
     totalUsersCount: number
     isFetching: boolean
     followingInProgress: Array<number>
-    isAuth: boolean
+   // isAuth: boolean
 }
 export type MapDispatchToPropsType = {
     follow: (userId: number) => void
@@ -69,8 +77,19 @@ export type MapDispatchToPropsType = {
     getUsers: (currentPage: number, pageSize: number) => void
 }
 
+let mapStateToProps = (state: RootStateRedux) => {
+    return {
+        users: getUsersState(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state),
+       /* isAuth: getIsAuth(state)*/
+    }
+}
 
-let mapStateToProps = (state: RootStateRedux): MapStateToPropsType => {
+/*let mapStateToProps = (state: RootStateRedux): MapStateToPropsType => {
     return {
         users: state.usersPage.users,
         pageSize: state.usersPage.pageSize,
@@ -80,7 +99,7 @@ let mapStateToProps = (state: RootStateRedux): MapStateToPropsType => {
         followingInProgress: state.usersPage.followingInProgress,
         isAuth: state.auth.isAuth
     }
-}
+}*/
 
 /* let mapDispatchToProps = (dispatch: Dispatch): MapDispatchToPropsType => {
      return {
@@ -112,7 +131,7 @@ let withRedirect = withAuthRedirect(UsersContainer)
 
 
 export default compose<React.ComponentType>(
-    withAuthRedirect,
+   // withAuthRedirect,
     connect<MapStateToPropsType, MapDispatchToPropsType, {}, RootStateRedux>
-    (mapStateToProps, {follow, unfollow: unfollowSuccess, setCurrentPage, toggleFollowingProgress, getUsers, setUsers, setTotalUsersCount, toggleIsFetching})
+    (mapStateToProps, {follow, unfollow: unfollowSuccess, setCurrentPage, toggleFollowingProgress, getUsers: getUsers, setUsers, setTotalUsersCount, toggleIsFetching})
 ) (UsersContainer)

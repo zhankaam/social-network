@@ -3,7 +3,7 @@ import Profile from "./Profile";
 import {connect} from "react-redux";
 import { RouteComponentProps, withRouter} from 'react-router-dom';
 import {RootStateRedux} from "../Redux/redux-store";
-import {getStatus, getUserProfile, ProfileStateType, updateStatus} from "../Redux/profile-reducer";
+import {getStatus, getUserProfile, updateStatus} from "../Redux/profile-reducer";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
 import {compose} from "redux";
 import {ProfileType} from "../types";
@@ -34,12 +34,14 @@ type AllPropsType = RouteComponentProps<PathParamsType> & PropsType
     let userId: number | undefined = this.props.match.params.userId ? Number(this.props.match.params.userId): undefined
         if(!userId){
             userId = this.props.authorizedUserId
+            if(!userId){
+                this.props.history.push("/login")
+            }
         }
             this.props.getUserProfile(userId)
             this.props.getStatus(userId)
     }
     render() {
-
     return (
         <Profile {...this.props}
                  profile={this.props.profile}

@@ -17,17 +17,23 @@ import {initializeApp} from "./Redux/app-reducer";
 import {RootStateRedux} from "./Redux/redux-store";
 import {Preloader} from "./assets/common/Preloader";
 
+type MapStateToPropsType = ReturnType<typeof mapStateToProps>
+type MapDispatchToPropsType = {
+    initializeApp: () => void
+}
 
+export class App extends React.Component<MapStateToPropsType & MapDispatchToPropsType> {
 
-export class App extends React.Component<any> {
     componentDidMount() {
         this.props.initializeApp();
     }
 
     render() {
+        debugger
         if(!this.props.initialized) {
             return <Preloader/>
         }
+
         return (
             <BrowserRouter>
                 <div className='app-wrapper'>
