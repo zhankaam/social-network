@@ -23,15 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/profile-reducer.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/app-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/app-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/users-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/users-selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/profile-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +38,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -75,6 +70,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\node_modules\typescript\lib" />
@@ -92,7 +88,59 @@
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.message of new posts should be correct">
+    <configuration name="after deleting length of messages should be decrement" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Redux/profile-reducer.test.ts" />
+      <test-names>
+        <test-name value="after deleting length of messages should be decrement" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="length of posts should be added" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Redux/profile-reducer.test.ts" />
+      <test-names>
+        <test-name value="length of posts should be added" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="length of posts should be incremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Redux/profile-reducer.test.ts" />
+      <test-names>
+        <test-name value="length of posts should be incremented" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="message of new posts should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Redux/profile-reducer.test.ts" />
+      <test-names>
+        <test-name value="message of new posts should be correct" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -105,6 +153,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.message of new posts should be correct" />
+        <item itemvalue="Jest.after deleting length of messages should be decrement" />
+        <item itemvalue="Jest.length of posts should be incremented" />
+        <item itemvalue="Jest.length of posts should be added" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -184,7 +236,9 @@
       <workItem from="1613325583209" duration="602000" />
       <workItem from="1613331973862" duration="5712000" />
       <workItem from="1613382456088" duration="596000" />
-      <workItem from="1613739209064" duration="12563000" />
+      <workItem from="1613739209064" duration="15659000" />
+      <workItem from="1613814999748" duration="28000" />
+      <workItem from="1614166305089" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="social-network">
       <created>1610398271572</created>
@@ -375,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613757891220</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="social-network">
+      <created>1613770332438</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613770332438</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,6 +452,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -422,10 +484,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610452134277" />
-    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1613757889123">
+    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1613770329757">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613757889123" />
+    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613770329757" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -434,34 +496,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1610398350079" />
-    <state width="1345" height="245" key="GridCell.Tab.0.bottom" timestamp="1613740200664">
+    <state width="1345" height="245" key="GridCell.Tab.0.bottom" timestamp="1613775482861">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613740200664" />
-    <state width="1345" height="245" key="GridCell.Tab.0.center" timestamp="1613740200663">
+    <state width="1345" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613775482861" />
+    <state width="1345" height="245" key="GridCell.Tab.0.center" timestamp="1613775482861">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613740200663" />
-    <state width="1345" height="245" key="GridCell.Tab.0.left" timestamp="1613740200662">
+    <state width="1345" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613775482861" />
+    <state width="1345" height="245" key="GridCell.Tab.0.left" timestamp="1613775482861">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613740200662" />
-    <state width="1345" height="245" key="GridCell.Tab.0.right" timestamp="1613740200664">
+    <state width="1345" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613775482861" />
+    <state width="1345" height="245" key="GridCell.Tab.0.right" timestamp="1613775482861">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613740200664" />
+    <state width="1345" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613775482861" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1611568612579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611568612579" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1613757910099">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1613770333323">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1613757910099" />
-    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613759832094">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1613770333323" />
+    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613774829215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1613759832094" />
+    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1613774829215" />
     <state x="0" y="0" width="1361" height="716" key="dock-window-1" timestamp="1606741703091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -474,9 +536,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1613333925256" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1613762584354">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1613770346787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1613762584354" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1613770346787" />
   </component>
 </project>
