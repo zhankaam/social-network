@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import Navbar from './Navbar/Navbar';
 import News from "./Profile/News/News";
@@ -17,52 +17,82 @@ import {initializeApp} from "./Redux/app-reducer";
 import {RootStateRedux} from "./Redux/redux-store";
 import {Preloader} from "./assets/common/Preloader";
 
-type MapStateToPropsType = ReturnType<typeof mapStateToProps>
+type MapStateToPropsType = {
+    initialized: boolean
+}
 type MapDispatchToPropsType = {
     initializeApp: () => void
 }
 
-export class App extends React.Component<MapStateToPropsType & MapDispatchToPropsType> {
+// class App extends React.Component<MapStateToPropsType & MapDispatchToPropsType> {
+//
+//     componentDidMount() {
+//         this.props.initializeApp();
+//     }
+//
+//     render() {
+//         // if(!this.props.initialized) {
+//         //     return <Preloader/>
+//         // }
+//
+//         return (
+//                 <div className='app-wrapper'>
+//                     <HeaderContainer/>
+//                     <Navbar/>
+//                     <div className='app-wrapper-content'>
+//
+//                         <Route path='/dialogs'
+//                                render={() => <DialogsContainer/>}/>
+//                         <Route path='/profile/:userId?'
+//                                render={() => <ProfileContainer/>}/>
+//                         <Route path='/users'
+//                                render={() => <UsersContainer/>}/>
+//                         <Route path='/login' render={() => <Login/>}/>
+//                         <Route path='/dialogs' render={() => <News/>}/>
+//                         <Route path='/profile' render={() => <Music/>}/>
+//                         <Route path='/dialogs' render={() => <Settings/>}/>
+//
+//                     </div>
+//                 </div>
+//         );
+//     }
+// }
+type PropsType = MapStateToPropsType & MapDispatchToPropsType
+const App = (props: PropsType ) => {
 
-    componentDidMount() {
-        this.props.initializeApp();
+    useEffect(() => {
+        props.initializeApp()
+    },[])
+    if(!props.initialized) {
+        return <Preloader/>
     }
+    return (
+        <div className='app-wrapper'>
+            <HeaderContainer/>
+            <Navbar/>
+            <div className='app-wrapper-content'>
 
-    render() {
-        if(!this.props.initialized) {
-            return <Preloader/>
-        }
-
-        return (
-            <BrowserRouter>
-                <div className='app-wrapper'>
-                    <HeaderContainer/>
-                    <Navbar/>
-                    <div className='app-wrapper-content'>
-
-                        <Route path='/dialogs'
-                               render={() => <DialogsContainer/>}/>
-                        <Route path='/profile/:userId?'
-                               render={() => <ProfileContainer/>}/>
-                        <Route path='/users'
-                               render={() => <UsersContainer/>}/>
-                        <Route path='/login' render={() => <Login/>}/>
-                        <Route path='/dialogs' render={() => <News/>}/>
-                        <Route path='/profile' render={() => <Music/>}/>
-                        <Route path='/dialogs' render={() => <Settings/>}/>
-
-                    </div>
-                </div>
-            </BrowserRouter>
-        );
-    }
+                <Route path='/dialogs'
+                       render={() => <DialogsContainer/>}/>
+                <Route path='/profile/:userId?'
+                       render={() => <ProfileContainer/>}/>
+                <Route path='/users'
+                       render={() => <UsersContainer/>}/>
+                <Route path='/login' render={() => <Login/>}/>
+                <Route path='/dialogs' render={() => <News/>}/>
+                <Route path='/profile' render={() => <Music/>}/>
+                <Route path='/dialogs' render={() => <Settings/>}/>
+            </div>
+        </div>
+    )
 }
 
-const mapStateToProps = (state: RootStateRedux) => ({
+const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
     initialized: state.app.initialized
 })
-
-
-export default compose(
-    withRouter,
-    connect(mapStateToProps, {initializeApp})(App))
+// export default App
+//
+// export default compose(
+//     withRouter,
+//     connect(mapStateToProps, {initializeApp})(App))
+ export default withRouter(connect(mapStateToProps, {initializeApp})(App))

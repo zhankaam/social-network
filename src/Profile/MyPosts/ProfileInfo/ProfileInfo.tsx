@@ -6,7 +6,7 @@ import {ProfileStatusWithHooks} from "./ProfileStatusWithHooks";
 
  type ProfileInfoPropsType = {
       profile: any
-      status: string
+      status: string | null
       updateStatus: (status: string) => void
 }
 

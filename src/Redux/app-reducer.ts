@@ -29,11 +29,18 @@ const appReducer = (state = initialState, action:ActionsType ): InitialStateType
 }
 
 export const initializeApp = () => (dispatch: any) => {
+    debugger
     let promise = dispatch(getAuthUserData())
     Promise.all([promise])
         .then(() => {
+            debugger
         dispatch(initializedSuccess())
     })
+    // dispatch(getAuthUserData()).then(() => {
+    //     debugger
+    //     dispatch(initializedSuccess())
+    // })
+
 }
 
 export default appReducer;

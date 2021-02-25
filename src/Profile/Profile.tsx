@@ -5,8 +5,8 @@ import {ProfileType} from "../types";
 
 export type ProfilePropsType = {
       profile: ProfileType | null
-      updateStatus: () => void
-      status: string
+        updateStatus: (status:string) => void
+      status: string | null
 }
 
 const Profile = (props: ProfilePropsType) => {
