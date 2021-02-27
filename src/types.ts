@@ -5,10 +5,13 @@ export type UserType = {
     status: string
     UrlName: null
     photos: {
-        small: string | undefined
-        large: string | undefined
+        small: string | null
+        large: string | null
     }
 }
 export type ProfileType = {
-    userId: string
+    photos: {
+        small: string | undefined
+        large: string | undefined
+    }
 }

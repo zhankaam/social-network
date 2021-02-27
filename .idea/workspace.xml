@@ -23,10 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Users/User.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/common/Paginator/Paginator.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/common/Paginator/Paginator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/common/FormsControls/FormsControls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/common/FormsControls/FormsControls.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +40,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
         <option value="CSS File" />
         <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -59,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/common/Paginator" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -81,11 +84,11 @@
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Login\LoginForm.tsx" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\assets\common\Paginator" />
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Users" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Redux" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile" />
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Users" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile\Dialogs" />
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.message of new posts should be correct">
@@ -240,7 +243,7 @@
       <workItem from="1613814999748" duration="28000" />
       <workItem from="1614166305089" duration="378000" />
       <workItem from="1614253206111" duration="7208000" />
-      <workItem from="1614422531269" duration="9316000" />
+      <workItem from="1614422531269" duration="12857000" />
     </task>
     <task id="LOCAL-00001" summary="social-network">
       <created>1610398271572</created>
@@ -466,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614454339298</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="social-network">
+      <created>1614461318270</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1614461318270</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,14 +508,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1612451999008" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610452134277">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614462160061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610452134277" />
-    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1614454336864">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1614462160061" />
+    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1614461316229">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614454336864" />
+    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614461316229" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -514,30 +524,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1610398350079" />
-    <state width="1345" height="215" key="GridCell.Tab.0.bottom" timestamp="1614422852062">
+    <state width="1345" height="97" key="GridCell.Tab.0.bottom" timestamp="1614462665819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="215" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614422852062" />
-    <state width="1345" height="215" key="GridCell.Tab.0.center" timestamp="1614422852061">
+    <state width="1345" height="97" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614462665819" />
+    <state width="1345" height="97" key="GridCell.Tab.0.center" timestamp="1614462665819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="215" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614422852061" />
-    <state width="1345" height="215" key="GridCell.Tab.0.left" timestamp="1614422852060">
+    <state width="1345" height="97" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614462665819" />
+    <state width="1345" height="97" key="GridCell.Tab.0.left" timestamp="1614462665819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="215" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614422852060" />
-    <state width="1345" height="215" key="GridCell.Tab.0.right" timestamp="1614422852061">
+    <state width="1345" height="97" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614462665819" />
+    <state width="1345" height="97" key="GridCell.Tab.0.right" timestamp="1614462665819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="215" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614422852061" />
+    <state width="1345" height="97" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614462665819" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1614425215316">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614425215316" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1614454343615">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1614461320020">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614454343615" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614461320020" />
     <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613774829215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -554,9 +564,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1613333925256" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614459928094">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614464762305">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614459928094" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614464762305" />
   </component>
 </project>
