@@ -1,5 +1,6 @@
 import {UserType} from "../types";
 import {usersAPI} from "../api/api";
+import {updateObjectInArray} from "../utilities/object-helpers";
 
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
@@ -59,22 +60,18 @@ const usersReducer = (state = initialState, action: UsersACType): InitialState =
         case FOLLOW:
             return {
                 ...state,
-                users: state.users.map(u => {
-                    if (u.id === action.usersId) {
-                        return {...u, followed: true}
-                    }
-                    return u
-                })
+                users: updateObjectInArray(state.users,action.usersId,"id",{followed: true})
+                // users: state.users.map(u => {
+                //     if (u.id === action.usersId) {
+                //         return {...u, followed: true}
+                //     }
+                //     return u
+                // })
             }
         case UNFOLLOW:
             return {
                 ...state,
-                users: state.users.map(u => {
-                    if (u.id === action.usersId) {
-                        return {...u, followed: false}
-                    }
-                    return u
-                })
+                users: updateObjectInArray(state.users,action.usersId,"id",{followed: false})
             }
         case SET_USERS: {
             return {...state, users: action.users}
@@ -129,7 +126,6 @@ export const followUnfollowFlow = async (dispatch: any,userId: number,apiMethod:
         dispatch(actionCreator(userId))}
     dispatch(toggleFollowingProgress(false, userId))
 }
-
 
 export const follow = (userId: number) => {  //ThunkCreator
         return async (dispatch: any) => {
