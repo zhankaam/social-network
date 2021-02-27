@@ -4,14 +4,13 @@ import Navbar from './Navbar/Navbar';
 import News from "./Profile/News/News";
 import Music from "./Profile/Music/Music";
 import Settings from './Profile/Settings/Settings';
-import {BrowserRouter, Route} from "react-router-dom";
+import { Route} from "react-router-dom";
 import DialogsContainer from "./Profile/Dialogs/DialogsContainer";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
 import HeaderContainer from "./Header/HeaderContainer";
 import Login from "./Login/Login";
 import {connect} from "react-redux";
-import {compose} from "redux";
 import {withRouter} from "react-router-dom";
 import {initializeApp} from "./Redux/app-reducer";
 import {RootStateRedux} from "./Redux/redux-store";
@@ -94,5 +93,5 @@ const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
 //
 // export default compose(
 //     withRouter,
-//     connect(mapStateToProps, {initializeApp})(App))
+//     connect(mapStateToProps, {initializeApp}))(App)
  export default withRouter(connect(mapStateToProps, {initializeApp})(App))
