@@ -92,7 +92,7 @@ const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
 })
 // export default App
 //
-let AppContainer = compose(
+const AppContainer = compose<any>(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App)
 //  export default withRouter(connect(mapStateToProps, {initializeApp})(App))
