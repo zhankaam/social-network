@@ -73,13 +73,13 @@ const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
             <div className='app-wrapper-content'>
                 <Route path='/dialogs'
                        render={() => {
-                           return <React.Suspense fallback={<div>Loading...</div>}>
+                           return <React.Suspense fallback={<Preloader/>}>
                                <DialogsContainer/>
                            </React.Suspense>
                        }}/>
                 <Route path='/profile/:userId?'
                        render={() => {
-                           return <React.Suspense fallback={<div>Loading...</div>}>
+                           return <React.Suspense fallback={<Preloader/>}>
                                <ProfileContainer/>
                            </React.Suspense>
                        }}/>

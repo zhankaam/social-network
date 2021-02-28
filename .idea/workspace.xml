@@ -22,13 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,7 +244,7 @@
       <workItem from="1614526088417" duration="1954000" />
       <workItem from="1614528076667" duration="410000" />
       <workItem from="1614528529180" duration="4017000" />
-      <workItem from="1614532596477" duration="2616000" />
+      <workItem from="1614532596477" duration="2928000" />
     </task>
     <task id="LOCAL-00001" summary="social-network">
       <created>1610398271572</created>
@@ -525,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614531491075</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="social-network">
+      <created>1614537551312</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1614537551312</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,10 +562,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1614462160061" />
-    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1614531489020">
+    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1614537549093">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614531489020" />
+    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614537549093" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -641,10 +642,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614529647531" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1614531494291">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1614537556560">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614531494291" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614537556560" />
     <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614528302896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
