@@ -14,7 +14,7 @@ describe("ProfileStatus component", () => {
     test("after creation <span>  should be displayed", () => {
         const component = create(<ProfileStatus status="it-kamasutra.com" updateStatus={updateStatus}/>)
         const root = component.root;
-        let span = root.findByType("span")
+        let span = root.findByType("span") as any
         expect(span.length).not.toBeNull()
     })
 
@@ -45,7 +45,7 @@ describe("ProfileStatus component", () => {
     test("callback should be called", () => {
         const mockCallback = jest.fn()
         const component = create(<ProfileStatus status="it-kamasutra.com" updateStatus={mockCallback}/>)
-        const instance = component.getInstance()
+        const instance = component.getInstance() as any
         instance.deactivateEditMode()
         expect(mockCallback.mock.calls.length).toBe(1)
     })

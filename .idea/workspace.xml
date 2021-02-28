@@ -23,13 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +86,7 @@
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.ProfileStatus component.after creation &lt;input&gt;  shouldn't be displayed">
+  <component name="RunManager" selected="Jest.ProfileStatus component.callback should be called">
     <configuration name="ProfileStatus component.after creation &lt;input&gt;  shouldn't be displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -103,6 +98,20 @@
       <test-names>
         <test-name value="ProfileStatus component" />
         <test-name value="after creation &lt;input&gt;  shouldn't be displayed" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProfileStatus component.after creation &lt;span&gt;  should be displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-names>
+        <test-name value="ProfileStatus component" />
+        <test-name value="after creation &lt;span&gt;  should be displayed" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -120,6 +129,20 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="ProfileStatus component.callback should be called" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-names>
+        <test-name value="ProfileStatus component" />
+        <test-name value="callback should be called" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="ProfileStatus component.input should be displayed in editMode instead of span" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -134,41 +157,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.status from props should be in the state (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" />
-      <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="status from props should be in the state" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProfileStatus component.status from props should be in the state" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.ts" />
-      <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="status from props should be in the state" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.ProfileStatus component.callback should be called" />
+        <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt;  should be displayed" />
         <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt;  shouldn't be displayed" />
         <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt;  should contains correct status" />
         <item itemvalue="Jest.ProfileStatus component.input should be displayed in editMode instead of span" />
-        <item itemvalue="Jest.ProfileStatus component.status from props should be in the state (1)" />
-        <item itemvalue="Jest.ProfileStatus component.status from props should be in the state" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +248,8 @@
       <workItem from="1614253206111" duration="7208000" />
       <workItem from="1614422531269" duration="13775000" />
       <workItem from="1614509108387" duration="13559000" />
-      <workItem from="1614526088417" duration="1627000" />
+      <workItem from="1614526088417" duration="1954000" />
+      <workItem from="1614528076667" duration="410000" />
     </task>
     <task id="LOCAL-00001" summary="social-network">
       <created>1610398271572</created>
@@ -507,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614514957448</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="social-network">
+      <created>1614527738727</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1614527738727</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,10 +546,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1614462160061" />
-    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1614514954367">
+    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1614527735276">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614514954367" />
+    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614527735276" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -555,70 +558,70 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1610398350079" />
-    <state width="1345" height="204" key="GridCell.Tab.0.bottom" timestamp="1614527555260">
+    <state width="1345" height="308" key="GridCell.Tab.0.bottom" timestamp="1614528486618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="204" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614527555260" />
-    <state width="1345" height="204" key="GridCell.Tab.0.center" timestamp="1614527555260">
+    <state width="1345" height="308" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614528486618" />
+    <state width="1345" height="308" key="GridCell.Tab.0.center" timestamp="1614528486618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="204" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614527555260" />
-    <state width="1345" height="204" key="GridCell.Tab.0.left" timestamp="1614527555260">
+    <state width="1345" height="308" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614528486618" />
+    <state width="1345" height="308" key="GridCell.Tab.0.left" timestamp="1614528486618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="204" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614527555260" />
-    <state width="1345" height="204" key="GridCell.Tab.0.right" timestamp="1614527555260">
+    <state width="1345" height="308" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614528486618" />
+    <state width="1345" height="308" key="GridCell.Tab.0.right" timestamp="1614528486618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="204" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614527555260" />
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614528486618" />
+    <state width="1345" height="308" key="GridCell.Tab.1.bottom" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
-    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1614527157949">
+    <state width="1345" height="308" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.1.center" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1614527157949" />
-    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1614527157949">
+    <state width="1345" height="308" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.1.left" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1614527157949" />
-    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1614527157949">
+    <state width="1345" height="308" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.1.right" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1614527157949" />
-    <state width="1345" height="223" key="GridCell.Tab.2.bottom" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.2.bottom" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
-    <state width="1345" height="223" key="GridCell.Tab.2.center" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.2.center" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
-    <state width="1345" height="223" key="GridCell.Tab.2.left" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.2.left" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
-    <state width="1345" height="223" key="GridCell.Tab.2.right" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.2.right" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
-    <state width="1345" height="223" key="GridCell.Tab.3.bottom" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.3.bottom" timestamp="1614528486620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
-    <state width="1345" height="223" key="GridCell.Tab.3.center" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614528486620" />
+    <state width="1345" height="308" key="GridCell.Tab.3.center" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
-    <state width="1345" height="223" key="GridCell.Tab.3.left" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.3.left" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
-    <state width="1345" height="223" key="GridCell.Tab.3.right" timestamp="1614527157950">
+    <state width="1345" height="308" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1614528486619" />
+    <state width="1345" height="308" key="GridCell.Tab.3.right" timestamp="1614528486620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="223" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1614527157950" />
+    <state width="1345" height="308" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1614528486620" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1614425215316">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -627,10 +630,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614514958783" />
-    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614523377016">
+    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614528302896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1614523377016" />
+    <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1614528302896" />
     <state x="0" y="0" width="1361" height="716" key="dock-window-1" timestamp="1606741703091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
