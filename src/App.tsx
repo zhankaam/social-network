@@ -14,8 +14,12 @@ import {initializeApp} from "./Redux/app-reducer";
 import store, {RootStateRedux} from "./Redux/redux-store";
 import {Preloader} from "./assets/common/Preloader";
 import {compose} from "redux";
+import {withSuspense} from "./hoc/withSuspense";
 const DialogsContainer = React.lazy(() => import('./Profile/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./Profile/ProfileContainer'));
+const SuspendedDialogs = withSuspense(DialogsContainer)
+const SuspendedProfile = withSuspense(ProfileContainer)
+
 
 type MapStateToPropsType = {
     initialized: boolean
@@ -72,17 +76,9 @@ const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
             <Navbar/>
             <div className='app-wrapper-content'>
                 <Route path='/dialogs'
-                       render={() => {
-                           return <React.Suspense fallback={<Preloader/>}>
-                               <DialogsContainer/>
-                           </React.Suspense>
-                       }}/>
+                       render={() => <SuspendedDialogs/>}/>
                 <Route path='/profile/:userId?'
-                       render={() => {
-                           return <React.Suspense fallback={<Preloader/>}>
-                               <ProfileContainer/>
-                           </React.Suspense>
-                       }}/>
+                       render={() => <SuspendedProfile/>}/>
                 <Route path='/users'
                        render={() => <UsersContainer/>}/>
                 <Route path='/login' render={() => <Login/>}/>
