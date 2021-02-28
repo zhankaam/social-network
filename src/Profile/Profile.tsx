@@ -4,9 +4,9 @@ import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import {ProfileType} from "../types";
 
 export type ProfilePropsType = {
-      profile: ProfileType | null
+        profile: ProfileType | null
         updateStatus: (status:string) => void
-      status: string | null
+        status: string | null
 }
 
 const Profile = (props: ProfilePropsType) => {

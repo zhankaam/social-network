@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom"
 import {UserType} from "../types";
 
 type UserPropsType = {
-    user: Array<UserType>
+    user: UserType
     followingInProgress: number[]
     follow: (userId: number) => void
     unfollow: (userId: number) => void
@@ -32,8 +32,8 @@ export let User: React.FC<UserPropsType> = ({user,followingInProgress,unfollow,f
                     <div>{user.status}</div>
                 </span>
                 <span>
-                    <div>{"user.location.country"}</div>
-                    <div>{"user.location.city"}</div>
+                    <div>{'user.location.country'}</div>
+                    <div>{'user.location.city'}</div>
                 </span>
          </span>
         </div>

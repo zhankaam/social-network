@@ -7,6 +7,10 @@ export type UserType = {
     photos: {
         small: string | null
         large: string | null
+    },
+    location: {
+        country: string
+        city: string
     }
 }
 export type ProfileType = {

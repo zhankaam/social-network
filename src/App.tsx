@@ -4,17 +4,18 @@ import Navbar from './Navbar/Navbar';
 import News from "./Profile/News/News";
 import Music from "./Profile/Music/Music";
 import Settings from './Profile/Settings/Settings';
-import { Route} from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 import DialogsContainer from "./Profile/Dialogs/DialogsContainer";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
 import HeaderContainer from "./Header/HeaderContainer";
 import Login from "./Login/Login";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {withRouter} from "react-router-dom";
 import {initializeApp} from "./Redux/app-reducer";
-import {RootStateRedux} from "./Redux/redux-store";
+import store, {RootStateRedux} from "./Redux/redux-store";
 import {Preloader} from "./assets/common/Preloader";
+import {compose} from "redux";
 
 type MapStateToPropsType = {
     initialized: boolean
@@ -57,12 +58,12 @@ type MapDispatchToPropsType = {
 //     }
 // }
 type PropsType = MapStateToPropsType & MapDispatchToPropsType
-const App = (props: PropsType ) => {
+const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
 
     useEffect(() => {
-        props.initializeApp()
+       initializeApp()
     },[])
-    if(!props.initialized) {
+    if(!initialized) {
         return <Preloader/>
     }
     return (
@@ -91,7 +92,17 @@ const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
 })
 // export default App
 //
-// export default compose(
-//     withRouter,
-//     connect(mapStateToProps, {initializeApp}))(App)
- export default withRouter(connect(mapStateToProps, {initializeApp})(App))
+let AppContainer = compose(
+    withRouter,
+    connect(mapStateToProps, {initializeApp}))(App)
+//  export default withRouter(connect(mapStateToProps, {initializeApp})(App))
+
+const SamuraiJSApp = () => {
+    return <BrowserRouter>
+        <Provider store={store}>
+            <AppContainer />
+        </Provider>
+    </BrowserRouter>
+}
+
+export default SamuraiJSApp

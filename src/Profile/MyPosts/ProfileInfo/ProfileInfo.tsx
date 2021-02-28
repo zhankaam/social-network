@@ -6,7 +6,7 @@ import {ProfileType} from "../../../types";
 
 
  type ProfileInfoPropsType = {
-      profile: ProfileType
+      profile: ProfileType |  null
       status: string | null
       updateStatus: (status: string) => void
 }
