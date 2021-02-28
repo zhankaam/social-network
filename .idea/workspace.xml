@@ -24,7 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/common/Paginator/Paginator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/common/Paginator/Paginator.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="ts.external.directory.path" value="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -143,27 +144,23 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.input should be displayed in editMode instead of span" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" />
-      <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="input should be displayed in editMode instead of span" />
-      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="Jest.ProfileStatus component.callback should be called" />
         <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt;  should be displayed" />
         <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt;  shouldn't be displayed" />
         <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt;  should contains correct status" />
-        <item itemvalue="Jest.ProfileStatus component.input should be displayed in editMode instead of span" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +247,7 @@
       <workItem from="1614509108387" duration="13559000" />
       <workItem from="1614526088417" duration="1954000" />
       <workItem from="1614528076667" duration="410000" />
+      <workItem from="1614528529180" duration="2734000" />
     </task>
     <task id="LOCAL-00001" summary="social-network">
       <created>1610398271572</created>
@@ -510,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614527738727</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="social-network">
+      <created>1614528819705</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1614528819705</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,10 +551,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1614462160061" />
-    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1614527735276">
+    <state x="237" y="0" key="CommitChangelistDialog2" timestamp="1614528818345">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614527735276" />
+    <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614528818345" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -558,22 +563,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1610398350079" />
-    <state width="1345" height="308" key="GridCell.Tab.0.bottom" timestamp="1614528486618">
+    <state width="1345" height="65" key="GridCell.Tab.0.bottom" timestamp="1614529505067">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="308" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614528486618" />
-    <state width="1345" height="308" key="GridCell.Tab.0.center" timestamp="1614528486618">
+    <state width="1345" height="65" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614529505067" />
+    <state width="1345" height="65" key="GridCell.Tab.0.center" timestamp="1614529505066">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="308" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614528486618" />
-    <state width="1345" height="308" key="GridCell.Tab.0.left" timestamp="1614528486618">
+    <state width="1345" height="65" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614529505066" />
+    <state width="1345" height="65" key="GridCell.Tab.0.left" timestamp="1614529505066">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="308" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614528486618" />
-    <state width="1345" height="308" key="GridCell.Tab.0.right" timestamp="1614528486618">
+    <state width="1345" height="65" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614529505066" />
+    <state width="1345" height="65" key="GridCell.Tab.0.right" timestamp="1614529505067">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="308" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614528486618" />
+    <state width="1345" height="65" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614529505067" />
     <state width="1345" height="308" key="GridCell.Tab.1.bottom" timestamp="1614528486619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -622,14 +627,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="308" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1614528486620" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1614425215316">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1614529647531">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614425215316" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1614514958783">
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614529647531" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1614528823493">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614514958783" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614528823493" />
     <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614528302896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -646,9 +651,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1613333925256" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614516134515">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614531267418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614516134515" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614531267418" />
   </component>
 </project>

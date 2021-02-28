@@ -45,7 +45,7 @@ export type UsersACType = FollowACType | UnFollowACType |
 
 let initialState = {
     users: [ ] as UserType[],
-    pageSize: 5,
+    pageSize: 10,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,
