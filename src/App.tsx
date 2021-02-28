@@ -95,7 +95,7 @@ const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
 })
 // export default App
 //
-const AppContainer = compose<any>(
+const AppContainer = compose<React.ComponentType>(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App)
 //  export default withRouter(connect(mapStateToProps, {initializeApp})(App))
