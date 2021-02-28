@@ -5,9 +5,7 @@ import News from "./Profile/News/News";
 import Music from "./Profile/Music/Music";
 import Settings from './Profile/Settings/Settings';
 import {BrowserRouter, Route} from "react-router-dom";
-import DialogsContainer from "./Profile/Dialogs/DialogsContainer";
 import UsersContainer from "./Users/UsersContainer";
-import ProfileContainer from "./Profile/ProfileContainer";
 import HeaderContainer from "./Header/HeaderContainer";
 import Login from "./Login/Login";
 import {connect, Provider} from "react-redux";
@@ -16,6 +14,8 @@ import {initializeApp} from "./Redux/app-reducer";
 import store, {RootStateRedux} from "./Redux/redux-store";
 import {Preloader} from "./assets/common/Preloader";
 import {compose} from "redux";
+const DialogsContainer = React.lazy(() => import('./Profile/Dialogs/DialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./Profile/ProfileContainer'));
 
 type MapStateToPropsType = {
     initialized: boolean
@@ -71,11 +71,18 @@ const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
             <HeaderContainer/>
             <Navbar/>
             <div className='app-wrapper-content'>
-
                 <Route path='/dialogs'
-                       render={() => <DialogsContainer/>}/>
+                       render={() => {
+                           return <React.Suspense fallback={<div>Loading...</div>}>
+                               <DialogsContainer/>
+                           </React.Suspense>
+                       }}/>
                 <Route path='/profile/:userId?'
-                       render={() => <ProfileContainer/>}/>
+                       render={() => {
+                           return <React.Suspense fallback={<div>Loading...</div>}>
+                               <ProfileContainer/>
+                           </React.Suspense>
+                       }}/>
                 <Route path='/users'
                        render={() => <UsersContainer/>}/>
                 <Route path='/login' render={() => <Login/>}/>
