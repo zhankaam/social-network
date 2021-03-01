@@ -32,9 +32,7 @@ export type ProfileType = {
     aboutMe: string
 }
 export type ContactsType = {
-    contactTitle: string | null
-    contactValue: string | null
-    // [key: string]: string | null
+     [key: string]: string | null
     // github: string
     // Linkedin: string
     // vk: string

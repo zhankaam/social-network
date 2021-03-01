@@ -31,7 +31,7 @@ let initialState: ProfileStateType = {
         {id: 4, message: "Dada", likesCount: 11}
     ],
     newPostText: "",
-    profile: ProfileType |  null,
+    profile: ProfileType,
     status: ""
 }
 export type ProfileActionsPropsType = ReturnType<typeof addPost> |
