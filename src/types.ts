@@ -1,3 +1,4 @@
+
 export type UserType = {
     id: number
     fullName: string
@@ -23,18 +24,24 @@ export type ProfileType = {
     lookingForAJob: boolean
     lookingForAJobDescription: string
     fullName: string
-    contacts:ContactsType
-    photos:PhotosType
+    contacts:string
+    photos: {
+        small: string | undefined
+        large: string | undefined
+    }
     aboutMe: string
 }
 export type ContactsType = {
-    github: string
-    Linkedin: string
-    vk: string
-    instagram: string
-    facebook: string
-    twitter: string
-    website: string
-    youtube: string
-    mainLink: string
+    contactTitle: string | null
+    contactValue: string | null
+    // [key: string]: string | null
+    // github: string
+    // Linkedin: string
+    // vk: string
+    // instagram: string
+    // facebook: string
+    // twitter: string
+    // website: string
+    // youtube: string
+    // mainLink: string
 }

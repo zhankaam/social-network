@@ -2,7 +2,7 @@ import React, {ChangeEvent} from 'react';
 import s from './ProfileInfo.module.css';
 import {Preloader} from "../../../assets/common/Preloader";
 import {ProfileStatusWithHooks} from "./ProfileStatusWithHooks";
-import {PhotosType, ProfileType} from "../../../types";
+import { ProfileType} from "../../../types";
 import userPhoto from "../../../assets/images/390poHMbqew.jpg";
 
  type ProfileInfoPropsType = {
@@ -47,9 +47,9 @@ const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile,status,updateStatu
                 <div>
                     <b>Contacts</b>: {
                     Object
-                        .keys{profile.contacts}
+                        .keys(profile.contacts)
                         .map((key) => {
-                        return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key as keyof ContactPropsType] }/>
+                        return <Contact key={key} contactTitle={key} contactValue={profile.contacts}/>
                 }) }
                 </div>
             </div>
