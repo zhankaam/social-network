@@ -19,6 +19,7 @@ type MapDispatchToPropsType = {
     getUserProfile: (userId: number) => void
     getStatus: (userId: number) => void
     savePhoto: (file: File) => void
+    saveProfile: (formData: any) => void
 }
 
 type PropsType = MapStateToPropsType & MapDispatchToPropsType
@@ -45,6 +46,7 @@ class ProfileContainer extends React.Component<PropsType & RouteComponentProps<{
     render() {
            return (
                <Profile  {...this.props}
+                         saveProfile={this.props.saveProfile}
                         isOwner={!this.props.match.params.userId}
                         profile={this.props.profile}
                         updateStatus={this.props.updateStatus}

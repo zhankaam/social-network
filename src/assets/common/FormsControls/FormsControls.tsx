@@ -1,7 +1,6 @@
 import  React from "react"
 import {Field, WrappedFieldProps} from "redux-form";
 import s from './FormsControls.module.css'
-import {required} from "../../../utilities/validators/Validators";
 
 const FormControl: React.FC<WrappedFieldProps> = ({meta: {touched,error}, children}) => {
     const hasError = touched && error
@@ -34,3 +33,5 @@ export const createField = (placeholder: string | null,name:any,validators:any,c
         /> {text}
     </div>
 }
+
+export type GetStringKeys<T> = Extract<keyof T, string>

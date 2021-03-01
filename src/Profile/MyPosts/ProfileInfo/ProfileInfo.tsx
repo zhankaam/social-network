@@ -4,18 +4,19 @@ import {Preloader} from "../../../assets/common/Preloader";
 import {ProfileStatusWithHooks} from "./ProfileStatusWithHooks";
 import {ProfileType} from "../../../types";
 import userPhoto from "../../../assets/images/390poHMbqew.jpg";
-import {ProfileDataForm} from "./ProfileDataForm";
+import ProfileDataForm from "./ProfileDataForm";
 import {ProfileData} from "./ProfileData";
 
 type ProfileInfoPropsType = {
-      profile: ProfileType |  null
-      status: string | null
-      updateStatus: (status: string) => void
-      isOwner: boolean
-      savePhoto: (file: File) => void
+       profile: ProfileType |  null
+       status: string | null
+       updateStatus: (status: string) => void
+       isOwner: boolean
+       savePhoto: (file: File) => void
+       saveProfile: (formData: any) => void
 }
 
-const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile,status,updateStatus,isOwner,savePhoto}) => {
+const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile,status,updateStatus,isOwner,savePhoto,saveProfile}) => {
 
 const [editMode,setEditMode] = useState<boolean>(false)
 
@@ -29,12 +30,16 @@ const [editMode,setEditMode] = useState<boolean>(false)
         }
     }
 
+    const onSubmit = (formData: any) => {
+        saveProfile(formData)
+    }
+
     return (
         <div className={s.descriptionBlock}>
             <img src={profile.photos.large || userPhoto} alt={"try again later"} className={s.mainPhoto}/>
             {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
             {editMode
-                ? <ProfileDataForm profile={profile}/>
+                ? <ProfileDataForm profile={profile} onSubmit={onSubmit}/>
                 : <ProfileData goToEditMode={() => {setEditMode(true)}} profile={profile} isOwner={isOwner}/>}
 
             <ProfileStatusWithHooks status={status}
