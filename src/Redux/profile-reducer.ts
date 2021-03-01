@@ -1,5 +1,6 @@
 import {profileAPI} from "../api/api";
 import {PhotosType, ProfileType} from "../types";
+import {stopSubmit} from "redux-form";
 
 const ADD_POST = 'ADD-POST';
 //const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
@@ -132,6 +133,16 @@ export const savePhoto = (file: File) => async (dispatch: any) => {
     if(response.data.resultCode === 0) {
         dispatch(savePhotoSuccess(response.data.data.photos))
     }
+}
+export const saveProfile = (profile: any) => async (dispatch: any,getState:any) => {
+     const userId = getState().auth.userId
+     const response = await profileAPI.savePhoto(profile);
+     if(response.data.resultCode === 0) {
+        dispatch(getUserProfile(userId))
+     } else {
+         dispatch(stopSubmit("edit-profile",{error: response.data.messages[0]}))
+               return Promise.reject(response.data.messages[0])
+     }
 }
 
  /*export const updateNewPostText = (text: string) => ({

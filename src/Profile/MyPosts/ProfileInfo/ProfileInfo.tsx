@@ -30,8 +30,10 @@ const [editMode,setEditMode] = useState<boolean>(false)
         }
     }
 
-    const onSubmit = (formData: any) => {
-        saveProfile(formData)
+    const onSubmit =  (formData: any) => {
+             saveProfile(formData).then(() => {
+                 setEditMode(false)
+             })
     }
 
     return (
@@ -39,7 +41,7 @@ const [editMode,setEditMode] = useState<boolean>(false)
             <img src={profile.photos.large || userPhoto} alt={"try again later"} className={s.mainPhoto}/>
             {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
             {editMode
-                ? <ProfileDataForm profile={profile} onSubmit={onSubmit}/>
+                ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
                 : <ProfileData goToEditMode={() => {setEditMode(true)}} profile={profile} isOwner={isOwner}/>}
 
             <ProfileStatusWithHooks status={status}

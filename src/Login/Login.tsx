@@ -13,7 +13,7 @@ const Login = (props: any) => {
         props.login(formData.email, formData.password,formData.rememberMe)
     }
 
-    debugger
+
     if(props.isAuth) {
         return <Redirect to={"/profile"}/>
     }
