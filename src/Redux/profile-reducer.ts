@@ -20,7 +20,7 @@ export type PostsPropsType = {
 export type ProfileStateType = {
     posts: Array<PostsPropsType>
     newPostText: string,
-    profile: ProfileType |  null,
+    profile: ProfileType,
     status: string | null
 }
 let initialState: ProfileStateType = {
@@ -31,7 +31,28 @@ let initialState: ProfileStateType = {
         {id: 4, message: "Dada", likesCount: 11}
     ],
     newPostText: "",
-    profile: ProfileType,
+    profile: {
+        userId: 2,
+        lookingForAJob: true,
+        lookingForAJobDescription: '',
+        fullName: '',
+        contacts: {
+             github: "",
+             Linkedin: "",
+             vk: "",
+             instagram: "",
+             facebook: "",
+            twitter: "",
+            website: "",
+            youtube: "",
+            mainLink: ""
+        },
+        photos: {
+            small: '',
+            large:''
+        },
+        aboutMe: '',
+    },
     status: ""
 }
 export type ProfileActionsPropsType = ReturnType<typeof addPost> |
@@ -60,7 +81,7 @@ const profileReducer = (state: ProfileStateType = initialState, action: ProfileA
         case SAVE_PHOTO_SUCCESS: {
             return {
                 ...state,
-                profile: {...state.profile, photos: action.photos}
+                profile: {...state.profile, photos: {small:action.photos.photos.small, large: action.photos.photos.large}}
             }
         }
         case SET_STATUS: {

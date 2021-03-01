@@ -32,8 +32,8 @@ export let User: React.FC<UserPropsType> = ({user,followingInProgress,unfollow,f
                     <div>{user.status}</div>
                 </span>
                 <span>
-                    <div>{user.location.country}</div>
-                    <div>{user.location.city}</div>
+                    <div>{"user.location.country"}</div>
+                    <div>{"user.location.city"}</div>
                 </span>
          </span>
         </div>

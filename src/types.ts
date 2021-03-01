@@ -15,8 +15,8 @@ export type UserType = {
 }
 export type PhotosType = {
     photos: {
-        small: string | undefined
-        large: string | undefined
+        small: string
+        large: string
     }
 }
 export type ProfileType = {
@@ -24,10 +24,10 @@ export type ProfileType = {
     lookingForAJob: boolean
     lookingForAJobDescription: string
     fullName: string
-    contacts:string
+    contacts: ContactsType
     photos: {
-        small: string | undefined
-        large: string | undefined
+        small: string
+        large: string
     }
     aboutMe: string
 }

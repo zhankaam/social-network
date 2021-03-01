@@ -1,11 +1,13 @@
-import React, {ChangeEvent} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import s from './ProfileInfo.module.css';
 import {Preloader} from "../../../assets/common/Preloader";
 import {ProfileStatusWithHooks} from "./ProfileStatusWithHooks";
-import { ProfileType} from "../../../types";
+import {ProfileType} from "../../../types";
 import userPhoto from "../../../assets/images/390poHMbqew.jpg";
+import {ProfileDataForm} from "./ProfileDataForm";
+import {ProfileData} from "./ProfileData";
 
- type ProfileInfoPropsType = {
+type ProfileInfoPropsType = {
       profile: ProfileType |  null
       status: string | null
       updateStatus: (status: string) => void
@@ -14,6 +16,9 @@ import userPhoto from "../../../assets/images/390poHMbqew.jpg";
 }
 
 const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile,status,updateStatus,isOwner,savePhoto}) => {
+
+const [editMode,setEditMode] = useState<boolean>(false)
+
     if(!profile){
         return <Preloader/>
     }
@@ -28,31 +33,9 @@ const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile,status,updateStatu
         <div className={s.descriptionBlock}>
             <img src={profile.photos.large || userPhoto} alt={"try again later"} className={s.mainPhoto}/>
             {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
-
-            <div>
-                <div>
-                    <b>FullName</b>: {profile.fullName}
-                </div>
-                <div>
-                    <b>Looking for a job</b>: {profile.lookingForAJob ? "yes" : "no"}
-                </div>
-                {profile.lookingForAJob &&
-                    <div>
-                        <b>My professional skills</b>: {profile.lookingForAJobDescription}
-                    </div>
-                }
-                <div>
-                    <b>About me</b>: {profile.aboutMe}
-                </div>
-                <div>
-                    <b>Contacts</b>: {
-                    Object
-                        .keys(profile.contacts)
-                        .map((key) => {
-                        return <Contact key={key} contactTitle={key} contactValue={profile.contacts}/>
-                }) }
-                </div>
-            </div>
+            {editMode
+                ? <ProfileDataForm profile={profile}/>
+                : <ProfileData goToEditMode={() => {setEditMode(true)}} profile={profile} isOwner={isOwner}/>}
 
             <ProfileStatusWithHooks status={status}
             updateStatus={updateStatus}/>
@@ -60,9 +43,10 @@ const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile,status,updateStatu
     );
 }
 
+
 export type ContactPropsType = {
-    contactTitle: string
-    contactValue: string
+    contactTitle: string | null
+    contactValue: string | null
 }
 
 export const Contact: React.FC<ContactPropsType> = ({contactTitle,contactValue}) => {

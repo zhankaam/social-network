@@ -23,15 +23,11 @@ type MapDispatchToPropsType = {
 
 type PropsType = MapStateToPropsType & MapDispatchToPropsType
 
-class ProfileContainer extends React.Component<PropsType & RouteComponentProps<{ userId?: string }>>  {
+class ProfileContainer extends React.Component<PropsType & RouteComponentProps<{ userId: string }>>  {
     refreshProfile(){
         let userId = Number(this.props.match.params.userId)
-
         if(!userId){
             userId = Number(this.props.authorizedUserId);
-            if(!userId){
-                this.props.history.push("/login")
-            }
         }
         this.props.getUserProfile(userId);
         this.props.getStatus(userId)
