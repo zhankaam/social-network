@@ -1,5 +1,5 @@
 import {profileAPI} from "../api/api";
-import {ProfileType} from "../types";
+import {PhotosType, ProfileType} from "../types";
 
 const ADD_POST = 'ADD-POST';
 //const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
@@ -10,7 +10,7 @@ const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS'
 
 export type setUserProfile = {
     type: 'SET_USER_PROFILE',
-    profile: any
+    profile: ProfileType
 }
 export type PostsPropsType = {
     id: number
@@ -20,7 +20,7 @@ export type PostsPropsType = {
 export type ProfileStateType = {
     posts: Array<PostsPropsType>
     newPostText: string,
-    profile: null,
+    profile: ProfileType |  null,
     status: string | null
 }
 let initialState: ProfileStateType = {
@@ -31,7 +31,7 @@ let initialState: ProfileStateType = {
         {id: 4, message: "Dada", likesCount: 11}
     ],
     newPostText: "",
-    profile: null,
+    profile: ProfileType |  null,
     status: ""
 }
 export type ProfileActionsPropsType = ReturnType<typeof addPost> |
@@ -86,7 +86,7 @@ export const deletePost = (postId: number) => ({
     type: DELETE_POST,
     postId} as const)
 
-export const savePhotoSuccess = (photos:ProfileType) => ({
+export const savePhotoSuccess = (photos:PhotosType) => ({
     type: SAVE_PHOTO_SUCCESS,
     photos} as const)
 

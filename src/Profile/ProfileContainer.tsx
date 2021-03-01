@@ -5,11 +5,10 @@ import { RouteComponentProps, withRouter} from 'react-router-dom';
 import {RootStateRedux} from "../Redux/redux-store";
 import {getStatus, getUserProfile, savePhoto, updateStatus} from "../Redux/profile-reducer";
 import {compose} from "redux";
-
-
+import {ProfileType} from "../types";
 
 type MapStateToPropsType = {
-    profile: any
+    profile: ProfileType |  null
     status: string | null
     isAuth: boolean
     authorizedUserId: number | null

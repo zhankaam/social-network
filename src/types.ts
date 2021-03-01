@@ -3,7 +3,6 @@ export type UserType = {
     fullName: string
     followed: boolean
     status: string
-    UrlName: null
     photos: {
         small: string | null
         large: string | null
@@ -13,9 +12,29 @@ export type UserType = {
         city: string
     }
 }
-export type ProfileType = {
+export type PhotosType = {
     photos: {
         small: string | undefined
         large: string | undefined
     }
+}
+export type ProfileType = {
+    userId: number
+    lookingForAJob: boolean
+    lookingForAJobDescription: string
+    fullName: string
+    contacts:ContactsType
+    photos:PhotosType
+    aboutMe: string
+}
+export type ContactsType = {
+    github: string
+    Linkedin: string
+    vk: string
+    instagram: string
+    facebook: string
+    twitter: string
+    website: string
+    youtube: string
+    mainLink: string
 }
