@@ -10,7 +10,7 @@ const LoginReduxForm = reduxForm({ form: 'login'})(LoginForm)
 
 const Login = (props: any) => {
     const onSubmit = (formData: any) => {
-        props.login(formData.email, formData.password,formData.rememberMe)
+        props.login(formData.email, formData.password,formData.rememberMe, formData.captchaUrl)
     }
 
 
@@ -20,12 +20,13 @@ const Login = (props: any) => {
 
     return <div>
         <h1>Login</h1>
-        <LoginReduxForm onSubmit={onSubmit}/>
+        <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl}/>
     </div>
 }
 
 const mapStateToProps = (state: RootStateRedux) => ({
-   isAuth: state.auth.isAuth
+    captchaUrl: state.auth.captchaUrl,
+    isAuth: state.auth.isAuth
 })
 
 export default connect(mapStateToProps, {login})(Login);
