@@ -1,14 +1,19 @@
 import React from 'react'
 import {reduxForm} from "redux-form";
 import {connect} from "react-redux";
-import {LoginForm} from "./LoginForm";
+import {LoginForm, PropsType} from "./LoginForm";
 import {login} from "../Redux/auth-reducer";
 import { Redirect } from 'react-router-dom';
 import {RootStateRedux} from "../Redux/redux-store";
 
 const LoginReduxForm = reduxForm({ form: 'login'})(LoginForm)
+type LoginPropsType = {
+    captchaUrl: string | null
+    login: Function
+    isAuth: boolean
+}
 
-const Login = (props: any) => {
+const Login = (props:any) => {
     const onSubmit = (formData: any) => {
         props.login(formData.email, formData.password,formData.rememberMe, formData.captchaUrl)
     }
