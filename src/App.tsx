@@ -4,7 +4,7 @@ import Navbar from './Navbar/Navbar';
 import News from "./Profile/News/News";
 import Music from "./Profile/Music/Music";
 import Settings from './Profile/Settings/Settings';
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Redirect, Route} from "react-router-dom";
 import UsersContainer from "./Users/UsersContainer";
 import HeaderContainer from "./Header/HeaderContainer";
 import Login from "./Login/Login";
@@ -63,9 +63,14 @@ type MapDispatchToPropsType = {
 // }
 type PropsType = MapStateToPropsType & MapDispatchToPropsType
 const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
+    let catchAllUnhandledErrors = (e: PromiseRejectionEvent) => {
+        alert('Some error occured')
+    }
 
     useEffect(() => {
-       initializeApp()
+       initializeApp();
+       window.addEventListener('unhandledrejection', catchAllUnhandledErrors);
+       window.removeEventListener('unhandledrejection', catchAllUnhandledErrors)
     },[])
     if(!initialized) {
         return <Preloader/>
@@ -75,6 +80,8 @@ const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
             <HeaderContainer/>
             <Navbar/>
             <div className='app-wrapper-content'>
+                <Route exact path="/"
+                render={() => <Redirect to={"/profile"}/>}/>
                 <Route path='/dialogs'
                        render={() => <SuspendedDialogs/>}/>
                 <Route path='/profile/:userId?'
