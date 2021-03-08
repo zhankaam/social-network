@@ -4,10 +4,12 @@ const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS'
 
 export type InitialStateType = {
     initialized: boolean
+    globalError: null
 }
 
 let initialState: InitialStateType = {
-    initialized: false
+    initialized: false,
+    globalError: null
 }
 
 export type ActionsType = ReturnType<typeof initializedSuccess>

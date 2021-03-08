@@ -20,7 +20,7 @@ let initialState: InitialStateType = {
     captchaUrl: null
 }
 
-const authReducer = (state = initialState, action: SetUserDataActionType): InitialStateType => {
+const authReducer = (state = initialState, action: ActionsType): InitialStateType => {
 
     switch (action.type) {
         case SET_USER_DATA:
@@ -33,11 +33,11 @@ const authReducer = (state = initialState, action: SetUserDataActionType): Initi
             return state;
     }
 }
-export type SetUserDataActionType = ReturnType<typeof setAuthUserData> |  ReturnType<typeof getCaptchaUrlSuccess>
+export type ActionsType = ReturnType<typeof setAuthUserData> |  ReturnType<typeof getCaptchaUrlSuccess>
 
 export const setAuthUserData = (usersId: number | null, email: string | null, login: string | null, isAuth: boolean) => ({type: SET_USER_DATA, payload:{usersId, email,login, isAuth} } as const)
 
-export const getCaptchaUrlSuccess = (captchaUrl: string | null) => ({type: GET_CAPTCHA_URL_SUCCESS, payload:{captchaUrl} } as const)
+export const getCaptchaUrlSuccess = (captchaUrl: string ) => ({type: GET_CAPTCHA_URL_SUCCESS, payload:{captchaUrl} } as const)
 
     export const getAuthUserData = () => async (dispatch: any) => {
             let response = await authAPI.me();
@@ -48,7 +48,7 @@ export const getCaptchaUrlSuccess = (captchaUrl: string | null) => ({type: GET_C
             }
 }
 
-    export const login = (email:string, password:string,rememberMe:boolean,captcha: string | null) => async (dispatch: any) => {
+    export const login = (email:string, password:string,rememberMe:boolean,captcha: string) => async (dispatch: any) => {
 
          let response = await authAPI.login(email,password,rememberMe,captcha);
          if(response.data.resultCode === 0){

@@ -10,7 +10,6 @@ export type MessagesPropsType = {
     id: number
     message: string
 }
-
 export type DialogsStateType = {
     dialogs: Array<DialogsPropsType>
     messages:  Array<MessagesPropsType>
@@ -37,7 +36,7 @@ let initialState = {
 
 export type sendMessageAC = {
     type: "SEND_MESSAGE"
-    newMessageBody: any
+    newMessageBody: string
 }
 export type updateMessageAC = {
     type: "UPDATE_NEW_MESSAGE_BODY"
@@ -55,15 +54,14 @@ const dialogsReducer = (state: DialogsStateType = initialState, action: actionsM
             return {
                 ...state,
                // newMessageBody: "",
-                messages: [...state.messages,
-                    {id: 6, message: body}]
+                messages: [...state.messages, {id: 6, message: body}]
             }
         default:
             return state;
     }
 }
 
-export const sendMessageCreator = (newMessageBody:any) => ({type: SEND_MESSAGE, newMessageBody} as const)
+export const sendMessageCreator = (newMessageBody:string) => ({type: SEND_MESSAGE, newMessageBody} as const)
 /*
 export const updateNewMessageBodyCreator = (body: string) =>
     ({type: UPDATE_NEW_MESSAGE_BODY, body: body} as const)
