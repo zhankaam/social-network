@@ -1,23 +1,13 @@
-
 export type UserType = {
     id: number
-    fullName: string
-    followed: boolean
+   name: string
     status: string
-    photos: {
-        small: string | null
-        large: string | null
-    },
-    location: {
-        country: string
-        city: string
-    }
+    photos: PhotosType
+    followed: boolean
 }
 export type PhotosType = {
-    photos: {
         small: string | null
         large: string | null
-    }
 }
 export type ProfileType = {
     userId: number

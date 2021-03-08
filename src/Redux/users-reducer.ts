@@ -44,29 +44,23 @@ export type UsersACType = FollowACType | UnFollowACType |
     SetUsersTotalCountACType | toggleIsFetchingACType | toggleFollowingProgressACType
 
 let initialState = {
-    users: [ ] as UserType[],
+    users: [] as UserType[],
     pageSize: 10,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,
-    followingInProgress: [] as Array<number>
+    followingInProgress: [] as Array<number> // array of users ids
 }
 
-type InitialState = typeof initialState;
+type InitialStateType = typeof initialState;
 
-const usersReducer = (state = initialState, action: UsersACType): InitialState => {
+const usersReducer = (state = initialState, action: UsersACType): InitialStateType => {
 
     switch (action.type) {
         case FOLLOW:
             return {
                 ...state,
                 users: updateObjectInArray(state.users,action.usersId,"id",{followed: true})
-                // users: state.users.map(u => {
-                //     if (u.id === action.usersId) {
-                //         return {...u, followed: true}
-                //     }
-                //     return u
-                // })
             }
         case UNFOLLOW:
             return {
@@ -123,19 +117,19 @@ export const followUnfollowFlow = async (dispatch: any,userId: number,apiMethod:
     let response = await apiMethod(userId);
 
     if(response.data.resultCode === 0) {
-        dispatch(actionCreator(userId))}
-    dispatch(toggleFollowingProgress(false, userId))
+      dispatch(actionCreator(userId))}
+      dispatch(toggleFollowingProgress(false, userId))
 }
 
 export const follow = (userId: number) => {  //ThunkCreator
         return async (dispatch: any) => {
-            followUnfollowFlow(dispatch,userId,usersAPI.follow.bind(usersAPI),followSuccess)
+            await followUnfollowFlow(dispatch,userId,usersAPI.follow.bind(usersAPI),followSuccess)
            }
 }
 
 export const unfollow = (userId: number) => {  //ThunkCreator
         return async (dispatch: any) => {
-            followUnfollowFlow(dispatch,userId,usersAPI.unfollow.bind(usersAPI),unfollowSuccess)
+            await followUnfollowFlow(dispatch,userId,usersAPI.unfollow.bind(usersAPI),unfollowSuccess)
         }
 }
 
