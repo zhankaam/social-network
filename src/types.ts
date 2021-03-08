@@ -15,8 +15,8 @@ export type UserType = {
 }
 export type PhotosType = {
     photos: {
-        small: string
-        large: string
+        small: string | null
+        large: string | null
     }
 }
 export type ProfileType = {
@@ -25,10 +25,11 @@ export type ProfileType = {
     lookingForAJobDescription: string
     fullName: string
     contacts: ContactsType
-    photos: {
-        small: string
-        large: string
-    }
+    // photos: {
+    //     small: string | null
+    //     large: string | null
+    // }
+    photos: PhotosType
     aboutMe: string
 }
 export type ContactsType = {
@@ -42,4 +43,9 @@ export type ContactsType = {
     // website: string
     // youtube: string
     // mainLink: string
+}
+export type PostsPropsType = {
+    id: number
+    message: string
+    likesCount: number
 }

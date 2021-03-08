@@ -1,75 +1,46 @@
 import {profileAPI} from "../api/api";
-import {PhotosType, ProfileType} from "../types";
+import {PhotosType, PostsPropsType, ProfileType} from "../types";
 import {stopSubmit} from "redux-form";
 
-const ADD_POST = 'ADD-POST';
-//const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
+const ADD_POST = 'ADD_POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
 const DELETE_POST = 'DELETE_POST'
 const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS'
 
-export type setUserProfile = {
-    type: 'SET_USER_PROFILE',
-    profile: ProfileType
-}
-export type PostsPropsType = {
-    id: number
-    message: string
-    likesCount: number
-}
-export type ProfileStateType = {
-    posts: Array<PostsPropsType>
-    newPostText: string,
-    profile: ProfileType,
-    status: string | null
-}
-let initialState: ProfileStateType = {
-    posts: [
+
+// export type InitialStateType = {
+//     posts: Array<PostsPropsType>
+//     newPostText: string,
+//     profile: ProfileType,
+//     status: string | null
+// }
+export type InitialStateType = typeof initialState
+let initialState = {
+     posts: [
         {id: 1, message: "Hi, how are you?", likesCount: 12},
         {id: 2, message: "It is my first post", likesCount: 11},
         {id: 3, message: "Blabla", likesCount: 11},
         {id: 4, message: "Dada", likesCount: 11}
-    ],
-    newPostText: "",
-    profile: {
-        userId: 2,
-        lookingForAJob: true,
-        lookingForAJobDescription: '',
-        fullName: '',
-        contacts: {
-             github: "",
-             Linkedin: "",
-             vk: "",
-             instagram: "",
-             facebook: "",
-            twitter: "",
-            website: "",
-            youtube: "",
-            mainLink: ""
-        },
-        photos: {
-            small: '',
-            large:''
-        },
-        aboutMe: '',
-    },
-    status: ""
+    ] as Array<PostsPropsType>,
+     newPostText: "",
+     profile: null as ProfileType | null,
+     status: ""
 }
-export type ProfileActionsPropsType = ReturnType<typeof addPost> |
-   /* ReturnType<typeof updateNewPostText> |*/ ReturnType<typeof setStatus> | setUserProfile |
-    ReturnType<typeof deletePost> |  ReturnType<typeof savePhotoSuccess>
+export type setUserProfile = {
+    type: 'SET_USER_PROFILE',
+    profile: ProfileType
+}
+export type ActionsType = ReturnType<typeof addPost> | ReturnType<typeof setStatus>
+    | setUserProfile | ReturnType<typeof deletePost> |  ReturnType<typeof savePhotoSuccess>
 
 
-const profileReducer = (state: ProfileStateType = initialState, action: ProfileActionsPropsType): ProfileStateType => {
+const profileReducer = (state = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
         case ADD_POST: {
             let newPost = { id: 5, message: action.newPostText, likesCount: 0 };
-            return {...state, posts: [...state.posts, newPost]}
+            return {...state, posts: [...state.posts, newPost],newPostText: ''}
         }
-       /* case UPDATE_NEW_POST_TEXT: {
-            return {...state, newPostText: action.newText}
-        }*/
         case SET_USER_PROFILE: {
             return {...state, profile: action.profile}
         }
@@ -79,28 +50,22 @@ const profileReducer = (state: ProfileStateType = initialState, action: ProfileA
                 posts: state.posts.filter(p => p.id !== action.postId)
             }
         }
-        case SAVE_PHOTO_SUCCESS: {
-            return {
-                ...state,
-                profile: {...state.profile, photos: {small:action.photos.photos.small, large: action.photos.photos.large}}
-            }
-        }
-        case SET_STATUS: {
+        case SAVE_PHOTO_SUCCESS:
+            return {...state, profile: {...state.profile, photos: action.photos} as ProfileType}
+        case SET_STATUS:
             return {...state, status: action.status}
-        }
         default:
             return state;
     }
 }
 
-export const addPost = (newPostText: string) => ({
-    type: ADD_POST, newPostText } as const)
+export const addPost = (newPostText: string) => ({ type: ADD_POST, newPostText } as const)
 
-export const setUserProfile = (profile: ProfileStateType) => ({
+export const setUserProfile = (profile: ProfileType) => ({
     type: SET_USER_PROFILE,
     profile} as const)
 
-export const setStatus = (status: string | null) => ({
+export const setStatus = (status: string ) => ({
     type: SET_STATUS,
     status} as const)
 
@@ -144,11 +109,6 @@ export const saveProfile = (profile: any) => async (dispatch: any,getState:any) 
                return Promise.reject(response.data.messages[0])
      }
 }
-
- /*export const updateNewPostText = (text: string) => ({
-        type: UPDATE_NEW_POST_TEXT,
-        newText: text} as const)*/
-
 
 
 export default profileReducer;
