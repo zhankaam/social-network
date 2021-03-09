@@ -1,8 +1,12 @@
 import  React from "react"
-import {Field, WrappedFieldProps} from "redux-form";
+import {Field, WrappedFieldMetaProps, WrappedFieldProps} from "redux-form";
 import s from './FormsControls.module.css'
+import {FieldValidatorType} from "../../../utilities/validators/Validators";
+type FormsControlsPropsType = {
+    meta: WrappedFieldMetaProps
+}
 
-const FormControl: React.FC<WrappedFieldProps> = ({meta: {touched,error}, children}) => {
+const FormControl: React.FC<FormsControlsPropsType> = ({meta: {touched,error}, children}) => {
     const hasError = touched && error
 
     return <div className={s.formControl + " " + (hasError ? s.error : "")}>
@@ -23,7 +27,12 @@ export const Input: React.FC<WrappedFieldProps>  = (props) => {
   return <FormControl {...props}><input {...input} {...restProps}/></FormControl>
 }
 
-export const createField = (placeholder: string | null,name:any,validators:any,component:any,props= {},text = "") => {
+export const createField = (placeholder: string | null,
+                            name:string,
+                            validators:FieldValidatorType[],
+                            component: React.FC<WrappedFieldProps>,
+                            props= {},
+                            text = "") => {
    return <div>
         <Field  placeholder={placeholder}
                 name={name}
@@ -34,4 +43,4 @@ export const createField = (placeholder: string | null,name:any,validators:any,c
     </div>
 }
 
-export type GetStringKeys<T> = Extract<keyof T, string>
+//export type GetStringKeys<T> = Extract<keyof T, string>
