@@ -8,10 +8,11 @@ import {LoginFormValuesType} from "./Login";
 export type PropsType = {
     handleSubmit: (formData: LoginFormValuesType) => void
     error: string
-    captchaUrl: string
+    captchaUrl: string | null
+    onSubmit: (formData: LoginFormValuesType) => void
 }
 
-export const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType> & PropsType> = ({handleSubmit,error,captchaUrl}) => {
+export const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType,PropsType> & PropsType> = ({handleSubmit,error,captchaUrl}) => {
     return (
         <form onSubmit={handleSubmit}>
                 {createField("Email","email",[required],Input)}

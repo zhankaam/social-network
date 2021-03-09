@@ -6,10 +6,12 @@ import {login} from "../Redux/auth-reducer";
 import { Redirect } from 'react-router-dom';
 import {RootStateRedux} from "../Redux/redux-store";
 
-const LoginReduxForm = reduxForm({ form: 'login'})(LoginForm)
+
+const LoginReduxForm = reduxForm<LoginFormValuesType,PropsType>({ form: 'login'})(LoginForm)
 type MapStateToPropsType = {
     captchaUrl: string | null
     isAuth: boolean
+
 }
 type MapDispatchToPropsType = {
     login: (email:string, password:string,rememberMe:boolean,captcha: string) => void
@@ -20,7 +22,7 @@ export type LoginFormValuesType = {
     rememberMe: boolean
     captchaUrl: string
 }
-const Login: React.FC<MapStateToPropsType & MapDispatchToPropsType> = (props) => {
+const Login: React.FC<MapStateToPropsType & MapDispatchToPropsType > = (props) => {
     const onSubmit = (formData: LoginFormValuesType) => {
         props.login(formData.email, formData.password,formData.rememberMe, formData.captchaUrl)
     }
