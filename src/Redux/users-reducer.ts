@@ -136,7 +136,7 @@ export const unfollow = (userId: number): ThunkType => {  //ThunkCreator
         }
 }
 
-type GetStateType = () => RootStateRedux;
+// type GetStateType = () => RootStateRedux;
 type DispatchType =  Dispatch<UsersACType>
 type ThunkType = ThunkAction<Promise<void>, RootStateRedux, unknown, UsersACType>
 export default usersReducer;

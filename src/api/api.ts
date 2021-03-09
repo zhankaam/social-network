@@ -56,7 +56,8 @@ export const authAPI = {
         return instance.get<meResponseType>(`auth/me`)
     },
     login(email: string,password: string,rememberMe:boolean = false,captcha: string | null = null) {
-        return instance.post(`auth/login`, {email,password,rememberMe,captcha})
+        return instance.post<LoginResponseType>(`auth/login`, {email,password,rememberMe,captcha})
+            .then(res => res.data)
     },
     logout() {
         return instance.delete(`auth/login`)
@@ -75,6 +76,21 @@ type meResponseType = {
         email: string
         login: string
     }
-    resultCode: number
+    resultCode: ResultCodeEnum
     messages: string[]
+}
+type LoginResponseType = {
+    data: {
+        userId: number
+    }
+    resultCode: ResultCodeEnum | ResultCodeForCaptcha
+    messages: string[]
+}
+
+export enum ResultCodeEnum {
+    Success= 0,
+    Error = 1,
+}
+export enum ResultCodeForCaptcha {
+    CaptchaIsRequired = 10
 }
