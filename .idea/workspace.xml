@@ -24,9 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/sidebar-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/sidebar-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/users-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,14 +258,7 @@
       <workItem from="1614605186310" duration="15296000" />
       <workItem from="1614689082047" duration="5418000" />
       <workItem from="1614798181725" duration="237000" />
-      <workItem from="1615208252561" duration="7475000" />
-    </task>
-    <task id="LOCAL-00006" summary="social-network">
-      <created>1611757706593</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1611757706593</updated>
+      <workItem from="1615208252561" duration="11077000" />
     </task>
     <task id="LOCAL-00007" summary="social-network">
       <created>1612454370356</created>
@@ -603,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615236688011</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="social-network">
+      <created>1615237319403</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1615237319403</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -639,10 +639,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1614462160061" />
-    <state x="226" y="0" key="CommitChangelistDialog2" timestamp="1615236685796">
+    <state x="226" y="0" key="CommitChangelistDialog2" timestamp="1615237317111">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="226" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1615236685796" />
+    <state x="226" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1615237317111" />
     <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614719963763" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
@@ -720,10 +720,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614529647531" />
-    <state x="263" y="101" key="Vcs.Push.Dialog.v2" timestamp="1615236690990">
+    <state x="263" y="101" key="Vcs.Push.Dialog.v2" timestamp="1615237320613">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="263" y="101" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1615236690990" />
+    <state x="263" y="101" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1615237320613" />
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614719967002" />
     <state x="206" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614691836417">
       <screen x="0" y="0" width="1366" height="728" />
