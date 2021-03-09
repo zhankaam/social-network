@@ -1,6 +1,5 @@
 import {authAPI, ResultCodeEnum, ResultCodeForCaptcha, securityAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
-import {Dispatch} from "redux";
 import {ThunkAction} from "redux-thunk";
 import {RootStateRedux} from "./redux-store";
 
@@ -81,6 +80,6 @@ export const getCaptchaUrlSuccess = (captchaUrl: string ) => ({type: GET_CAPTCHA
             }
 }
 
-//type DispatchType = Dispatch<ActionsType>
+// type DispatchType = Dispatch<ActionsType>
 type ThunkType = ThunkAction<Promise<void>, RootStateRedux, unknown, ActionsType>
 export default authReducer;

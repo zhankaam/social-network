@@ -7,17 +7,23 @@ import { Redirect } from 'react-router-dom';
 import {RootStateRedux} from "../Redux/redux-store";
 
 const LoginReduxForm = reduxForm({ form: 'login'})(LoginForm)
-type LoginPropsType = {
+type MapStateToPropsType = {
     captchaUrl: string | null
-    login: Function
     isAuth: boolean
 }
-
-const Login = (props:any) => {
-    const onSubmit = (formData: any) => {
+type MapDispatchToPropsType = {
+    login: (email:string, password:string,rememberMe:boolean,captcha: string) => void
+}
+export type LoginFormValuesType = {
+    password: string
+    email: string
+    rememberMe: boolean
+    captchaUrl: string
+}
+const Login: React.FC<MapStateToPropsType & MapDispatchToPropsType> = (props) => {
+    const onSubmit = (formData: LoginFormValuesType) => {
         props.login(formData.email, formData.password,formData.rememberMe, formData.captchaUrl)
     }
-
 
     if(props.isAuth) {
         return <Redirect to={"/profile"}/>
@@ -29,7 +35,7 @@ const Login = (props:any) => {
     </div>
 }
 
-const mapStateToProps = (state: RootStateRedux) => ({
+const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
     captchaUrl: state.auth.captchaUrl,
     isAuth: state.auth.isAuth
 })
