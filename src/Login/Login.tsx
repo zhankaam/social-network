@@ -6,7 +6,6 @@ import {login} from "../Redux/auth-reducer";
 import { Redirect } from 'react-router-dom';
 import {RootStateRedux} from "../Redux/redux-store";
 
-
 const LoginReduxForm = reduxForm<LoginFormValuesType,PropsType>({ form: 'login'})(LoginForm)
 type MapStateToPropsType = {
     captchaUrl: string | null

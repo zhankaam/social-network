@@ -6,10 +6,7 @@ import {InjectedFormProps} from "redux-form";
 import {LoginFormValuesType} from "./Login";
 
 export type PropsType = {
-    handleSubmit: (formData: LoginFormValuesType) => void
-    error: string
     captchaUrl: string | null
-    onSubmit: (formData: LoginFormValuesType) => void
 }
 
 export const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType,PropsType> & PropsType> = ({handleSubmit,error,captchaUrl}) => {
