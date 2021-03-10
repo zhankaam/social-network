@@ -9,7 +9,7 @@ export type ProfilePropsType = {
         status: string | null
         isOwner: boolean
         savePhoto: (file: File) => void
-        saveProfile: (formData: any) => void
+        saveProfile: (formData: ProfileType) => Promise<any>
 }
 
 const Profile: React.FC<ProfilePropsType> = (props) => {

@@ -13,7 +13,7 @@ type ProfileInfoPropsType = {
        updateStatus: (status: string) => void
        isOwner: boolean
        savePhoto: (file: File) => void
-       saveProfile: (formData: any) => void
+       saveProfile: (formData: ProfileType) => Promise<any>
 }
 
 const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile,status,updateStatus,isOwner,savePhoto,saveProfile}) => {
@@ -30,7 +30,7 @@ const [editMode,setEditMode] = useState<boolean>(false)
         }
     }
 
-    const onSubmit =  (formData: any) => {
+    const onSubmit =  (formData: ProfileType) => {
              saveProfile(formData).then(() => {
                  setEditMode(false)
              })

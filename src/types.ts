@@ -1,6 +1,7 @@
 export type UserType = {
+    fullName: string;
     id: number
-   name: string
+    name: string
     status: string
     photos: PhotosType
     followed: boolean
