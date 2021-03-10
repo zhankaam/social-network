@@ -116,12 +116,16 @@ export const getUsers = (currentPage: number, pageSize:number): ThunkType => {  
 }
 
 export const _followUnfollowFlow = async (dispatch: DispatchType, userId: number, apiMethod: any, actionCreator: (userId: number) => FollowACType | UnFollowACType ) => {
-    dispatch(toggleFollowingProgress(true, userId))
-    let response = await apiMethod(userId);
+    try{
+        dispatch(toggleFollowingProgress(true, userId))
+        let response = await apiMethod(userId);
 
-    if(response.data.resultCode === 0) {
-      dispatch(actionCreator(userId))}
-      dispatch(toggleFollowingProgress(false, userId))
+        if(response.data.resultCode === 0) {
+            dispatch(actionCreator(userId))}
+    }
+    finally{
+        dispatch(toggleFollowingProgress(false, userId))
+    }
 }
 
 export const follow = (userId: number): ThunkType => {  //ThunkCreator
