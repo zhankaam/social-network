@@ -22,11 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/auth-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/users-reducer.ts" afterDir="false" />
-    </list>
+    <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -262,14 +258,7 @@
       <workItem from="1615327602112" duration="632000" />
       <workItem from="1615331485214" duration="774000" />
       <workItem from="1615382511456" duration="2102000" />
-      <workItem from="1615384695935" duration="2868000" />
-    </task>
-    <task id="LOCAL-00015" summary="social-network">
-      <created>1612970627571</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1612970627571</updated>
+      <workItem from="1615384695935" duration="3478000" />
     </task>
     <task id="LOCAL-00016" summary="social-network">
       <created>1612972385062</created>
@@ -607,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615384443901</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="social-network">
+      <created>1615387939666</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1615387939666</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,10 +639,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1614462160061" />
-    <state x="226" y="0" key="CommitChangelistDialog2" timestamp="1615384440341">
+    <state x="226" y="0" key="CommitChangelistDialog2" timestamp="1615387936094">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="226" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1615384440341" />
+    <state x="226" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1615387936094" />
     <state x="237" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614719963763" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1610398187465">
       <screen x="0" y="0" width="1366" height="728" />
@@ -728,10 +724,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614529647531" />
-    <state x="263" y="101" key="Vcs.Push.Dialog.v2" timestamp="1615384444620">
+    <state x="263" y="101" key="Vcs.Push.Dialog.v2" timestamp="1615387939858">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="263" y="101" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1615384444620" />
+    <state x="263" y="101" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1615387939858" />
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614719967002" />
     <state x="197" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1615324757904">
       <screen x="0" y="0" width="1304" height="768" />
