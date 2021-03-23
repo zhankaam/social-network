@@ -1,7 +1,7 @@
 import React from "react";
-import {createField, Input, Textarea} from "../../../assets/common/FormsControls/FormsControls";
+import {createField, Input, Textarea} from "../../../../assets/common/FormsControls/FormsControls";
 import {InjectedFormProps, reduxForm} from "redux-form";
-import {ProfileType} from "../../../types";
+import {ProfileType} from "../../../../types";
 import s from "./ProfileInfo.module.css"
 
 type PropsType = {

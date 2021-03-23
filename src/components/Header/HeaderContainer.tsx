@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from "./Header";
 import {connect} from "react-redux";
-import {RootStateRedux} from "../Redux/redux-store";
-import { logout} from "../Redux/auth-reducer";
+import {RootStateRedux} from "../../Redux/redux-store";
+import { logout} from "../../Redux/auth-reducer";
 
 type PropsType = {
     //setAuthUserData: (id: number, email: string, login: string, isAuth: boolean) => void

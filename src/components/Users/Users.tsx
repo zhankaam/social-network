@@ -1,6 +1,6 @@
 import React from "react";
-import {UserType} from "../types";
-import {Paginator} from "../assets/common/Paginator/Paginator";
+import {UserType} from "../../types";
+import {Paginator} from "../../assets/common/Paginator/Paginator";
 import {User} from "./User";
 
 type PropsType = {

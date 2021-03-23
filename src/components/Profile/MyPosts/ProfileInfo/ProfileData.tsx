@@ -1,6 +1,6 @@
 import React from "react";
 import {Contact} from "./ProfileInfo";
-import {ProfileType} from "../../../types";
+import {ProfileType} from "../../../../types";
 
 export type ProfileDataPropsType = {
     profile: ProfileType

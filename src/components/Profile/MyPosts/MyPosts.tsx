@@ -2,9 +2,9 @@ import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 import {Field, reduxForm} from "redux-form";
-import {maxLengthCreator, required} from "../../utilities/validators/Validators";
-import {Textarea} from "../../assets/common/FormsControls/FormsControls";
-import { PostsPropsType } from '../../types';
+import {maxLengthCreator, required} from "../../../utilities/validators/Validators";
+import {Textarea} from "../../../assets/common/FormsControls/FormsControls";
+import { PostsPropsType } from '../../../types';
 
 export type MyPostsPropsType = {
     posts: Array<PostsPropsType>

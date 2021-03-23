@@ -2,10 +2,10 @@ import React from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
 import { RouteComponentProps, withRouter} from 'react-router-dom';
-import {RootStateRedux} from "../Redux/redux-store";
-import {getStatus, getUserProfile, savePhoto, saveProfile, updateStatus} from "../Redux/profile-reducer";
+import {RootStateRedux} from "../../Redux/redux-store";
+import {getStatus, getUserProfile, savePhoto, saveProfile, updateStatus} from "../../Redux/profile-reducer";
 import {compose} from "redux";
-import {ProfileType} from "../types";
+import {ProfileType} from "../../types";
 
 type MapStateToPropsType = {
     profile: ProfileType |  null

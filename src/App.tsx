@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import Navbar from './Navbar/Navbar';
-import News from "./Profile/News/News";
-import Music from "./Profile/Music/Music";
-import Settings from './Profile/Settings/Settings';
+import Navbar from './components/Navbar/Navbar';
+import News from "./components/Profile/News/News";
+import Music from "./components/Profile/Music/Music";
+import Settings from './components/Profile/Settings/Settings';
 import {BrowserRouter, Redirect, Route} from "react-router-dom";
-import UsersContainer from "./Users/UsersContainer";
-import HeaderContainer from "./Header/HeaderContainer";
-import Login from "./Login/Login";
+import UsersContainer from "./components/Users/UsersContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {withRouter} from "react-router-dom";
 import {initializeApp} from "./Redux/app-reducer";
@@ -15,8 +15,8 @@ import store, {RootStateRedux} from "./Redux/redux-store";
 import {Preloader} from "./assets/common/Preloader";
 import {compose} from "redux";
 import {withSuspense} from "./hoc/withSuspense";
-const DialogsContainer = React.lazy(() => import('./Profile/Dialogs/DialogsContainer'));
-const ProfileContainer = React.lazy(() => import('./Profile/ProfileContainer'));
+const DialogsContainer = React.lazy(() => import('./components/Profile/Dialogs/DialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 const SuspendedDialogs = withSuspense(DialogsContainer)
 const SuspendedProfile = withSuspense(ProfileContainer)
 

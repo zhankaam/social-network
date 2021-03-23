@@ -1,7 +1,7 @@
 import React from 'react';
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
-import { ProfileType} from "../types";
+import { ProfileType} from "../../types";
 
 export type ProfilePropsType = {
         profile: ProfileType | null

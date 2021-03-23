@@ -1,9 +1,9 @@
 import React, {ChangeEvent, useState} from 'react';
 import s from './ProfileInfo.module.css';
-import {Preloader} from "../../../assets/common/Preloader";
+import {Preloader} from "../../../../assets/common/Preloader";
 import {ProfileStatusWithHooks} from "./ProfileStatusWithHooks";
-import {ProfileType} from "../../../types";
-import userPhoto from "../../../assets/images/390poHMbqew.jpg";
+import {ProfileType} from "../../../../types";
+import userPhoto from "../../../../assets/images/390poHMbqew.jpg";
 import ProfileDataForm from "./ProfileDataForm";
 import {ProfileData} from "./ProfileData";
 
