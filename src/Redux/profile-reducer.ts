@@ -78,35 +78,35 @@ export const savePhotoSuccess = (photos:PhotosType) => ({
     photos} as const)
 
 export const getUserProfile = (userId: number) =>  async (dispatch: any) => {
-           let response = await profileAPI.getProfile(userId);
-           dispatch(setUserProfile(response.data))
+           let data = await profileAPI.getProfile(userId);
+           dispatch(setUserProfile(data))
 }
 
 export const getStatus = (userId: number) => async (dispatch: any) => {
-           let response = await profileAPI.getStatus(userId);
-           dispatch(setStatus(response.data))
+           let data = await profileAPI.getStatus(userId);
+           dispatch(setStatus(data))
 }
 
 export const updateStatus = (status:string) => async (dispatch: any) => {
-            let response = await profileAPI.updateStatus(status);
-            if(response.data.resultCode === 0) {
+            let data = await profileAPI.updateStatus(status);
+            if(data.resultCode === 0) {
                 dispatch(setStatus(status))
             }
 }
 export const savePhoto = (file: File) => async (dispatch: any) => {
-    let response = await profileAPI.savePhoto(file);
-    if(response.data.resultCode === 0) {
-        dispatch(savePhotoSuccess(response.data.data.photos))
+    let data = await profileAPI.savePhoto(file);
+    if(data.resultCode === 0) {
+        dispatch(savePhotoSuccess(data.data.photos))
     }
 }
 export const saveProfile = (profile: any) => async (dispatch: any,getState:any) => {
      const userId = getState().auth.userId
-     const response = await profileAPI.savePhoto(profile);
-     if(response.data.resultCode === 0) {
+     const data = await profileAPI.savePhoto(profile);
+     if(data.resultCode === 0) {
         dispatch(getUserProfile(userId))
      } else {
-         dispatch(stopSubmit("edit-profile",{error: response.data.messages[0]}))
-               return Promise.reject(response.data.messages[0])
+         dispatch(stopSubmit("edit-profile",{error: data.messages[0]}))
+               return Promise.reject(data.messages[0])
      }
 }
 
