@@ -1,7 +1,6 @@
 import {UserType} from "../types";
 import {updateObjectInArray} from "../utilities/object-helpers";
-import {RootStateRedux} from "./redux-store";
-import {ThunkAction} from "redux-thunk";
+import {BaseThunkType} from "./redux-store";
 import {Dispatch} from "redux";
 import {usersAPI} from "../api/users-api";
 
@@ -42,7 +41,7 @@ export type toggleFollowingProgressACType = {
     isFetching: boolean
     userId: number
 }
-export type UsersACType = FollowACType | UnFollowACType |
+export type ActionsType = FollowACType | UnFollowACType |
     SetUsersACType | SetCurrentPageACType |
     SetUsersTotalCountACType | toggleIsFetchingACType | toggleFollowingProgressACType
 
@@ -57,7 +56,7 @@ let initialState = {
 
 type InitialStateType = typeof initialState;
 
-const usersReducer = (state = initialState, action: UsersACType): InitialStateType => {
+export const usersReducer = (state = initialState, action: ActionsType): InitialStateType => {
 
     switch (action.type) {
         case FOLLOW:
@@ -141,6 +140,5 @@ export const unfollow = (userId: number): ThunkType => {  //ThunkCreator
 }
 
 // type GetStateType = () => RootStateRedux;
-type DispatchType =  Dispatch<UsersACType>
-type ThunkType = ThunkAction<Promise<void>, RootStateRedux, unknown, UsersACType>
-export default usersReducer;
+type DispatchType =  Dispatch<ActionsType>
+type ThunkType = BaseThunkType<ActionsType>

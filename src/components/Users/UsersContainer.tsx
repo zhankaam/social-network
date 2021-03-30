@@ -5,8 +5,8 @@ import {
     setCurrentPage,
     setUsers, setTotalUsersCount, toggleIsFetching,
     unfollowSuccess, toggleFollowingProgress, getUsers, unfollow,
-} from "../../Redux/users-reducer";
-import {RootStateRedux} from "../../Redux/redux-store";
+} from "../../redux/users-reducer";
+import {RootStateRedux} from "../../redux/redux-store";
 import {UserType} from "../../types";
 import {Users} from "./Users";
 import {Preloader} from "../../assets/common/Preloader";
@@ -19,7 +19,7 @@ import {
     getPageSize,
     getTotalUsersCount,
     getUsersState
-} from "../../Redux/users-selectors";
+} from "../../redux/users-selectors";
 
 
 class UsersContainer extends React.Component<MapDispatchToPropsType & MapStateToPropsType> {

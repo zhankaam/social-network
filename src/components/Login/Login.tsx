@@ -2,9 +2,9 @@ import React from 'react'
 import {reduxForm} from "redux-form";
 import {connect} from "react-redux";
 import {LoginForm, PropsType} from "./LoginForm";
-import {login} from "../../Redux/auth-reducer";
+import {login} from "../../redux/auth-reducer";
 import { Redirect } from 'react-router-dom';
-import {RootStateRedux} from "../../Redux/redux-store";
+import {RootStateRedux} from "../../redux/redux-store";
 
 const LoginReduxForm = reduxForm<LoginFormValuesType,PropsType>({ form: 'login'})(LoginForm)
 type MapStateToPropsType = {

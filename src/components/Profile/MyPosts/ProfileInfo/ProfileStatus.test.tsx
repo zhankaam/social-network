@@ -1,6 +1,6 @@
 import React from 'react'
 import {ProfileStatus, ProfileStatusStateType} from "./ProfileStatus";
-import {updateStatus} from "../../../../Redux/profile-reducer";
+import {updateStatus} from "../../../../redux/profile-reducer";
 import {create} from "react-test-renderer";
 
 
