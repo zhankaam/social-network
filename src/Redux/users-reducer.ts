@@ -1,9 +1,9 @@
 import {UserType} from "../types";
-import {usersAPI} from "../api/api";
 import {updateObjectInArray} from "../utilities/object-helpers";
 import {RootStateRedux} from "./redux-store";
 import {ThunkAction} from "redux-thunk";
 import {Dispatch} from "redux";
+import {usersAPI} from "../api/users-api";
 
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
