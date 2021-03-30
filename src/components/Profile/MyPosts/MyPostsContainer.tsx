@@ -1,9 +1,9 @@
 import React from 'react';
-import {addPost} from "../../../redux/profile-reducer";
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 import {RootStateRedux} from "../../../redux/redux-store";
 import {PostsPropsType} from "../../../types";
+import {actions} from "../../../redux/profile-reducer";
 
 
 export type MapStateToPropsType = {
@@ -11,28 +11,14 @@ export type MapStateToPropsType = {
     newPostText: string
 }
 export type MapDispatchToPropsType = {
- //   updateNewPostText: (text: string) => void
     addPost: (newPostText: string) => void
 }
 
-const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => {
-    return {
+const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
         posts: state.profilePage.posts,
         newPostText: state.profilePage.newPostText
-    }
-}
-// const mapDispatchToProps = (dispatch: Dispatch): MapDispatchToPropsType => {
-//     return {
-//         updateNewPostText: (text: string) => {
-//             let action = updateNewPostTextActionCreator(text);
-//             dispatch(action)
-//         },
-//         addPost: () => {
-//             dispatch(addPostActionCreator());
-//         }
-//     }
-// }
+})
 
 
 export default connect<MapStateToPropsType, MapDispatchToPropsType, {}, RootStateRedux>
-(mapStateToProps, {addPost})(MyPosts) /*as ConnectedComponent<any, {}>*/
+(mapStateToProps, {addPost: actions.addPost})(MyPosts) /*as ConnectedComponent<any, {}>*/

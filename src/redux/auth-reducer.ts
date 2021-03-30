@@ -25,7 +25,7 @@ const authReducer = (state = initialState, action: ActionsType): InitialStateTyp
     }
 }
 
-
+// ACTION CREATORS
 export const actions = {
     setAuthUserData: (userId: number | null, email: string | null, login: string | null, isAuth: boolean) => (
         {type: 'SN/auth/SET_USER_DATA', payload:{userId, email,login, isAuth} } as const),
@@ -34,7 +34,7 @@ export const actions = {
 
 }
 
-
+// THUNK CREATORS
     export const getAuthUserData = ():ThunkType => async (dispatch) => {
             let response = await authAPI.me();
 
@@ -72,7 +72,7 @@ export const actions = {
             }
 }
 
-
+// TYPES
 export type InitialStateType = typeof initialState;
 type ActionsType = InferActionsType<typeof actions>
 type ThunkType = BaseThunkType<ActionsType | ReturnType<typeof stopSubmit>>
