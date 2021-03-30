@@ -57,9 +57,11 @@ export const actions = {
     unfollowSuccess: (usersId: number)  => ({type: 'SN/USERS/UNFOLLOW', usersId} as const),
     setUsers: (users: Array<UserType>)  => ({type: 'SN/USERS/SET_USERS', users} as const),
     setCurrentPage: (currentPage: number) => ({type: 'SN/USERS/SET_CURRENT_PAGE', currentPage} as const),
-    setTotalUsersCount: (totalUsersCount: number)=> ({type: 'SN/USERS/SET_TOTAL_USERS_COUNT', count: totalUsersCount} as const),
+    setTotalUsersCount: (totalUsersCount: number) => (
+        {type: 'SN/USERS/SET_TOTAL_USERS_COUNT', count: totalUsersCount} as const),
     toggleIsFetching: (isFetching: boolean) => ({type: 'SN/USERS/TOGGLE_IS_FETCHING', isFetching} as const),
-    toggleFollowingProgress: (isFetching: boolean, userId: number) => ({type: 'SN/USERS/TOGGLE_IS_FOLLOWING_PROGRESS', isFetching, userId} as const)
+    toggleFollowingProgress: (isFetching: boolean, userId: number) => (
+        {type: 'SN/USERS/TOGGLE_IS_FOLLOWING_PROGRESS', isFetching, userId} as const)
 }
 
 // THUNK CREATORS
