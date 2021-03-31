@@ -28,12 +28,13 @@ export const Input: React.FC<WrappedFieldProps>  = (props) => {
   return <FormControl {...props}><input {...input} {...restProps}/></FormControl>
 }
 
-export const createField = (placeholder: string | null,
-                            name:string,
-                            validators:FieldValidatorType[],
-                            component: React.FC<WrappedFieldProps>,
-                            props= {},
-                            text = "") => {
+export function createField<FormKeysType extends string>(placeholder: string | null,
+                                                         name: string,
+                                                         validators: FieldValidatorType[],
+                                                         component: React.FC<WrappedFieldProps>,
+                                                         //component: (value: string) => (string | undefined),
+                                                         props = {},
+                                                         text = "") {
    return <div>
         <Field  placeholder={placeholder}
                 name={name}
@@ -44,4 +45,4 @@ export const createField = (placeholder: string | null,
     </div>
 }
 
-//export type GetStringKeys<T> = Extract<keyof T, string>
+export type GetStringKeys<T> = Extract<keyof T, string>
