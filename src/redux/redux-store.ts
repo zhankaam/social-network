@@ -20,8 +20,11 @@ let rootReducer = combineReducers({
 
 export type RootStateRedux = ReturnType<typeof rootReducer>
 let store: Store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
-type PropertiesTypes<T> = T extends { [key: string] : infer U } ? U : never
-export type InferActionsType<T extends { [key: string] : (...args: any[]) => any}> = ReturnType<PropertiesTypes<T>>
+
+// type PropertiesTypes<T> = T extends { [key: string] : infer U } ? U : never
+// export type InferActionsType<T extends { [key: string] : (...args: any[]) => any}> = ReturnType<PropertiesTypes<T>>
+
+export type InferActionsType<T> = T extends { [key: string] : (...args: any[]) => infer U } ? U : never
 export type BaseThunkType<A extends Action,R = Promise<void>> = ThunkAction<R, RootStateRedux, unknown, A>
 
 // @ts-ignore
