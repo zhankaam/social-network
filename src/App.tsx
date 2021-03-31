@@ -28,39 +28,6 @@ type MapDispatchToPropsType = {
     initializeApp: () => void
 }
 
-// class App extends React.Component<MapStateToPropsType & MapDispatchToPropsType> {
-//
-//     componentDidMount() {
-//         this.props.initializeApp();
-//     }
-//
-//     render() {
-//         // if(!this.props.initialized) {
-//         //     return <Preloader/>
-//         // }
-//
-//         return (
-//                 <div className='app-wrapper'>
-//                     <HeaderContainer/>
-//                     <Navbar/>
-//                     <div className='app-wrapper-content'>
-//
-//                         <Route path='/dialogs'
-//                                render={() => <DialogsContainer/>}/>
-//                         <Route path='/profile/:userId?'
-//                                render={() => <ProfileContainer/>}/>
-//                         <Route path='/users'
-//                                render={() => <UsersContainer/>}/>
-//                         <Route path='/login' render={() => <Login/>}/>
-//                         <Route path='/dialogs' render={() => <News/>}/>
-//                         <Route path='/profile' render={() => <Music/>}/>
-//                         <Route path='/dialogs' render={() => <Settings/>}/>
-//
-//                     </div>
-//                 </div>
-//         );
-//     }
-// }
 type PropsType = MapStateToPropsType & MapDispatchToPropsType
 const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
     let catchAllUnhandledErrors = (e: PromiseRejectionEvent) => {
@@ -100,12 +67,10 @@ const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
 const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
     initialized: state.app.initialized
 })
-// export default App
-//
+
 const AppContainer = compose<React.ComponentType>(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App)
-//  export default withRouter(connect(mapStateToProps, {initializeApp})(App))
 
 const SamuraiJSApp = () => {
     return <BrowserRouter>
