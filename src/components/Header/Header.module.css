@@ -4,12 +4,15 @@
   }
   
   .header img {
-      width: 20px;
+      width: 35px;
+      opacity: 0.4;
+      padding: 5px;
+      border-radius: 25px;
   }
 
   .loginBlock {
       float: right;
   }
   .loginBlock a {
-  color: lightblue;
+   color: lightblue;
   }
