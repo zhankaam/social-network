@@ -12,7 +12,7 @@ export type MapDispatchToPropsType = {
 }
 
 
-const MyPosts: React.FC<MapStateToPropsType & MapDispatchToPropsType> = React.memo((props) => {
+const MyPosts: React.FC<MapStateToPropsType & MapDispatchToPropsType> = props => {
 
     let postsElements = props.posts.map((p, i) => <Post key={i} message={p.message} likesCount={p.likesCount}/>);
 
@@ -30,7 +30,8 @@ const MyPosts: React.FC<MapStateToPropsType & MapDispatchToPropsType> = React.me
             </div>
 
         );
-})
+}
 
+const MyPostsMemorized = React.memo(MyPosts)
 
-export default MyPosts
+export default MyPostsMemorized
