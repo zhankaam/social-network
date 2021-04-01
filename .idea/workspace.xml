@@ -23,8 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/AddNewPostForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/withAuthRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +93,11 @@
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\AddNewPostForm.tsx" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\Dialogs\AddMessageForm.tsx" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\api\api.ts" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\api\security-api.ts" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\api\auth-api.ts" />
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\api\profile-api.ts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components" />
@@ -279,14 +281,8 @@
       <workItem from="1617103762420" duration="11158000" />
       <workItem from="1617129889427" duration="9882000" />
       <workItem from="1617179300579" duration="4485000" />
-      <workItem from="1617199862865" duration="4390000" />
-    </task>
-    <task id="LOCAL-00028" summary="social-network">
-      <created>1613770332438</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1613770332438</updated>
+      <workItem from="1617199862865" duration="4418000" />
+      <workItem from="1617304182345" duration="3105000" />
     </task>
     <task id="LOCAL-00029" summary="social-network">
       <created>1614166677433</created>
@@ -624,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617204397855</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="typeScript for all!">
+      <created>1617225144761</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1617225144762</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
