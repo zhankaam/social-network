@@ -1,7 +1,7 @@
-import {createField, GetStringKeys, Textarea} from "../../../assets/common/FormsControls/FormsControls";
+import {createField, GetStringKeys, Textarea} from "../../../../../assets/common/FormsControls/FormsControls";
 import React from "react";
 import {InjectedFormProps, reduxForm} from "redux-form";
-import {required} from "../../../utilities/validators/Validators";
+import {required} from "../../../../../utilities/validators/Validators";
 
 export type AddPostFormValuesType = {
     newPostText: string

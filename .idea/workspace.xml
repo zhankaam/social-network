@@ -23,10 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/AddNewPostForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/AddNewPostForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer/AddNewPost/AddNewPostForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer/MyPosts.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer/MyPostsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileData/ProfileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileDataForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileData/ProfileDataForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus/ProfileStatus.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus/ProfileStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatusWithHooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +110,11 @@
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\api\auth-api.ts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components" />
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\MyPostsContainer\AddNewPost" />
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\MyPostsContainer" />
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\ProfileInfo\ProfileStatus" />
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\ProfileInfo\ProfileInfo" />
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\ProfileInfo\ProfileData" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -282,21 +296,7 @@
       <workItem from="1617129889427" duration="9882000" />
       <workItem from="1617179300579" duration="4485000" />
       <workItem from="1617199862865" duration="4418000" />
-      <workItem from="1617304182345" duration="3105000" />
-    </task>
-    <task id="LOCAL-00029" summary="social-network">
-      <created>1614166677433</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1614166677433</updated>
-    </task>
-    <task id="LOCAL-00030" summary="social-network">
-      <created>1614288533480</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1614288533480</updated>
+      <workItem from="1617304182345" duration="3900000" />
     </task>
     <task id="LOCAL-00031" summary="social-network">
       <created>1614453232477</created>
@@ -627,7 +627,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617225144762</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="typeScript for all!">
+      <created>1617307339843</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1617307339844</updated>
+    </task>
+    <task id="LOCAL-00079" summary="typeScript for all!">
+      <created>1617307565126</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1617307565126</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './MyPosts.module.css';
-import Post from './Post/Post';
-import {PostsPropsType} from '../../../types';
-import AddNewPostForm, {AddPostFormValuesType} from "./AddNewPostForm";
+import Post from '../Post/Post';
+import {PostsPropsType} from '../../../../types';
+import AddNewPostForm, {AddPostFormValuesType} from "./AddNewPost/AddNewPostForm";
 
 export type MapStateToPropsType = {
     posts: Array<PostsPropsType>
