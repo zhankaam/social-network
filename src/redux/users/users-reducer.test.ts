@@ -9,7 +9,7 @@ beforeEach(() => {
                 fullName: "L", photos: {small: null, large: null}, status: "let it be"},
             {id: 1, name: "Dimych", followed: true,
                 fullName: "K", photos: {small: null, large: null}, status: "let it be"},
-            {id: 2, name: "Svetlana", followed: true,
+            {id: 2, name: "Svetlana", followed: false,
                 fullName: "D", photos: {small: null, large: null}, status: "let it be"},
         ] ,
         pageSize: 10,

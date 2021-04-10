@@ -23,19 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.thunks.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer/MyPostsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus/ProfileStatus.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus/ProfileStatus.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile/profile-reducer.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile/profile-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/object-helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/object-helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users/users-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users/users-reducer.thunks.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.thunks.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +106,7 @@
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\ProfileInfo\ProfileStatus" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.renders without crashing">
+  <component name="RunManager" selected="Jest.Unnamed">
     <configuration name="Unnamed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -181,9 +171,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Unnamed" />
         <item itemvalue="Jest.renders without crashing" />
         <item itemvalue="npm.test" />
-        <item itemvalue="Jest.Unnamed" />
         <item itemvalue="Jest.unfollow success" />
         <item itemvalue="Jest.follow success" />
       </list>
@@ -294,14 +284,7 @@
       <workItem from="1617304182345" duration="6087000" />
       <workItem from="1617363813877" duration="585000" />
       <workItem from="1617556340947" duration="2441000" />
-      <workItem from="1618088673480" duration="4854000" />
-    </task>
-    <task id="LOCAL-00034" summary="social-network">
-      <created>1614465004469</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1614465004469</updated>
+      <workItem from="1618088673480" duration="6245000" />
     </task>
     <task id="LOCAL-00035" summary="social-network">
       <created>1614467926868</created>
@@ -639,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617557942585</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="typeScript for all!">
+      <created>1618093627211</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1618093627212</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
