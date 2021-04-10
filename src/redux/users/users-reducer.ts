@@ -1,9 +1,9 @@
-import {UserType} from "../types";
-import {updateObjectInArray} from "../utilities/object-helpers";
-import {BaseThunkType, InferActionsType} from "./redux-store";
+import {UserType} from "../../types";
+import {updateObjectInArray} from "../../utilities/object-helpers";
+import {BaseThunkType, InferActionsType} from "../redux-store";
 import {Dispatch} from "redux";
-import {usersAPI} from "../api/users-api";
-import {APIResponseType} from "../api/api";
+import {usersAPI} from "../../api/users-api";
+import {APIResponseType} from "../../api/api";
 
 
 let initialState = {
@@ -109,4 +109,4 @@ export const unfollow = (userId: number): ThunkType => {  //ThunkCreator
 export type ActionsType = InferActionsType<typeof actions>
 type DispatchType =  Dispatch<ActionsType>
 type ThunkType = BaseThunkType<ActionsType>
-type InitialStateType = typeof initialState;
+export type InitialStateType = typeof initialState;

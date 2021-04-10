@@ -1,7 +1,7 @@
-import {PhotosType, PostsPropsType, ProfileType} from "../types";
+import {PhotosType, PostsPropsType, ProfileType} from "../../types";
 import {stopSubmit} from "redux-form";
-import {profileAPI} from "../api/profile-api";
-import {BaseThunkType, InferActionsType} from "./redux-store";
+import {profileAPI} from "../../api/profile-api";
+import {BaseThunkType, InferActionsType} from "../redux-store";
 
 let initialState = {
      posts: [

@@ -3,7 +3,7 @@ import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 import {RootStateRedux} from "../../../../redux/redux-store";
 import {PostsPropsType} from "../../../../types";
-import {actions} from "../../../../redux/profile-reducer";
+import {actions} from "../../../../redux/profile/profile-reducer";
 
 
 export type MapStateToPropsType = {

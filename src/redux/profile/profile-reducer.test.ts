@@ -1,4 +1,4 @@
-import profileReducer, {addPost, deletePost, InitialStateType} from "./profile-reducer";
+import profileReducer, {actions, InitialStateType} from "./profile-reducer";
 
 let state: InitialStateType = {
     posts: [
@@ -15,7 +15,7 @@ let state: InitialStateType = {
 test("length of posts should be incremented", () => {
     // 1 пункт: готовим исходные данные
     // 1) test data
-    let action = addPost("it-kamasutra.com")
+    let action = actions.addPost("it-kamasutra.com")
 
     // 2) action - действия
     let newState = profileReducer(state,action)
@@ -28,7 +28,7 @@ test("length of posts should be incremented", () => {
 test("message of new posts should be correct", () => {
     // 1 пункт: готовим исходные данные
     // 1) test data
-    let action = addPost("it-kamasutra.com")
+    let action = actions.addPost("it-kamasutra.com")
 
     // 2) action - действия
     let newState = profileReducer(state,action)
@@ -40,7 +40,7 @@ test("message of new posts should be correct", () => {
 test("after deleting length of messages should be decrement", () => {
     // 1 пункт: готовим исходные данные
     // 1) test data
-    let action = deletePost(1)
+    let action = actions.deletePost(1)
 
     // 2) action - действия
     let newState = profileReducer(state,action)

@@ -1,12 +1,12 @@
 import {Action, applyMiddleware, combineReducers, createStore, Store} from "redux";
-import profileReducer from "./profile-reducer";
+import profileReducer from "./profile/profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
 import sidebarReducer from "./sidebar-reducer";
 import authReducer from "./auth-reducer";
 import thunkMiddleware, {ThunkAction} from "redux-thunk";
 import {reducer as formReducer} from 'redux-form';
 import appReducer from "./app-reducer";
-import {usersReducer} from "./users-reducer";
+import {usersReducer} from "./users/users-reducer";
 
 let rootReducer = combineReducers({
     profilePage:  profileReducer,

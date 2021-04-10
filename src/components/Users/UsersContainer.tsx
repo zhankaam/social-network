@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import {
     follow, getUsers, unfollow,
-} from "../../redux/users-reducer";
+} from "../../redux/users/users-reducer";
 import {RootStateRedux} from "../../redux/redux-store";
 import {UserType} from "../../types";
 import {Users} from "./Users";
@@ -15,8 +15,8 @@ import {
     getPageSize,
     getTotalUsersCount,
     getUsersState
-} from "../../redux/users-selectors";
-import {actions} from "../../redux/users-reducer";
+} from "../../redux/users/users-selectors";
+import {actions} from "../../redux/users/users-reducer";
 
 
 class UsersContainer extends React.Component<MapDispatchToPropsType & MapStateToPropsType> {

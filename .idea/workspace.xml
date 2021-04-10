@@ -23,7 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.thunks.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer/MyPostsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus/ProfileStatus.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileStatus/ProfileStatus.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile/profile-reducer.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile/profile-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-selectors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utilities/object-helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/object-helpers.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,75 +109,71 @@
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\api\auth-api.ts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\redux\users" />
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\redux\profile" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\MyPostsContainer\AddNewPost" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\MyPostsContainer" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\ProfileInfo\ProfileStatus" />
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\ProfileInfo\ProfileInfo" />
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Profile\MyPosts\ProfileInfo\ProfileData" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration name="ProfileStatus component.after creation &lt;input&gt;  shouldn't be displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.renders without crashing">
+    <configuration name="Unnamed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/redux/users/users-reducer.thunks.test.ts" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="after creation &lt;input&gt;  shouldn't be displayed" />
+        <test-name value="" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.after creation &lt;span&gt;  should be displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="follow success" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/redux/users/users-reducer.test.ts" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="after creation &lt;span&gt;  should be displayed" />
+        <test-name value="follow success" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.after creation &lt;span&gt;  should contains correct status" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/App.test.tsx" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="after creation &lt;span&gt;  should contains correct status" />
+        <test-name value="renders without crashing" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.callback should be called" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="unfollow success" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Profile/MyPosts/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/redux/users/users-reducer.test.ts" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="callback should be called" />
+        <test-name value="unfollow success" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="test" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -174,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
-        <item itemvalue="Jest.ProfileStatus component.callback should be called" />
-        <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt;  should be displayed" />
-        <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt;  shouldn't be displayed" />
-        <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt;  should contains correct status" />
+        <item itemvalue="Jest.renders without crashing" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.Unnamed" />
+        <item itemvalue="Jest.unfollow success" />
+        <item itemvalue="Jest.follow success" />
       </list>
     </recent_temporary>
   </component>
@@ -286,14 +293,8 @@
       <workItem from="1617199862865" duration="4418000" />
       <workItem from="1617304182345" duration="6087000" />
       <workItem from="1617363813877" duration="585000" />
-      <workItem from="1617556340947" duration="1580000" />
-    </task>
-    <task id="LOCAL-00033" summary="social-network">
-      <created>1614461318270</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1614461318270</updated>
+      <workItem from="1617556340947" duration="2441000" />
+      <workItem from="1618088673480" duration="4854000" />
     </task>
     <task id="LOCAL-00034" summary="social-network">
       <created>1614465004469</created>
@@ -631,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617310327036</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="typeScript for all!">
+      <created>1617557942584</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1617557942585</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
