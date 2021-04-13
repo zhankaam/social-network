@@ -14,7 +14,7 @@ const result: APIResponseType = {
 
 usersAPIMock.follow.mockReturnValue(Promise.resolve(result))
 
-test("",() => {
+test("success follow thunk",() => {
 
     const thunk = follow(2)
     const dispatchMock = jest.fn()

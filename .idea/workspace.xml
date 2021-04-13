@@ -23,8 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users/users-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users/users-reducer.thunks.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.thunks.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -284,14 +282,7 @@
       <workItem from="1617304182345" duration="6087000" />
       <workItem from="1617363813877" duration="585000" />
       <workItem from="1617556340947" duration="2441000" />
-      <workItem from="1618088673480" duration="6245000" />
-    </task>
-    <task id="LOCAL-00035" summary="social-network">
-      <created>1614467926868</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1614467926868</updated>
+      <workItem from="1618088673480" duration="6925000" />
     </task>
     <task id="LOCAL-00036" summary="social-network">
       <created>1614514957448</created>
@@ -629,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618093627212</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="typeScript for all!">
+      <created>1618095066885</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1618095066885</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
