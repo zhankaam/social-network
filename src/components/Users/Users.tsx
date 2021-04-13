@@ -3,8 +3,8 @@ import {UserType} from "../../types";
 import {Paginator} from "../../assets/common/Paginator/Paginator";
 import {User} from "./User";
 import { Formik } from "formik/dist/Formik";
-import {ErrorMessage, Form} from "formik";
-import {Field} from "redux-form";
+import { Form, Field} from "formik";
+
 
 type PropsType = {
     onPageChanged: (p: number) => void
@@ -64,7 +64,7 @@ const UsersSearchForm = () => {
             validate={usersSearchFormValidate}
             onSubmit={submit}
         >
-            {({ isSubmitting }) => (
+            {({ isSubmitting } ) => (
                 <Form>
                     <Field type="text" name="term" />
                     <button type="submit" disabled={isSubmitting}>
@@ -73,6 +73,5 @@ const UsersSearchForm = () => {
                 </Form>
             )}
         </Formik>
-
     </div>
 }
