@@ -2,12 +2,13 @@ import React from "react";
 import {UserType} from "../../types";
 import {Paginator} from "../../assets/common/Paginator/Paginator";
 import {User} from "./User";
-import {Formik} from "formik/dist/Formik";
-import {Form, Field} from "formik";
+import {FilterType} from "../../redux/users/users-reducer";
+import {UsersSearchForm} from "./UsersSearchForm";
 
 
 type PropsType = {
     onPageChanged: (p: number) => void
+    onFilterChanged: (filter: FilterType) => void
     followingInProgress: number[]
     totalUsersCount: number
     pageSize: number
@@ -21,11 +22,14 @@ type PropsType = {
     setTotalUsersCount: (totalCount: number) => void
     toggleIsFetching: (isFetching: boolean) => void
     toggleFollowingProgress: (isFetching: boolean, userId: number) => void
-    getUsers: (currentPage: number, pageSize: number) => void
+    getUsers: (currentPage: number, pageSize: number,term: string) => void
 }
 
 export let Users = (props: PropsType) => {
     return <div>
+
+        <UsersSearchForm onFilterChanged={props.onFilterChanged}/>
+
         <Paginator totalItemsCount={props.totalUsersCount}
                    pageSize={props.pageSize}
                    currentPage={props.currentPage}
@@ -41,37 +45,3 @@ export let Users = (props: PropsType) => {
     </div>
 }
 
-const usersSearchFormValidate = (values: UsersSearchFormObjectType) => {
-    const errors = {}
-    return errors
-}
-type UsersSearchFormObjectType = {
-    term: string
-}
-
-const UsersSearchForm = () => {
-
-    const submit = (values: UsersSearchFormObjectType, {setSubmitting}: { setSubmitting: (setSubmitting: boolean) => void }) => {
-        setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            setSubmitting(false)
-        }, 400)
-    }
-
-    return <div>
-        <Formik
-            initialValues={{term: ''}}
-            validate={usersSearchFormValidate}
-            onSubmit={submit}
-        >
-            {({isSubmitting}) => (
-                <Form>
-                    <Field type="text" name="term"/>
-                    <button type="submit" disabled={isSubmitting}>
-                        Find
-                    </button>
-                </Form>
-            )}
-        </Formik>
-    </div>
-}
