@@ -5,14 +5,14 @@ type ProfileStatusPropstype = {
     updateStatus: (status: string) => void
 }
 
-export const ProfileStatusWithHooks: React.FC<ProfileStatusPropstype> = (props) =>  {
+export const ProfileStatusWithHooks: React.FC<ProfileStatusPropstype> = (props) => {
 
     let [editMode, setEditMode] = useState(false)
     let [status, setStatus] = useState(props.status)
 
     useEffect(() => {
         setStatus(props.status)
-    },[])
+    }, [])
 
     const activateEditMode = () => {
         setEditMode(true)
@@ -27,18 +27,18 @@ export const ProfileStatusWithHooks: React.FC<ProfileStatusPropstype> = (props) 
         setStatus(e.currentTarget.value)
     }
 
-        return (
+    return (
+        <div>
+            {!editMode &&
             <div>
-                { !editMode &&
-                <div>
-                    <b>Status:</b> <span onDoubleClick={activateEditMode}>{props.status || "-----"}</span>
-                </div>}
-                { editMode &&
-                <div>
-                    <input onChange={onStatusChange} autoFocus onBlur={deactivateEditMode}
-                           value={status ? status : ''} />
-                </div>}
-            </div>
-        )
-    }
+                <b>Status:</b> <span onDoubleClick={activateEditMode}>{props.status || "-----"}</span>
+            </div>}
+            {editMode &&
+            <div>
+                <input onChange={onStatusChange} autoFocus onBlur={deactivateEditMode}
+                       value={status ? status : ''}/>
+            </div>}
+        </div>
+    )
+}
 
