@@ -14,19 +14,18 @@ const result: APIResponseType = {
 
 usersAPIMock.follow.mockReturnValue(Promise.resolve(result))
 
-test("success follow thunk",() => {
+test("success follow thunk", () => {
 
     const thunk = follow(2)
     const dispatchMock = jest.fn()
     const getStateMock = jest.fn()
 
 
+    thunk(dispatchMock, getStateMock, {})
 
-    thunk(dispatchMock,getStateMock, {})
 
-
- expect(dispatchMock).toBeCalledTimes(1)
- expect(dispatchMock).toHaveBeenCalledWith(1,actions.toggleFollowingProgress(true,2))
- expect(dispatchMock).toHaveBeenCalledWith(2,actions.followSuccess(2))
- expect(dispatchMock).toHaveBeenCalledWith(3,actions.toggleFollowingProgress(false,2))
+    expect(dispatchMock).toBeCalledTimes(1)
+    expect(dispatchMock).toHaveBeenCalledWith(1, actions.toggleFollowingProgress(true, 2))
+    expect(dispatchMock).toHaveBeenCalledWith(2, actions.followSuccess(2))
+    expect(dispatchMock).toHaveBeenCalledWith(3, actions.toggleFollowingProgress(false, 2))
 })

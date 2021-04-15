@@ -15,6 +15,7 @@ import store, {RootStateRedux} from "./redux/redux-store";
 import {Preloader} from "./assets/common/Preloader";
 import {compose} from "redux";
 import {withSuspense} from "./hoc/withSuspense";
+
 const DialogsContainer = React.lazy(() => import('./components/Profile/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 const SuspendedDialogs = withSuspense(DialogsContainer)
@@ -29,17 +30,17 @@ type MapDispatchToPropsType = {
 }
 
 type PropsType = MapStateToPropsType & MapDispatchToPropsType
-const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
+const App: React.FC<PropsType> = ({initialized, initializeApp}) => {
     let catchAllUnhandledErrors = (e: PromiseRejectionEvent) => {
         alert('Some error occured')
     }
 
     useEffect(() => {
-       initializeApp();
-       window.addEventListener('unhandledrejection', catchAllUnhandledErrors);
-       window.removeEventListener('unhandledrejection', catchAllUnhandledErrors)
-    },[])
-    if(!initialized) {
+        initializeApp();
+        window.addEventListener('unhandledrejection', catchAllUnhandledErrors);
+        window.removeEventListener('unhandledrejection', catchAllUnhandledErrors)
+    }, [])
+    if (!initialized) {
         return <Preloader/>
     }
     return (
@@ -48,7 +49,7 @@ const App: React.FC<PropsType> = ({initialized,initializeApp} ) => {
             <Navbar/>
             <div className='app-wrapper-content'>
                 <Route exact path="/"
-                render={() => <Redirect to={"/profile"}/>}/>
+                       render={() => <Redirect to={"/profile"}/>}/>
                 <Route path='/dialogs'
                        render={() => <SuspendedDialogs/>}/>
                 <Route path='/profile/:userId?'
@@ -75,7 +76,7 @@ const AppContainer = compose<React.ComponentType>(
 const SamuraiJSApp = () => {
     return <BrowserRouter>
         <Provider store={store}>
-            <AppContainer />
+            <AppContainer/>
         </Provider>
     </BrowserRouter>
 }

@@ -18,7 +18,7 @@ test("length of posts should be incremented", () => {
     let action = actions.addPost("it-kamasutra.com")
 
     // 2) action - действия
-    let newState = profileReducer(state,action)
+    let newState = profileReducer(state, action)
 
 
     // 3) expect - ожидаем получить
@@ -31,7 +31,7 @@ test("message of new posts should be correct", () => {
     let action = actions.addPost("it-kamasutra.com")
 
     // 2) action - действия
-    let newState = profileReducer(state,action)
+    let newState = profileReducer(state, action)
 
 
     // 3) expect - ожидаем получить
@@ -43,7 +43,7 @@ test("after deleting length of messages should be decrement", () => {
     let action = actions.deletePost(1)
 
     // 2) action - действия
-    let newState = profileReducer(state,action)
+    let newState = profileReducer(state, action)
 
 
     // 3) expect - ожидаем получить

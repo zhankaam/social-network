@@ -9,7 +9,7 @@ import appReducer from "./app-reducer";
 import {usersReducer} from "./users/users-reducer";
 
 let rootReducer = combineReducers({
-    profilePage:  profileReducer,
+    profilePage: profileReducer,
     dialogsPage: dialogsReducer,
     sidebar: sidebarReducer,
     usersPage: usersReducer,
@@ -24,8 +24,8 @@ let store: Store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 // type PropertiesTypes<T> = T extends { [key: string] : infer U } ? U : never
 // export type InferActionsType<T extends { [key: string] : (...args: any[]) => any}> = ReturnType<PropertiesTypes<T>>
 
-export type InferActionsType<T> = T extends { [key: string] : (...args: any[]) => infer U } ? U : never
-export type BaseThunkType<A extends Action,R = Promise<void>> = ThunkAction<R, RootStateRedux, unknown, A>
+export type InferActionsType<T> = T extends { [key: string]: (...args: any[]) => infer U } ? U : never
+export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<R, RootStateRedux, unknown, A>
 
 // @ts-ignore
 window.store = store;

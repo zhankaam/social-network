@@ -1,15 +1,15 @@
 import React from 'react';
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer/MyPostsContainer";
-import { ProfileType} from "../../types";
+import {ProfileType} from "../../types";
 
 export type ProfilePropsType = {
-        profile: ProfileType | null
-        updateStatus: (status:string) => void
-        status: string | null
-        isOwner: boolean
-        savePhoto: (file: File) => void
-        saveProfile: (formData: ProfileType) => Promise<any>
+    profile: ProfileType | null
+    updateStatus: (status: string) => void
+    status: string | null
+    isOwner: boolean
+    savePhoto: (file: File) => void
+    saveProfile: (formData: ProfileType) => Promise<any>
 }
 
 const Profile: React.FC<ProfilePropsType> = (props) => {
@@ -24,7 +24,7 @@ const Profile: React.FC<ProfilePropsType> = (props) => {
                 savePhoto={props.savePhoto}
                 saveProfile={props.saveProfile}
             />
-           <MyPostsContainer />
+            <MyPostsContainer/>
         </div>
 
     );
