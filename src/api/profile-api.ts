@@ -27,5 +27,5 @@ export const profileAPI = {
 }
 
 type SavePhotoResponseDataType = {
-    photos:PhotosType
+    photos: PhotosType
 }

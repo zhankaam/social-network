@@ -20,16 +20,16 @@ const MyPosts: React.FC<MapStateToPropsType & MapDispatchToPropsType> = props =>
         props.addPost(values.newPostText);
     }
 
-        return (
-            <div className={s.postsBlock}>
-                <h3> My posts </h3>
-                <AddNewPostForm onSubmit={onAddPost}/>
-                <div className={s.posts}>
-                    {postsElements}
-                </div>
+    return (
+        <div className={s.postsBlock}>
+            <h3> My posts </h3>
+            <AddNewPostForm onSubmit={onAddPost}/>
+            <div className={s.posts}>
+                {postsElements}
             </div>
+        </div>
 
-        );
+    );
 }
 
 const MyPostsMemorized = React.memo(MyPosts)

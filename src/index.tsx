@@ -5,9 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import SamuraiJSApp from "./App";
 
 
-ReactDOM.render( <SamuraiJSApp />
-  , document.getElementById('root'));
-
+ReactDOM.render(<SamuraiJSApp/>
+    , document.getElementById('root'));
 
 
 // If you want to start measuring performance in your app, pass a function

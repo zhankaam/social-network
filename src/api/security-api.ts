@@ -7,5 +7,5 @@ export const securityAPI = {
 }
 
 type GetCaptchaUrlResponseType = {
-    url:string
+    url: string
 }

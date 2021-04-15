@@ -10,12 +10,14 @@ export const instance = axios.create({
 })
 
 export enum ResultCodeEnum {
-    Success= 0,
+    Success = 0,
     Error = 1,
 }
+
 export enum ResultCodeForCaptcha {
     CaptchaIsRequired = 10
 }
+
 export type GetItemsType = {
     items: Array<UserType>
     totalCount: number

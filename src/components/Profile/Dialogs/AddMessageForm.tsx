@@ -14,7 +14,7 @@ const AddMessageForm: React.FC<InjectedFormProps<NewMessageFormType, PropsType> 
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                {createField<NewMessageFormValuesKeys>("Enter your message", "newMessageBody", [required, maxLength50], Textarea )}
+                {createField<NewMessageFormValuesKeys>("Enter your message", "newMessageBody", [required, maxLength50], Textarea)}
             </div>
             <div>
                 <button>Send</button>

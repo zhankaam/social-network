@@ -15,8 +15,8 @@ export type MapDispatchToPropsType = {
 }
 
 const mapStateToProps = (state: RootStateRedux): MapStateToPropsType => ({
-        posts: state.profilePage.posts,
-        newPostText: state.profilePage.newPostText
+    posts: state.profilePage.posts,
+    newPostText: state.profilePage.newPostText
 })
 
 

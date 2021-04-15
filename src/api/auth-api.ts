@@ -5,7 +5,12 @@ export const authAPI = {
         return instance.get<APIResponseType<MeResponseDataType>>(`auth/me`)
     },
     login(email: string, password: string, rememberMe: boolean = false, captcha: string | null = null) {
-        return instance.post<APIResponseType<LoginResponseDataType,ResultCodeEnum |ResultCodeForCaptcha>>(`auth/login`, {email, password, rememberMe, captcha})
+        return instance.post<APIResponseType<LoginResponseDataType, ResultCodeEnum | ResultCodeForCaptcha>>(`auth/login`, {
+            email,
+            password,
+            rememberMe,
+            captcha
+        })
             .then(res => res.data)
     },
     logout() {
@@ -15,10 +20,10 @@ export const authAPI = {
 
 
 type MeResponseDataType = {
-        id: number
-        email: string
-        login: string
+    id: number
+    email: string
+    login: string
 }
 type LoginResponseDataType = {
-        userId: number
+    userId: number
 }

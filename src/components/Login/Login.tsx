@@ -3,17 +3,17 @@ import {reduxForm} from "redux-form";
 import {connect} from "react-redux";
 import {LoginForm, PropsType} from "./LoginForm";
 import {login} from "../../redux/auth-reducer";
-import { Redirect } from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import {RootStateRedux} from "../../redux/redux-store";
 
-const LoginReduxForm = reduxForm<LoginFormValuesType,PropsType>({ form: 'login'})(LoginForm)
+const LoginReduxForm = reduxForm<LoginFormValuesType, PropsType>({form: 'login'})(LoginForm)
 type MapStateToPropsType = {
     captchaUrl: string | null
     isAuth: boolean
 
 }
 type MapDispatchToPropsType = {
-    login: (email:string, password:string,rememberMe:boolean,captcha: string) => void
+    login: (email: string, password: string, rememberMe: boolean, captcha: string) => void
 }
 export type LoginFormValuesType = {
     password: string
@@ -21,12 +21,12 @@ export type LoginFormValuesType = {
     rememberMe: boolean
     captchaUrl: string
 }
-const Login: React.FC<MapStateToPropsType & MapDispatchToPropsType > = (props) => {
+const Login: React.FC<MapStateToPropsType & MapDispatchToPropsType> = (props) => {
     const onSubmit = (formData: LoginFormValuesType) => {
-        props.login(formData.email, formData.password,formData.rememberMe, formData.captchaUrl)
+        props.login(formData.email, formData.password, formData.rememberMe, formData.captchaUrl)
     }
 
-    if(props.isAuth) {
+    if (props.isAuth) {
         return <Redirect to={"/profile"}/>
     }
 
