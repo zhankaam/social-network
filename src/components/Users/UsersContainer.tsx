@@ -23,18 +23,19 @@ import {actions} from "../../redux/users/users-reducer";
 class UsersContainer extends React.Component<MapDispatchToPropsType & MapStateToPropsType> {
 
     componentDidMount() {
-        this.props.getUsers(this.props.currentPage, this.props.pageSize,"")
+        const {currentPage,pageSize, filter} = this.props
+        this.props.getUsers(currentPage, pageSize,filter)
     }
 
     onPageChanged = (pageNumber: number) => {
         const {pageSize, filter} = this.props
-        this.props.getUsers(pageNumber, pageSize,filter.term)
+        this.props.getUsers(pageNumber, pageSize,filter)
     }
 
      onFilterChanged = (filter: FilterType) => {
      const {pageSize} = this.props
 
-     this.props.getUsers(1,pageSize,filter.term)
+     this.props.getUsers(1,pageSize,filter)
     }
 
     render() {
@@ -80,7 +81,7 @@ export type MapDispatchToPropsType = {
     setTotalUsersCount: (totalCount: number) => void
     toggleIsFetching: (isFetching: boolean) => void
     toggleFollowingProgress: (isFetching: boolean, userId: number) => void
-    getUsers: (currentPage: number, pageSize: number,term: string) => void
+    getUsers: (currentPage: number, pageSize: number,filter: FilterType) => void
 }
 
 const mapStateToProps = (state: RootStateRedux):MapStateToPropsType => {

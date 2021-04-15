@@ -22,7 +22,7 @@ type PropsType = {
     setTotalUsersCount: (totalCount: number) => void
     toggleIsFetching: (isFetching: boolean) => void
     toggleFollowingProgress: (isFetching: boolean, userId: number) => void
-    getUsers: (currentPage: number, pageSize: number,term: string) => void
+    getUsers: (currentPage: number, pageSize: number,filter: FilterType) => void
 }
 
 export let Users = (props: PropsType) => {
