@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Users.module.css";
-import userPhoto from "../../assets/images/390poHMbqew.jpg";
+import userPhoto from "../../assets/images/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png";
 import {NavLink} from "react-router-dom"
 import {UserType} from "../../types";
 
@@ -36,8 +36,8 @@ export let User: React.FC<UserPropsType> = ({user, followingInProgress, unfollow
                     <div>{user.status}</div>
                 </span>
                 <span>
-                    <div>{"user.location.country"}</div>
-                    <div>{"user.location.city"}</div>
+                    {/*<div>{"user.location.country"}</div>*/}
+                    {/*<div>{"user.location.city"}</div>*/}
                 </span>
          </span>
     </div>
