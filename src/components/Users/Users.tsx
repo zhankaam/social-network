@@ -1,12 +1,12 @@
-import React from "react";
-import {UserType} from "../../types";
+import React, {useEffect} from "react";
 import {Paginator} from "../../assets/common/Paginator/Paginator";
 import {User} from "./User";
 import {FilterType, getUsers} from "../../redux/users/users-reducer";
 import {UsersSearchForm} from "./UsersSearchForm";
 import {useDispatch, useSelector} from "react-redux";
 import {
-    getCurrentPage, getFollowingInProgress,
+    getCurrentPage,
+    getFollowingInProgress,
     getPageSize,
     getTotalUsersCount,
     getUsersFilter,
@@ -14,25 +14,13 @@ import {
 } from "../../redux/users/users-selectors";
 
 
-type PropsType = {
-    // onFilterChanged: (filter: FilterType) => void
-    // followingInProgress: number[]
-    // totalUsersCount: number
-    // pageSize: number
-    // currentPage: number
-    isFetching: boolean
-    // users: Array<UserType>
-    follow: (userId: number) => void
-    unfollow: (userId: number) => void
-    setUsers: (users: Array<UserType>) => void
-    setCurrentPage: (pageNumber: number) => void
-    setTotalUsersCount: (totalCount: number) => void
-    toggleIsFetching: (isFetching: boolean) => void
-    toggleFollowingProgress: (isFetching: boolean, userId: number) => void
-    getUsers: (currentPage: number, pageSize: number,filter: FilterType) => void
-}
+type PropsType = {}
 
-export let Users = (props: PropsType) => {
+export const Users: React.FC<PropsType> = (props) => {
+
+    useEffect(() => {
+        dispatch(getUsers(currentPage, pageSize, filter))
+    }, [])
 
     const totalUsersCount = useSelector(getTotalUsersCount)
     const users = useSelector(getUsersState)
@@ -44,11 +32,19 @@ export let Users = (props: PropsType) => {
     const dispatch = useDispatch()
 
     const onPageChanged = (pageNumber: number) => {
-        dispatch(getUsers(pageNumber, pageSize,filter))
+        dispatch(getUsers(pageNumber, pageSize, filter))
     }
 
     const onFilterChanged = (filter: FilterType) => {
-        dispatch(getUsers(1,pageSize,filter))
+        dispatch(getUsers(1, pageSize, filter))
+    }
+
+    const follow = (userId: number) => {
+        dispatch(follow(userId))
+    }
+
+    const unfollow = (userId: number) => {
+        dispatch(unfollow(userId))
     }
 
     return <div>
@@ -62,10 +58,10 @@ export let Users = (props: PropsType) => {
         />
         <div>
             {users.map(u => <User key={u.id}
-                                        user={u}
-                                        unfollow={props.unfollow}
-                                        follow={props.follow}
-                                        followingInProgress={followingInProgress}/>)}
+                                  user={u}
+                                  unfollow={unfollow}
+                                  follow={follow}
+                                  followingInProgress={followingInProgress}/>)}
 
         </div>
     </div>
