@@ -5,9 +5,9 @@ import News from "./components/Profile/News/News";
 import Music from "./components/Profile/Music/Music";
 import Settings from './components/Profile/Settings/Settings';
 import {BrowserRouter, Redirect, Route} from "react-router-dom";
-import UsersContainer from "./components/Users/UsersContainer";
+import {UsersPage} from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
-import Login from "./components/Login/Login";
+import {Login} from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {withRouter} from "react-router-dom";
 import {initializeApp} from "./redux/app-reducer";
@@ -55,7 +55,7 @@ const App: React.FC<PropsType> = ({initialized, initializeApp}) => {
                 <Route path='/profile/:userId?'
                        render={() => <SuspendedProfile/>}/>
                 <Route path='/users'
-                       render={() => <UsersContainer/>}/>
+                       render={() => <UsersPage/>}/>
                 <Route path='/login' render={() => <Login/>}/>
                 <Route path='/dialogs' render={() => <News/>}/>
                 <Route path='/profile' render={() => <Music/>}/>
