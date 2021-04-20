@@ -3,7 +3,7 @@ import s from './ProfileInfo.module.css';
 import {Preloader} from "../../../../../assets/common/Preloader";
 import {ProfileStatusWithHooks} from "../ProfileStatus/ProfileStatusWithHooks";
 import {ProfileType} from "../../../../../types";
-import userPhoto from "../../../../../assets/images/390poHMbqew.jpg";
+import userPhoto from "../../../../../assets/images/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png";
 import ProfileDataForm from "../ProfileData/ProfileDataForm";
 import {ProfileData} from "../ProfileData/ProfileData";
 
@@ -12,6 +12,7 @@ type ProfileInfoPropsType = {
     status: string | null
     updateStatus: (status: string) => void
     isOwner: boolean
+
     savePhoto: (file: File) => void
     saveProfile: (formData: ProfileType) => Promise<any>
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "./Header";
+import {AppHeader} from "./AppHeader";
 import {connect} from "react-redux";
 import {RootStateRedux} from "../../redux/redux-store";
 import {logout} from "../../redux/auth-reducer";
@@ -16,10 +16,10 @@ class HeaderContainer extends React.Component<OwnPropsType & MapStateToPropsType
 
     render() {
         return (
-            <Header
-                isAuth={this.props.isAuth}
-                login={this.props.login}
-                logout={this.props.logout}
+            <AppHeader
+                // isAuth={this.props.isAuth}
+                // login={this.props.login}
+                // logout={this.props.logout}
             />
         )
     }

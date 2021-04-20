@@ -22,16 +22,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="code refactoring!">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/153099.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/userPhoto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Без названия (1).png" afterDir="false" />
+    <list default="true" id="152df7c3-7eec-45ed-b3b3-e37d60e0433c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/auth-selectors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/153099.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/390poHMbqew.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/cwBh8gjJX_k.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/userPhoto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/AppHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/ProfileInfo/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +77,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -91,11 +96,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\redux" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\assets\common\Paginator" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Users" />
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Redux" />
-      <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\Profile" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="D:\it-incubator.com\react-kbazda-kak-prosto\projects\01-first-project\my-app\src\components\Users\UsersSearchForm.tsx" />
@@ -289,14 +294,10 @@
       <workItem from="1618398535816" duration="568000" />
       <workItem from="1618501874103" duration="473000" />
       <workItem from="1618512283986" duration="10264000" />
-      <workItem from="1618765723790" duration="11792000" />
-    </task>
-    <task id="LOCAL-00048" summary="social-network">
-      <created>1614629369660</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1614629369660</updated>
+      <workItem from="1618765723790" duration="12481000" />
+      <workItem from="1618829672429" duration="12000" />
+      <workItem from="1618925099666" duration="5971000" />
+      <workItem from="1618931803826" duration="1951000" />
     </task>
     <task id="LOCAL-00049" summary="social-network">
       <created>1614642433426</created>
@@ -634,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618774487910</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="code refactoring!">
+      <created>1618786097306</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1618786097306</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
