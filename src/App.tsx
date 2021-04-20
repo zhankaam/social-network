@@ -1,30 +1,26 @@
 import React, {useEffect} from 'react';
 import './App.css';
 import 'antd/dist/antd.css'
-import {Layout, Menu, Breadcrumb, Avatar, Row, Col} from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-import Navbar from './components/Navbar/Navbar';
-import News from "./components/Profile/News/News";
-import Music from "./components/Profile/Music/Music";
-import Settings from './components/Profile/Settings/Settings';
-import {BrowserRouter, Link, NavLink, Redirect, Route, Switch} from "react-router-dom";
+import {Breadcrumb, Layout, Menu} from 'antd';
+import {LaptopOutlined, UserOutlined,NotificationOutlined} from '@ant-design/icons';
+import {BrowserRouter, Link, Redirect, Route, Switch, withRouter} from "react-router-dom";
 import {UsersPage} from "./components/Users/UsersContainer";
-import HeaderContainer from "./components/Header/HeaderContainer";
 import {Login} from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
-import {withRouter} from "react-router-dom";
 import {initializeApp} from "./redux/app-reducer";
 import store, {RootStateRedux} from "./redux/redux-store";
 import {Preloader} from "./assets/common/Preloader";
 import {compose} from "redux";
 import {withSuspense} from "./hoc/withSuspense";
-import s from "./components/Navbar/Navbar.module.css";
 import {AppHeader} from "./components/Header/AppHeader";
 
 const DialogsContainer = React.lazy(() => import('./components/Profile/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
+const ChatPage = React.lazy(() => import('./pages/Chat/ChatPage'));
+
 const SuspendedDialogs = withSuspense(DialogsContainer)
 const SuspendedProfile = withSuspense(ProfileContainer)
+const SuspendedChatPage = withSuspense(ChatPage)
 
 
 type MapStateToPropsType = {
@@ -53,7 +49,7 @@ const App: React.FC<PropsType> = ({initialized, initializeApp}) => {
     }
 
     const { SubMenu } = Menu;
-    const { Header, Content, Footer, Sider } = Layout;
+    const { Content, Footer, Sider } = Layout;
 
     return (
         <Layout>
@@ -79,6 +75,9 @@ const App: React.FC<PropsType> = ({initialized, initializeApp}) => {
                             <SubMenu key="sub2" icon={<LaptopOutlined />} title="Developers">
                                 <Menu.Item key="5"><Link to="/users"> Users</Link></Menu.Item>
                             </SubMenu>
+                            <SubMenu key="sub3" icon={<NotificationOutlined />} title="Messages">
+                                <Menu.Item key="9"><Link to="/chat">Chat</Link></Menu.Item>
+                            </SubMenu>
                         </Menu>
                     </Sider>
                     <Content style={{ padding: '0 24px', minHeight: 280 }}>
@@ -92,34 +91,13 @@ const App: React.FC<PropsType> = ({initialized, initializeApp}) => {
                             <Route path='/users'
                                    render={() => <UsersPage/>}/>
                             <Route path='/login' render={() => <Login/>}/>
+                            <Route path='/chat' render={() => <SuspendedChatPage/>}/>
                         </Switch>
                     </Content>
                 </Layout>
             </Content>
             <Footer style={{ textAlign: 'center' }}>Social Network ©2021 Created by Samurai Zhanat</Footer>
         </Layout>
-
-
-       /* <div className='app-wrapper'>
-            <HeaderContainer/>
-            <Navbar/>
-            <div className='app-wrapper-content'>
-            <Switch>
-                <Route exact path="/"
-                       render={() => <Redirect to={"/profile"}/>}/>
-                <Route path='/dialogs'
-                       render={() => <SuspendedDialogs/>}/>
-                <Route path='/profile/:userId?'
-                       render={() => <SuspendedProfile/>}/>
-                <Route path='/users'
-                       render={() => <UsersPage/>}/>
-                <Route path='/login' render={() => <Login/>}/>
-                <Route path='/dialogs' render={() => <News/>}/>
-                <Route path='/profile' render={() => <Music/>}/>
-                <Route path='/dialogs' render={() => <Settings/>}/>
-                </Switch>
-            </div>
-        </div>*/
     )
 }
 

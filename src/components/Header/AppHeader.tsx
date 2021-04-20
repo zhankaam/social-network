@@ -37,7 +37,7 @@ export const AppHeader: React.FC<HeaderPropsType> = () => {
                     ? <>
                         <Col span={3}>
                             <Avatar style={{backgroundColor: '#87d068'}} icon={<UserOutlined/>}/>
-                            <span style={{color: "White"}}>{login} </span>
+                            <span style={{color: "White"}}> {login} </span>
                         </Col>
                         <Col span={3}>
                             <Button onClick={logoutCallback}>Log out</Button>
