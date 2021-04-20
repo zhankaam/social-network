@@ -1,51 +1,77 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
- const ChatPage = () => {
+const wsChannel = new WebSocket("wss://social-network.samuraijs.com/handlers/ChatHandler.ashx\n")
+
+export type ChatMessageType = {
+    message: string
+    photo: string
+    userId: number
+    userName: string
+}
+
+const ChatPage = () => {
     return (
         <div>
-           <Chat/>
+            <Chat/>
         </div>
     );
 };
 
- export const Chat: React.FC = () => {
-     return <div>
-         <Messages/>
-         <AddMessageForm/>
-     </div>
- }
-
-export const Messages: React.FC = () => {
-    let messages =  [1,2,3,4]
+export const Chat: React.FC = () => {
 
     return <div>
-        {messages.map((m:any) => <Message/>)}
+        <Messages/>
+        <AddMessageForm/>
     </div>
 }
 
-export const Message: React.FC = () => {
-     const message = {
-         url: "https://via.placeholder.com/30",
-         author: "Zhanat",
-         text: "Hello World!"
-     }
+export const Messages: React.FC = () => {
+    const [messages, setMessages] = useState<ChatMessageType[]>([])
+
+    useEffect(() => {
+        wsChannel.addEventListener("messages", (e: MessageEvent) => {
+            let newMessages = JSON.parse(e.data);
+            setMessages((prevMessages) => [...prevMessages, ...newMessages])
+        })
+    }, [])
+
+
+    return <div style={{height: "400px", overflowY: "auto"}}>
+        {messages.map((m: any, index) => <Message message={m} key={index}/>)}
+    </div>
+}
+
+export const Message: React.FC<{ message: ChatMessageType }> = ({message}) => {
+
 
     return <div>
-        <img src={message.url}/><b>{message.author}</b>
+        <img src={message.photo} style={{width: "30px"}}/><b>{message.userName}</b>
         <br/>
-        {message.text}
+        {message.message}
         <hr/>
     </div>
 }
 
 export const AddMessageForm: React.FC = () => {
+    const [message, setMessage] = useState("")
+
+    const sendMessage = () => {
+        if (!message) {
+            return;
+        }
+        wsChannel.send(message)
+        sendMessage("")
+    }
+
+
     return <div>
         <div>
-            <textarea ></textarea>
+            <textarea value={message}
+                onChange={(e) => setMessage(e.currentTarget.value)} ></textarea>
         </div>
-      <div>
-          <button>Send</button>
-      </div>
+        <div>
+            <button onClick={sendMessage}>Send</button>
+        </div>
     </div>
 }
 
