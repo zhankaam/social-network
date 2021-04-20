@@ -33,7 +33,6 @@ export const AppHeader: React.FC<HeaderPropsType> = () => {
                     <Menu.Item key="1"><Link to="/users"> Developers</Link></Menu.Item>
                 </Menu>
             </Col>
-            <Col span={6}>
                 {isAuth
                     ? <>
                         <Col span={3}>
@@ -45,11 +44,10 @@ export const AppHeader: React.FC<HeaderPropsType> = () => {
                         </Col>
                     </>
                     : <Col span={6}>
-                        <Link to={'/login'}>Login</Link>
-                    </Col>
-
-                }
-            </Col>
+                        <Button>
+                            <Link to={'/login'}>Login</Link>
+                        </Button>
+                    </Col>}
         </Row>
     </Header>)
 }

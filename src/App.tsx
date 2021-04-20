@@ -96,7 +96,7 @@ const App: React.FC<PropsType> = ({initialized, initializeApp}) => {
                     </Content>
                 </Layout>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footer style={{ textAlign: 'center' }}>Social Network ©2021 Created by Samurai Zhanat</Footer>
         </Layout>
 
 
