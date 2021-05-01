@@ -31,7 +31,7 @@ export const Login: React.FC<LoginToPropsType> = () => {
     }
 
     return <div>
-        <h1>Login</h1>
+        <h1 style={{padding: "20px", margin:"10px",textTransform: "uppercase"}}>Login</h1>
         <LoginReduxForm onSubmit={onSubmit} captchaUrl={captchaUrl}/>
     </div>
 }

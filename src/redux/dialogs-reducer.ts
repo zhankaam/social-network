@@ -11,11 +11,11 @@ let initialState = {
         {id: 6, name: "Valera"},
     ],
     messages: [
-        {id: 1, message: "Hi"},
-        {id: 2, message: "How is your It-kamasutra? "},
-        {id: 3, message: "Yo"},
-        {id: 4, message: "Yo"},
-        {id: 5, message: "Yo"}
+        {id: 1, message: "Hello,How are you today? How may I help you? :)"},
+        {id: 2, message: "Hey! I'm fine. Thanks for asking! "},
+        {id: 3, message: "I have a question about your product. "},
+        {id: 4, message: "Could you help me?"},
+        {id: 5, message: " of course, what's the problem?"}
     ],
     newMessageBody: ""
 }

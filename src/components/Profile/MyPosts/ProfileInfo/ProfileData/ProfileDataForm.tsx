@@ -3,6 +3,7 @@ import {createField, Input, Textarea} from "../../../../../assets/common/FormsCo
 import {InjectedFormProps, reduxForm} from "redux-form";
 import {ProfileType} from "../../../../../types";
 import s from "../ProfileInfo/ProfileInfo.module.css"
+import { Button } from "antd";
 
 type PropsType = {
     profile: ProfileType

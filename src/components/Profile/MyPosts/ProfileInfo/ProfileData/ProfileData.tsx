@@ -1,6 +1,7 @@
 import React from "react";
 import {Contact} from "../ProfileInfo/ProfileInfo";
 import {ProfileType} from "../../../../../types";
+import s from "./Profile.module.css"
 
 export type ProfileDataPropsType = {
     profile: ProfileType
@@ -11,7 +12,7 @@ export type ProfileDataPropsType = {
 export const ProfileData: React.FC<ProfileDataPropsType> = ({profile, isOwner, goToEditMode}) => {
     return <div>
         {isOwner && <div>
-            <button onClick={goToEditMode}>edit</button>
+            <button className={s.btn} onClick={goToEditMode}>edit</button>
         </div>}
         <div>
             <b>FullName</b>: {profile.fullName}

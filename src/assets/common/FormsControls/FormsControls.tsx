@@ -20,12 +20,12 @@ const FormControl: React.FC<FormsControlsPropsType> = ({meta: {touched, error}, 
 
 export const Textarea: React.FC<WrappedFieldProps> = (props) => {
     const {input, meta, ...restProps} = props
-    return <FormControl {...props}><textarea {...input} {...restProps}/></FormControl>
+    return <FormControl {...props}><textarea className={s.textarea} {...input} {...restProps}/></FormControl>
 }
 
 export const Input: React.FC<WrappedFieldProps> = (props) => {
     const {input, meta, ...restProps} = props;
-    return <FormControl {...props}><input {...input} {...restProps}/></FormControl>
+    return <FormControl {...props}><input className={s.input} {...input} {...restProps}/></FormControl>
 }
 
 export function createField<FormKeysType extends string>(placeholder: string | null,

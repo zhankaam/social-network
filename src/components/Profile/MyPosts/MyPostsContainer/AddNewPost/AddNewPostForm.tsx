@@ -2,6 +2,8 @@ import {createField, GetStringKeys, Textarea} from "../../../../../assets/common
 import React from "react";
 import {InjectedFormProps, reduxForm} from "redux-form";
 import {required} from "../../../../../utilities/validators/Validators";
+import { Button } from "antd";
+import s from "./../MyPosts.module.css"
 
 export type AddPostFormValuesType = {
     newPostText: string
@@ -16,7 +18,7 @@ const AddNewPostForm: React.FC<InjectedFormProps<AddPostFormValuesType, PropsTyp
             {createField<AddPostFormValuesTypeKeys>("Post message", "newPostText", [required], Textarea)}
         </div>
         <div>
-            <button>Add post</button>
+            <button className={s.btn}>Add post</button>
         </div>
     </form>
     )

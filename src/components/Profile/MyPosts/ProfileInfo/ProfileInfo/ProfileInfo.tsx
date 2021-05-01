@@ -6,13 +6,13 @@ import {ProfileType} from "../../../../../types";
 import userPhoto from "../../../../../assets/images/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png";
 import ProfileDataForm from "../ProfileData/ProfileDataForm";
 import {ProfileData} from "../ProfileData/ProfileData";
+import { Input } from 'antd';
 
 type ProfileInfoPropsType = {
     profile: ProfileType | null
     status: string | null
     updateStatus: (status: string) => void
     isOwner: boolean
-
     savePhoto: (file: File) => void
     saveProfile: (formData: ProfileType) => Promise<any>
 }
@@ -37,18 +37,18 @@ const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile, status, updateSta
         })
     }
 
+
     return (
         <div className={s.descriptionBlock}>
             <img src={profile.photos.large || userPhoto} alt={"try again later"} className={s.mainPhoto}/>
-            {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
+            {isOwner && <Input style={{width: "20%", padding: "10px"}} type={"file"} onChange={onMainPhotoSelected}/>}
             {editMode
                 ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
                 : <ProfileData goToEditMode={() => {
                     setEditMode(true)
                 }} profile={profile} isOwner={isOwner}/>}
 
-            <ProfileStatusWithHooks status={status}
-                                    updateStatus={updateStatus}/>
+            <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
         </div>
     );
 }

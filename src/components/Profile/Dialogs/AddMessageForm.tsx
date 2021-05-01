@@ -3,6 +3,8 @@ import {createField, Textarea} from "../../../assets/common/FormsControls/FormsC
 import {maxLengthCreator, required} from "../../../utilities/validators/Validators";
 import React from "react";
 import {NewMessageFormType} from "./Dialogs";
+import s from "./Dialogs.module.css"
+
 
 const maxLength50 = maxLengthCreator(50)
 
@@ -17,7 +19,7 @@ const AddMessageForm: React.FC<InjectedFormProps<NewMessageFormType, PropsType> 
                 {createField<NewMessageFormValuesKeys>("Enter your message", "newMessageBody", [required, maxLength50], Textarea)}
             </div>
             <div>
-                <button>Send</button>
+                <button className={s.btn}>Send</button>
             </div>
         </form>
     )

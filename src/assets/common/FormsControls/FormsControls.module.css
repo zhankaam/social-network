@@ -13,3 +13,31 @@
   padding:5px;
   color: red;
 }
+.textarea {
+  text-align: center;
+  width: 300px;
+  min-height: 45px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  background: white;
+  resize: none;
+  border: 1px solid blue;
+}
+
+.input {
+  width: 30%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px ;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 20px;
+  margin-left: 30px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}

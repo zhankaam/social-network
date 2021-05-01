@@ -1,4 +1,6 @@
+import { Button } from 'antd';
 import React, {useEffect, useState} from 'react';
+import s from "./ChatPage.module.css"
 
 export type ChatMessageType = {
     message: string
@@ -120,7 +122,7 @@ export const AddMessageForm: React.FC<{ wsChannel: WebSocket | null }> = ({wsCha
                       onChange={(e) => setMessage(e.currentTarget.value)}></textarea>
         </div>
         <div>
-            <button disabled={wsChannel === null || readyStatus !== "ready"} onClick={sendMessage}>Send</button>
+            <button className={s.btn} disabled={wsChannel === null || readyStatus !== "ready"} onClick={sendMessage}>Send</button>
         </div>
     </div>
 }

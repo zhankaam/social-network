@@ -3,6 +3,8 @@ import styles from "./Users.module.css";
 import userPhoto from "../../assets/images/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png";
 import {NavLink} from "react-router-dom"
 import {UserType} from "../../types";
+import { Button } from "antd";
+import s from "./Users.module.css"
 
 type UserPropsType = {
     user: UserType
@@ -20,11 +22,11 @@ export let User: React.FC<UserPropsType> = ({user, followingInProgress, unfollow
                 </NavLink>
             </div>
              <div>{user.followed
-                 ? <button disabled={followingInProgress.some(id => id === user.id)}
+                 ? <button className={s.btn} disabled={followingInProgress.some(id => id === user.id)}
                            onClick={() => {
                                unfollow(user.id)
                            }}>Unfollow</button>
-                 : <button disabled={followingInProgress.some(id => id === user.id)}
+                 : <button className={s.btn} disabled={followingInProgress.some(id => id === user.id)}
                            onClick={() => {
                                follow(user.id)
                            }}>Follow</button>}

@@ -45,7 +45,7 @@ const App: React.FC<PropsType> = ({initialized, initializeApp}) => {
     }, [])
 
     if (!initialized) {
-        return <Preloader/>
+        return  <div style={{position: "fixed", top: "30%", textAlign:"center", width: "100%"}}><Preloader /></div>
     }
 
     const { SubMenu } = Menu;
