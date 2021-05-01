@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import styles from "./Paginator.module.css";
 import cn from "classnames";
+import { Pagination } from 'antd';
 
 type PropsType = {
     totalItemsCount: number
@@ -29,6 +30,8 @@ export let Paginator: React.FC<PropsType> = ({
     let [portionNumber, setPortionNumber] = useState(1)
     let leftPortionPageNumber = (portionNumber - 1) * portionSize + 1
     let rightPortionPageNumber = portionNumber * portionSize
+
+    // <Pagination/>
 
     return <div className={cn(styles.paginator)}>
         {portionNumber > 1 &&

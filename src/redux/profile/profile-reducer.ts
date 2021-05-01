@@ -5,10 +5,10 @@ import {BaseThunkType, InferActionsType} from "../redux-store";
 
 let initialState = {
     posts: [
-        {id: 1, message: "Hi, how are you?", likesCount: 12},
-        {id: 2, message: "It is my first post", likesCount: 11},
-        {id: 3, message: "Blabla", likesCount: 11},
-        {id: 4, message: "Dada", likesCount: 11}
+        {id: 1, message: "5 Secret features of JSON.stringify()", likesCount: 1273893},
+        {id: 2, message: "Use Chrome DevTools Like a Senior Frontend Developer", likesCount: 258743},
+        {id: 3, message: " 7 really good reasons not to use TypeScript", likesCount: 67844},
+        {id: 4, message: "19 things I stole from great developers", likesCount: 2682167}
     ] as Array<PostsPropsType>,
     newPostText: "",
     profile: null as ProfileType | null,

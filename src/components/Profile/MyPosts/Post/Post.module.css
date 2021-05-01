@@ -2,9 +2,44 @@
     grid-area: c;
     background-color: #BC8F8F;
    }
-   
+
+.item {
+    padding: 10px;
+    margin: 10px;
+    min-height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
 .item img {
+    padding: 5px;
     width: 50px;
     height: 50px;
     border-radius: 30px;
+}
+
+.chat {
+    background-color: blue;
+    width: 200px;
+    min-height: 45px;
+    border-radius: 5px;
+    color: azure;
+    padding: 10px;
+    position: relative;
+}
+
+.chat::before, .block::after {
+    content: '';
+    position: absolute;
+    left: 20px; bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid blue;
+}
+.chat::after {
+    border-top: 10px solid blue;
+    bottom: -19px;
+}
+
+.block {
+    padding: 10px;
 }
