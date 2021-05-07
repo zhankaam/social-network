@@ -41,7 +41,12 @@ const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile, status, updateSta
     return (
         <div className={s.descriptionBlock}>
             <img src={profile.photos.large || userPhoto} alt={"try again later"} className={s.mainPhoto}/>
-            {isOwner && <Input style={{width: "20%", padding: "10px"}} type={"file"} onChange={onMainPhotoSelected}/>}
+            {isOwner && <div className={s.wrapper}>
+                <label htmlFor={"file"} className={s.label}>
+                    <Input className={s.input} type={"file"} onChange={onMainPhotoSelected}/>
+                    <span>Загрузить файл</span>
+                </label>
+               </div>}
             {editMode
                 ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
                 : <ProfileData goToEditMode={() => {
@@ -52,6 +57,7 @@ const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile, status, updateSta
         </div>
     );
 }
+
 
 
 export type ContactPropsType = {
