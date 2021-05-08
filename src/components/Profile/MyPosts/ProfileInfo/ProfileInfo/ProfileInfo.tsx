@@ -42,7 +42,7 @@ const ProfileInfo: React.FC<ProfileInfoPropsType> = ({profile, status, updateSta
         <div className={s.descriptionBlock}>
             <img src={profile.photos.large || userPhoto} alt={"try again later"} className={s.mainPhoto}/>
             {isOwner && <div className={s.wrapper}>
-                <label htmlFor={"file"} className={s.label}>
+                <label className={s.label}>
                     <Input className={s.input} type={"file"} onChange={onMainPhotoSelected}/>
                     <span>Загрузить файл</span>
                 </label>

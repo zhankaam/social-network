@@ -27,7 +27,7 @@ export const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType, PropsTyp
                 {error}
             </div>}
             <div>
-                <button>Login</button>
+                <button className={s.btn}>Login</button>
             </div>
         </form>
     );
