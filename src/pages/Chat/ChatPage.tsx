@@ -48,6 +48,7 @@ export const Chat: React.FC = () => {
     //     })
     // }, [wsChannel])
 
+    const status = useSelector<RootStateRedux>(state => state.chat.status)
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -58,8 +59,12 @@ export const Chat: React.FC = () => {
     }, []);
 
     return <div>
-        <Messages/>
-        <AddMessageForm/>
+        {status === 'error'
+            ? <div>Some error occured.Please refresh the page</div>
+            : <>
+                <Messages/>
+                <AddMessageForm/>
+            </>}
     </div>;
 };
 
