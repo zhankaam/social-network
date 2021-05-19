@@ -4,8 +4,10 @@ import {chatAPI, ChatMessageType} from ".././api/chat-api";
 import {Dispatch} from "redux";
 import {FormAction} from "redux-form";
 
+export type StatusType = "pending" | "ready";
 let initialState = {
     messages: [] as ChatMessageType[],
+    status: "pending" as StatusType
 };
 
 export const chatReducer = (state = initialState, action: ActionsType): InitialStateType => {
@@ -16,6 +18,8 @@ export const chatReducer = (state = initialState, action: ActionsType): InitialS
                 ...state,
                 messages: [...state.messages, ...action.payload.messages]
             };
+        case "SN/CHAT/STATUS_CHANGED":
+
         default:
             return state;
     }
@@ -36,17 +40,17 @@ const newMessagesHandlerCreator = (dispatch: Dispatch) => {
 };
 
 export const startMessagesListening = (): ThunkType => async (dispatch) => {
-    chatAPI.start()
-    chatAPI.subscribe(newMessagesHandlerCreator(dispatch));
+    chatAPI.start();
+    chatAPI.subscribe("messages-received", newMessagesHandlerCreator(dispatch));
 };
 
 export const stopMessagesListening = (): ThunkType => async (dispatch) => {
-    chatAPI.unsubscribe(newMessagesHandlerCreator(dispatch));
-    chatAPI.stop()
+    chatAPI.unsubscribe("messages-received", newMessagesHandlerCreator(dispatch));
+    chatAPI.stop();
 };
 
 export const sendMessage = (message: string): ThunkType => async (dispatch) => {
-    chatAPI.sendMessage(message)
+    chatAPI.sendMessage(message);
 };
 
 // ACTION CREATORS
@@ -54,6 +58,10 @@ export const actions = {
     messagesReceived: (messages: ChatMessageType[]) => ({
         type: "SN/CHAT/MESSAGES_RECEIVED",
         payload: {messages}
+    } as const),
+    statusChanged: (status: StatusType) => ({
+        type: "SN/CHAT/STATUS_CHANGED",
+        payload: {status}
     } as const)
 };
 

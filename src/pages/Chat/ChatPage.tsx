@@ -2,8 +2,8 @@ import {Button} from "antd";
 import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {ChatMessageType} from "../../api/chat-api";
-import {sendMessage, startMessagesListening, stopMessagesListening } from "../../redux/chat-reducer";
-import { RootStateRedux } from "../../redux/redux-store";
+import {sendMessage, startMessagesListening, StatusType, stopMessagesListening} from "../../redux/chat-reducer";
+import {RootStateRedux} from "../../redux/redux-store";
 import s from "./ChatPage.module.css";
 
 
@@ -51,21 +51,21 @@ export const Chat: React.FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-         dispatch(startMessagesListening());
+        dispatch(startMessagesListening());
         return () => {
-            dispatch(stopMessagesListening())
-        }
-    }, [])
+            dispatch(stopMessagesListening());
+        };
+    }, []);
 
     return <div>
-        <Messages />
-        <AddMessageForm />
+        <Messages/>
+        <AddMessageForm/>
     </div>;
 };
 
 export const Messages: React.FC = () => {
-   // const [messages, setMessages] = useState<ChatMessageType[]>([]);
-    const messages = useSelector<RootStateRedux,ChatMessageType[]>(state => state.chat.messages)
+    // const [messages, setMessages] = useState<ChatMessageType[]>([]);
+    const messages = useSelector<RootStateRedux, ChatMessageType[]>(state => state.chat.messages);
 
     // useEffect(() => {
     //     let messageHandler = (e: MessageEvent) => {
@@ -98,8 +98,8 @@ export const Message: React.FC<{ message: ChatMessageType }> = ({message}) => {
 
 export const AddMessageForm: React.FC = () => {
     const [message, setMessage] = useState("");
-    const [readyStatus, setReadyStatus] = useState<"pending" | "ready">("pending");
-    const dispatch = useDispatch()
+    const status = useSelector<RootStateRedux, StatusType>(state => state.chat.status);
+    const dispatch = useDispatch();
 
     // useEffect(() => {
     //     let openHandler = () => {
@@ -116,7 +116,7 @@ export const AddMessageForm: React.FC = () => {
         if (!message) {
             return;
         }
-        dispatch(sendMessage(message))
+        dispatch(sendMessage(message));
         setMessage("");
     };
 
@@ -128,7 +128,7 @@ export const AddMessageForm: React.FC = () => {
         </div>
         <div>
             <button
-                className={s.btn} onClick={sendMessageHandler} disabled={false}>
+                className={s.btn} onClick={sendMessageHandler} disabled={status !== "ready"}>
                 Send
             </button>
         </div>

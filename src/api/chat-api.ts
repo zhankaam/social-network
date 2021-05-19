@@ -1,4 +1,9 @@
-let subscribers = [] as SubscriberType[];
+import {StatusType} from "../redux/chat-reducer";
+
+const subscribers = {
+    "messages-received": [] as MessagesReceivedSubscriberType[],
+    "status-changed": [] as StatusChangedSubscriberType[]
+};
 
 let ws: WebSocket | null = null;
 const closeHandler = () => {
@@ -6,13 +11,19 @@ const closeHandler = () => {
     setTimeout(createChannel, 3000);
 };
 
-let messageHandler = (e: MessageEvent) => {
-    let newMessages = JSON.parse(e.data);
-    subscribers.forEach(s => s(newMessages));
+const cleanUp = () => {
+    ws?.removeEventListener("close", closeHandler);
+    ws?.removeEventListener("message", messageHandler);
 };
 
-function createChannel() {
+let messageHandler = (e: MessageEvent) => {
+    let newMessages = JSON.parse(e.data);
+    subscribers["messages-received"].forEach(s => s(newMessages));
+};
 
+
+function createChannel() {
+    cleanUp();
     ws?.removeEventListener("close", closeHandler);
     ws?.close();
 
@@ -22,34 +33,42 @@ function createChannel() {
 }
 
 export const chatAPI = {
-    start(){
-      createChannel()
+    start() {
+        createChannel();
     },
-    subscribe(callback: SubscriberType) {
-        subscribers.push(callback);
+    subscribe(eventName: EventNamesType, callback: MessagesReceivedSubscriberType | StatusChangedSubscriberType) {
+        // @ts-ignore
+        subscribers[eventName].push(callback);
         return () => {
-            subscribers = subscribers.filter(s => s !== callback);
+            // @ts-ignore
+            subscribers[eventName] = subscribers[eventName].filter(s => s !== callback);
         };
     },
-    unsubscribe(callback: SubscriberType) {
-        subscribers = subscribers.filter(s => s !== callback);
+    unsubscribe(eventName: EventNamesType, callback: MessagesReceivedSubscriberType) {
+        // @ts-ignore
+        subscribers[eventName] = subscribers[eventName].filter(s => s !== callback);
     },
-    sendMessage(message: string){
-        ws?.send(message)
+    sendMessage(message: string) {
+        ws?.send(message);
     },
-    stop(){
-        subscribers = []
-        ws?.removeEventListener("close", closeHandler);
-        ws?.removeEventListener("message", messageHandler);
-        ws?.close()
+    stop() {
+        subscribers["messages-received"] = [];
+        subscribers["status-changed"] = [];
+        cleanUp();
+        ws?.close();
     }
 };
 
 
-type SubscriberType = (messages: ChatMessageType[]) => void
+type MessagesReceivedSubscriberType = (messages: ChatMessageType[]) => void
+type StatusChangedSubscriberType = (status: StatusType) => void
+
+
 export type ChatMessageType = {
     message: string
     photo: string
     userId: number
     userName: string
 }
+
+type EventNamesType = "messages-received" | "status-changed";
