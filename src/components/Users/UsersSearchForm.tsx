@@ -45,7 +45,7 @@ export const UsersSearchForm: React.FC<PropsType> = React.memo(props => {
                 <Form>
                     <Field type="text" name="term"/>
                     <Field name="friend" as="select">
-                        <option value={"null"}>All</option>
+                        <option className={s.option} value={"null"}>All</option>
                         <option value={"true"}>only followed</option>
                         <option value={"false"}>only unfollowed</option>
                     </Field>
