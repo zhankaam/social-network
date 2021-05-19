@@ -6,7 +6,7 @@ let initialState = {
     globalError: null
 }
 
-const appReducer = (state = initialState, action: ActionsType): InitialStateType => {
+export const appReducer = (state = initialState, action: ActionsType): InitialStateType => {
 
     switch (action.type) {
         case 'SN/APP/INITIALIZED_SUCCESS':
@@ -37,4 +37,3 @@ export const actions = {
 export type InitialStateType = typeof initialState
 type ActionsType = InferActionsType<typeof actions>
 // type ThunkType = BaseThunkType<ActionsType>
-export default appReducer;
