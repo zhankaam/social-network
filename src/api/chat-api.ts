@@ -8,20 +8,16 @@ const subscribers = {
 let ws: WebSocket | null = null;
 const closeHandler = () => {
     console.log("CLOSE WS");
+    notifySubscribersAboutStatus('pending')
     setTimeout(createChannel, 3000);
 };
 
-const cleanUp = () => {
-    ws?.removeEventListener("close", closeHandler);
-    ws?.removeEventListener("message", messageHandler);
-    ws?.removeEventListener("open", openHandler);
-    ws?.removeEventListener("error", errorHandler);
-};
 
 let messageHandler = (e: MessageEvent) => {
     let newMessages = JSON.parse(e.data);
     subscribers["messages-received"].forEach(s => s(newMessages));
 };
+
 
 let openHandler = () => {
     notifySubscribersAboutStatus('ready')
@@ -32,13 +28,20 @@ let errorHandler = () => {
     console.error('REFRESH PAGE')
 };
 
+
+const cleanUp = () => {
+    ws?.removeEventListener("close", closeHandler);
+    ws?.removeEventListener("message", messageHandler);
+    ws?.removeEventListener("open", openHandler);
+    ws?.removeEventListener("error", errorHandler);
+};
+
 const notifySubscribersAboutStatus = (status: StatusType) => {
     subscribers["status-changed"].forEach(s => s(status))
 }
 
 function createChannel() {
     cleanUp();
-    ws?.removeEventListener("close", closeHandler);
     ws?.close();
     ws = new WebSocket("wss://social-network.samuraijs.com/handlers/ChatHandler.ashx\n");
     notifySubscribersAboutStatus('pending')
@@ -51,6 +54,12 @@ function createChannel() {
 export const chatAPI = {
     start() {
         createChannel();
+    },
+    stop() {
+        subscribers["messages-received"] = [];
+        subscribers["status-changed"] = [];
+        cleanUp();
+        ws?.close();
     },
     subscribe(eventName: EventNamesType, callback: MessagesReceivedSubscriberType | StatusChangedSubscriberType) {
         // @ts-ignore
@@ -66,12 +75,6 @@ export const chatAPI = {
     },
     sendMessage(message: string) {
         ws?.send(message);
-    },
-    stop() {
-        subscribers["messages-received"] = [];
-        subscribers["status-changed"] = [];
-        cleanUp();
-        ws?.close();
     }
 };
 

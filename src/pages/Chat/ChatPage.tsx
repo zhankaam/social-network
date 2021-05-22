@@ -1,7 +1,12 @@
-import {Button} from "antd";
 import React, {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {ChatMessageType, sendMessage, startMessagesListening, StatusType, stopMessagesListening} from "../../redux/chat-reducer";
+import {
+    ChatMessageType,
+    sendMessage,
+    startMessagesListening,
+    StatusType,
+    stopMessagesListening
+} from "../../redux/chat-reducer";
 import {RootStateRedux} from "../../redux/redux-store";
 import s from "./ChatPage.module.css";
 
@@ -89,8 +94,7 @@ export const AddMessageForm: React.FC = () => {
 
     return <div>
         <div>
-            <textarea value={message}
-                      onChange={(e) => setMessage(e.currentTarget.value)}></textarea>
+            <textarea value={message} onChange={(e) => setMessage(e.currentTarget.value)}></textarea>
         </div>
         <div>
             <button
