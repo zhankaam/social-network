@@ -22,11 +22,13 @@ export let User: React.FC<UserPropsType> = ({user, followingInProgress, unfollow
                 </NavLink>
             </div>
              <div>{user.followed
-                 ? <button className={s.btn} disabled={followingInProgress.some(id => id === user.id)}
+                 ? <button className={s.btn}
+                           //disabled={followingInProgress.some(id => id === user.id)}
                            onClick={() => {
                                unfollow(user.id)
                            }}>Unfollow</button>
-                 : <button className={s.btn} disabled={followingInProgress.some(id => id === user.id)}
+                 : <button className={s.btn}
+                           //disabled={followingInProgress.some(id => id === user.id)}
                            onClick={() => {
                                follow(user.id)
                            }}>Follow</button>}
