@@ -6,7 +6,7 @@ import {UserOutlined} from "@ant-design/icons";
 import {useDispatch, useSelector} from "react-redux";
 import {RootStateRedux} from "../../redux/redux-store";
 import {selectCurrentUserLogin, selectIsAuth} from "../../redux/auth-selectors";
-import {logout} from "../../redux/auth-reducer";
+import { logout } from '../../redux/auth-reducer/auth-reducer-sagas';
 
 export type HeaderPropsType = {
 

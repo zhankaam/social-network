@@ -2,9 +2,9 @@ import React from 'react'
 import {reduxForm} from "redux-form";
 import {useDispatch, useSelector} from "react-redux";
 import {LoginForm, PropsType} from "./LoginForm";
-import {login} from "../../redux/auth-reducer";
 import {Redirect} from 'react-router-dom';
 import {RootStateRedux} from "../../redux/redux-store";
+import { login } from '../../redux/auth-reducer/auth-reducer-sagas';
 
 const LoginReduxForm = reduxForm<LoginFormValuesType, PropsType>({form: 'login'})(LoginForm)
 

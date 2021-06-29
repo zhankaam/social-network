@@ -1,4 +1,3 @@
-import {getAuthUserData} from "./auth-reducer";
 import {BaseThunkType, InferActionsType} from "./redux-store";
 import {chatAPI, ChatMessageAPIType} from ".././api/chat-api";
 import {Dispatch} from "redux";

@@ -1,5 +1,6 @@
-import {getAuthUserData} from "./auth-reducer";
 import {InferActionsType} from "./redux-store";
+import {Dispatch} from "redux";
+import {getAuthUserData} from "./auth-reducer/auth-reducer-sagas";
 
 let initialState = {
     initialized: false,
@@ -20,7 +21,7 @@ export const appReducer = (state = initialState, action: ActionsType): InitialSt
 }
 
 // THUNK CREATOR
-export const initializeApp = () => (dispatch: any) => {
+export const initializeApp = () => (dispatch: Dispatch) => {
     let promise = dispatch(getAuthUserData())
     Promise.all([promise])
         .then(() => {

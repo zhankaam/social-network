@@ -2,7 +2,7 @@ import React from 'react';
 import {AppHeader} from "./AppHeader";
 import {connect} from "react-redux";
 import {RootStateRedux} from "../../redux/redux-store";
-import {logout} from "../../redux/auth-reducer";
+import {logout} from "../../redux/auth-reducer/auth-reducer-sagas";
 
 type OwnPropsType = {
     logout: () => void

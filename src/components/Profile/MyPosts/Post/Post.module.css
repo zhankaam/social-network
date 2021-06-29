@@ -28,7 +28,7 @@
     position: relative;
 }
 
-.chat::before, .block::after {
+.chat::before {
     content: '';
     position: absolute;
     left: 20px; bottom: -20px;
