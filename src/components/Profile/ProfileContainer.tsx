@@ -3,9 +3,9 @@ import Profile from "./Profile";
 import {connect} from "react-redux";
 import {RouteComponentProps, withRouter} from 'react-router-dom';
 import {RootStateRedux} from "../../redux/redux-store";
-import {getStatus, getUserProfile, savePhoto, saveProfile, updateStatus} from "../../redux/profile/profile-reducer";
 import {compose} from "redux";
 import {ProfileType} from "../../types";
+import {getStatus, getUserProfile, savePhoto, saveProfile, updateStatus} from "../../redux/profile/profile-reducer-sagas";
 
 type MapStateToPropsType = {
     profile: ProfileType | null

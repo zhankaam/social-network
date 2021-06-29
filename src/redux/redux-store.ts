@@ -1,5 +1,5 @@
 import {Action, applyMiddleware, combineReducers, createStore, Store} from "redux";
-import profileReducer from "./profile/profile-reducer";
+import {profileReducer} from "./profile/profile-reducer";
 import {dialogsReducer} from "./dialogs-reducer";
 import {sidebarReducer} from "./sidebar-reducer";
 import {authReducer} from "./auth-reducer/auth-reducer";
@@ -11,6 +11,7 @@ import {usersReducer} from "./users/users-reducer";
 import createSagaMiddleware from "redux-saga";
 import {all} from "redux-saga/effects";
 import {authWatcherSaga} from "./auth-reducer/auth-reducer-sagas";
+import {profileWatcherSaga} from "./profile/profile-reducer-sagas";
 
 let rootReducer = combineReducers({
     profilePage: profileReducer,
@@ -39,7 +40,7 @@ export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<R, 
 sagaMiddleware.run(rootWatcher)
 
 function* rootWatcher() {
-    yield all([authWatcherSaga(),])
+    yield all([authWatcherSaga(),profileWatcherSaga()])
 }
 
 
